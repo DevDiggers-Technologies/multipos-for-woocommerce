@@ -164,6 +164,76 @@ if ( ! function_exists( 'ddfw_kses_allowed_svg_tags' ) ) {
 	}
 }
 
+if ( ! function_exists( 'ddfw_kses_allowed_form_html' ) ) {
+	/**
+	 * Allowed HTML for escaping assembled form-field markup with wp_kses().
+	 *
+	 * Extends the default "post" allow-list with form controls and inline SVG so
+	 * that pre-built form markup can be escaped on output without stripping
+	 * inputs, selects, textareas, buttons or icons.
+	 *
+	 * @return array
+	 */
+	function ddfw_kses_allowed_form_html() {
+		$allowed = array_merge( wp_kses_allowed_html( 'post' ), ddfw_kses_allowed_svg_tags() );
+
+		$global_attrs = [
+			'id'           => true,
+			'class'        => true,
+			'style'        => true,
+			'title'        => true,
+			'name'         => true,
+			'value'        => true,
+			'data-*'       => true,
+			'aria-*'       => true,
+			'role'         => true,
+			'tabindex'     => true,
+			'placeholder'  => true,
+			'autocomplete' => true,
+			'spellcheck'   => true,
+			'required'     => true,
+			'disabled'     => true,
+			'readonly'     => true,
+			'checked'      => true,
+			'selected'     => true,
+			'multiple'     => true,
+			'min'          => true,
+			'max'          => true,
+			'step'         => true,
+			'minlength'    => true,
+			'maxlength'    => true,
+			'pattern'      => true,
+			'rows'         => true,
+			'cols'         => true,
+			'size'         => true,
+			'for'          => true,
+			'type'         => true,
+			'accept'       => true,
+		];
+
+		$allowed['input']    = $global_attrs;
+		$allowed['select']   = $global_attrs;
+		$allowed['option']   = $global_attrs;
+		$allowed['optgroup'] = $global_attrs;
+		$allowed['textarea'] = $global_attrs;
+		$allowed['button']   = $global_attrs;
+		$allowed['label']    = $global_attrs;
+		$allowed['form']     = array_merge( $global_attrs, [ 'action' => true, 'method' => true, 'enctype' => true, 'target' => true ] );
+		$allowed['fieldset'] = $global_attrs;
+		$allowed['legend']   = $global_attrs;
+		$allowed['datalist'] = $global_attrs;
+
+		/**
+		 * Filter the allowed HTML used to escape framework form-field markup.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param array $allowed Allowed HTML tags/attributes.
+		 */
+		return apply_filters( 'ddfw_kses_allowed_form_html', $allowed );
+	}
+}
+
 if ( ! function_exists( 'ddfw_upgrade_to_pro_section' ) ) {
 	/**
 	 * Upgrade to Pro section function

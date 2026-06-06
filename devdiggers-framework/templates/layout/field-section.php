@@ -23,8 +23,8 @@ if ( ! empty( $args ) && is_array( $args ) ) {
 			}
 
 			if ( ! empty( $arg[ 'after_header_html' ] ) ) {
-				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Trusted layout HTML supplied by framework configuration.
-				echo ( $arg[ 'after_header_html' ] );
+				// after_header_html may contain form controls (inputs/selects), so allow form HTML, not just post HTML.
+				echo wp_kses( $arg[ 'after_header_html' ], ddfw_kses_allowed_form_html() );
 			}
 
 			if ( ! empty( $arg[ 'fields' ] ) && is_array( $arg[ 'fields' ] ) ) {

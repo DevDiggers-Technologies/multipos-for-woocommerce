@@ -2,16 +2,16 @@
 /**
  * Plugin Name: DevDiggers MultiPOS for WooCommerce
  * Description: Make your WooCommerce store work like a real shop. Sell in person, keep stock synced, run your retail or restaurant outlet, and keep selling even if the internet goes slow.
- * Plugin URI: https://devdiggers.com/product/multipos-point-of-sale-for-woocommerce/?utm_source=MultiPOS&utm_medium=plugins-list&utm_campaign=woocommerce-extensions
+ * Plugin URI: https://devdiggers.com/product/multipos-point-of-sale-for-woocommerce/
  * Author: DevDiggers
  * Author URI: https://devdiggers.com/
  * Version: 1.0.0
  * Text Domain: devdiggers-multipos-for-woocommerce
  * Domain Path: /i18n
  * WC requires at least: 9.5.0
- * WC tested up to: 10.7.0
+ * WC tested up to: 10.8.1
  * WP requires at least: 6.0.0
- * WP tested up to: 6.9.4
+ * WP tested up to: 7.0
  * DevDiggersPrefix: ddwcpos
  * Requires Plugins: woocommerce
  * License: GNU General Public License v3.0
@@ -137,7 +137,7 @@ if ( ! class_exists( 'DDWCPOS_Free_Init' ) ) {
 			|
 			<a href="<?php echo esc_url( admin_url( 'admin.php?page=ddwcpos-dashboard&setup-wizard=true' ) ); ?>"><?php esc_html_e( 'Setup Wizard', 'devdiggers-multipos-for-woocommerce' ); ?></a>
 			|
-			<a href="//devdiggers.com/product/multipos-point-of-sale-for-woocommerce/?utm_source=plugin_link&utm_medium=upgrade_button&utm_campaign=plugin_upgrade" style="color: #0256ff; font-weight: bold;" target="_blank"><?php esc_html_e( 'Upgrade to Pro', 'devdiggers-multipos-for-woocommerce' ); ?></a>
+			<a href="//devdiggers.com/product/multipos-point-of-sale-for-woocommerce/" style="color: #0256ff; font-weight: bold;" target="_blank"><?php esc_html_e( 'Upgrade to Pro', 'devdiggers-multipos-for-woocommerce' ); ?></a>
 			<?php
 			$new_links = ob_get_clean();
 			array_unshift( $links, $new_links );

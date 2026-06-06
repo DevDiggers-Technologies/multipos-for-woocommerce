@@ -49,6 +49,7 @@ if ( ! class_exists( 'DDWCPOS_Invoice_Helper' ) ) {
 				'unit_price'      => esc_html__( 'Unit Price', 'devdiggers-multipos-for-woocommerce' ),
 				'quantity'        => esc_html__( 'Quantity', 'devdiggers-multipos-for-woocommerce' ),
 				'total_price'     => esc_html__( 'Total Price', 'devdiggers-multipos-for-woocommerce' ),
+				/* translators: %s: number of items sold. */
 				'items_sold'      => esc_html__( '%s Item(s) Sold', 'devdiggers-multipos-for-woocommerce' ),
 				'sub_total'       => esc_html__( 'Sub Total', 'devdiggers-multipos-for-woocommerce' ),
 				'total'           => esc_html__( 'Total', 'devdiggers-multipos-for-woocommerce' ),

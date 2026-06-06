@@ -43,7 +43,6 @@ if ( is_admin() ) {
 	require_once DDFW_FILE . 'includes/class-ddfw-admin.php';
 	require_once DDFW_FILE . 'includes/class-ddfw-ajax.php';
 	require_once DDFW_FILE . 'includes/class-ddfw-review-notice.php';
-	require_once DDFW_FILE . 'includes/class-devdiggers-notifications.php';
 }
 
 load_textdomain( 'devdiggers-multipos-for-woocommerce', dirname( __FILE__ ) . '/i18n/devdiggers-multipos-for-woocommerce-' . apply_filters( 'plugin_locale', determine_locale(), 'devdiggers-multipos-for-woocommerce' ) . '.mo' ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- Core WordPress hook.

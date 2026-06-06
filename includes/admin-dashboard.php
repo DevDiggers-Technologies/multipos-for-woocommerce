@@ -78,7 +78,7 @@ if ( ! class_exists( 'DDWCPOS_Admin_Dashboard' ) ) {
 				'menu_title'              => esc_html__( 'MultiPOS', 'devdiggers-multipos-for-woocommerce' ),
 				'slug'                    => 'ddwcpos-dashboard',
 				'plugin_name'             => $plugin_name,
-				'upgrade_url'             => '//devdiggers.com/product/multipos-point-of-sale-for-woocommerce/?utm_source=plugin_header&utm_medium=upgrade_button&utm_campaign=header_upgrade',
+				'upgrade_url'             => '//devdiggers.com/product/multipos-point-of-sale-for-woocommerce/',
 				'screen_options_callback' => [ $this, 'add_screen_options' ],
 				'menus'                   => [
 					'dashboard'         => [
@@ -207,7 +207,7 @@ if ( ! class_exists( 'DDWCPOS_Admin_Dashboard' ) ) {
 		 * @return void
 		 */
 		public function add_screen_options() {
-			global $myListTable;
+			global $ddwcpos_list_table;
 
 			$current_menu = ! empty( $_GET['menu'] ) ? sanitize_title( wp_unslash( $_GET['menu'] ) ) : 'dashboard';
 
@@ -222,23 +222,23 @@ if ( ! class_exists( 'DDWCPOS_Admin_Dashboard' ) ) {
 			switch ( $current_menu ) {
 				case 'outlets':
 					$args['option'] = 'outlets_per_page';
-					$myListTable    = new Admin\Outlet\DDWCPOS_Outlets_List_Template( $this->ddwcpos_configuration );
+					$ddwcpos_list_table    = new Admin\Outlet\DDWCPOS_Outlets_List_Template( $this->ddwcpos_configuration );
 					break;
 				case 'cashiers':
 					$args['option'] = 'cashiers_per_page';
-					$myListTable    = new Admin\Cashier\DDWCPOS_Cashiers_List_Template();
+					$ddwcpos_list_table    = new Admin\Cashier\DDWCPOS_Cashiers_List_Template();
 					break;
 				case 'product-barcodes':
 					$args['option'] = 'barcodes_per_page';
-					$myListTable    = new Admin\Barcode\DDWCPOS_Product_Barcodes_List_Template( $this->ddwcpos_configuration );
+					$ddwcpos_list_table    = new Admin\Barcode\DDWCPOS_Product_Barcodes_List_Template( $this->ddwcpos_configuration );
 					break;
 				case 'transactions':
 					$args['option'] = 'transactions_per_page';
-					$myListTable    = new Admin\Transaction\DDWCPOS_Transactions_List_Template( $this->ddwcpos_configuration );
+					$ddwcpos_list_table    = new Admin\Transaction\DDWCPOS_Transactions_List_Template( $this->ddwcpos_configuration );
 					break;
 				case 'orders':
 					$args['option'] = 'orders_per_page';
-					$myListTable    = new Admin\Order\DDWCPOS_Orders_List_Template();
+					$ddwcpos_list_table    = new Admin\Order\DDWCPOS_Orders_List_Template();
 					break;
 			}
 
@@ -275,7 +275,7 @@ if ( ! class_exists( 'DDWCPOS_Admin_Dashboard' ) ) {
 						esc_html__( 'Tax totals and easy summary views', 'devdiggers-multipos-for-woocommerce' ),
 						esc_html__( 'POS analytics with outlet breakdowns', 'devdiggers-multipos-for-woocommerce' ),
 					],
-					'upgrade_url' => '//devdiggers.com/product/multipos-point-of-sale-for-woocommerce/?utm_source=plugin_dashboard&utm_medium=upgrade_notice&utm_campaign=reports_pro_feature',
+					'upgrade_url' => '//devdiggers.com/product/multipos-point-of-sale-for-woocommerce/',
 				]
 			);
 		}
@@ -304,7 +304,7 @@ if ( ! class_exists( 'DDWCPOS_Admin_Dashboard' ) ) {
 							esc_html__( 'Design different invoices for different outlets.', 'devdiggers-multipos-for-woocommerce' ),
 							esc_html__( 'Add more custom payment options for outlets.', 'devdiggers-multipos-for-woocommerce' ),
 						],
-						'upgrade_url'   => '//devdiggers.com/product/multipos-point-of-sale-for-woocommerce/?utm_source=plugin_dashboard&utm_medium=upgrade_notice&utm_campaign=multiple_outlets_pro_feature',
+						'upgrade_url'   => '//devdiggers.com/product/multipos-point-of-sale-for-woocommerce/',
 					]
 				);
 			} elseif ( ! empty( $action ) && ( 'add' === $action || 'edit' === $action ) ) {
@@ -503,7 +503,7 @@ if ( ! class_exists( 'DDWCPOS_Admin_Dashboard' ) ) {
 						esc_html__( 'Keep inventory accurate across multiple stores', 'devdiggers-multipos-for-woocommerce' ),
 						esc_html__( 'Bulk stock updates using CSV import', 'devdiggers-multipos-for-woocommerce' ),
 					],
-					'upgrade_url' => '//devdiggers.com/product/multipos-point-of-sale-for-woocommerce/?utm_source=plugin_dashboard&utm_medium=upgrade_notice&utm_campaign=stock_management_pro_feature',
+					'upgrade_url' => '//devdiggers.com/product/multipos-point-of-sale-for-woocommerce/',
 				]
 			);
 		}

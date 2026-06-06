@@ -2,10 +2,10 @@
 # This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: MultiPOS for WooCommerce 1.0.0\n"
+"Project-Id-Version: DevDiggers MultiPOS for WooCommerce 1.0.0\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/devdiggers-multipos-for-woocommerce\n"
-"POT-Creation-Date: 2026-06-05 12:56:57+00:00\n"
+"POT-Creation-Date: 2026-06-06 13:18:20+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -67,11 +67,19 @@ msgstr ""
 msgid "Customer not found"
 msgstr ""
 
-#: api/includes/customers/api-delete-customer.php:104
+#: api/includes/customers/api-delete-customer.php:89
+msgid "You cannot delete your own account."
+msgstr ""
+
+#: api/includes/customers/api-delete-customer.php:105
+msgid "This user cannot be deleted from the point of sale."
+msgstr ""
+
+#: api/includes/customers/api-delete-customer.php:129
 msgid "Cannot delete customer with existing orders"
 msgstr ""
 
-#: api/includes/customers/api-delete-customer.php:128
+#: api/includes/customers/api-delete-customer.php:153
 msgid "Failed to delete customer"
 msgstr ""
 
@@ -91,11 +99,15 @@ msgstr ""
 msgid "Email already exists"
 msgstr ""
 
-#: api/includes/customers/api-manage-customer.php:194
+#: api/includes/customers/api-manage-customer.php:153
+msgid "This user cannot be edited from the point of sale."
+msgstr ""
+
+#: api/includes/customers/api-manage-customer.php:212
 msgid "Customer updated successfully"
 msgstr ""
 
-#: api/includes/customers/api-manage-customer.php:276
+#: api/includes/customers/api-manage-customer.php:294
 msgid "Customer created successfully"
 msgstr ""
 
@@ -131,31 +143,35 @@ msgstr ""
 msgid "Sorry, Coupon Expired. Try another one!"
 msgstr ""
 
-#: api/includes/misc/api-save-cashier.php:72
+#: api/includes/misc/api-save-cashier.php:50
+msgid "You are not allowed to edit this account."
+msgstr ""
+
+#: api/includes/misc/api-save-cashier.php:81
 msgid "Invalid cashier ID"
 msgstr ""
 
-#: api/includes/misc/api-save-cashier.php:80
+#: api/includes/misc/api-save-cashier.php:89
 msgid "First name and last name are required"
 msgstr ""
 
-#: api/includes/misc/api-save-cashier.php:90
+#: api/includes/misc/api-save-cashier.php:99
 msgid "Both current and new passwords are required for password change"
 msgstr ""
 
-#: api/includes/misc/api-save-cashier.php:98
+#: api/includes/misc/api-save-cashier.php:107
 msgid "New password must be at least 6 characters long"
 msgstr ""
 
-#: api/includes/misc/api-save-cashier.php:130
+#: api/includes/misc/api-save-cashier.php:139
 msgid "Your account details are saved successfully."
 msgstr ""
 
-#: api/includes/misc/api-save-cashier.php:165
+#: api/includes/misc/api-save-cashier.php:174
 msgid "Cashier not found"
 msgstr ""
 
-#: api/includes/misc/api-save-cashier.php:174
+#: api/includes/misc/api-save-cashier.php:183
 msgid "Your current password does not match, please enter the correct password."
 msgstr ""
 
@@ -223,7 +239,7 @@ msgid "Out of Stock"
 msgstr ""
 
 #: autoload/autoload.php:45
-#. translators: %s for File path.
+#. translators: %s: File path.
 msgid "The file attempting to be loaded at %s does not exist."
 msgstr ""
 
@@ -345,7 +361,7 @@ msgstr ""
 #: helper/invoice/invoice-helper.php:44
 #: templates/admin/dashboard/dashboard-template.php:275
 #: templates/admin/order/orders-list-template.php:36
-#: templates/admin/order/orders-list-template.php:296
+#: templates/admin/order/orders-list-template.php:298
 msgid "Order"
 msgstr ""
 
@@ -374,7 +390,7 @@ msgid "Unit Price"
 msgstr ""
 
 #: helper/invoice/invoice-helper.php:50
-#: templates/admin/barcode/product-barcodes-list-template.php:230
+#: templates/admin/barcode/product-barcodes-list-template.php:228
 #: templates/admin/stock/product-stocks-list-template.php:229
 #: assets/js/pos.js:133
 msgid "Quantity"
@@ -384,73 +400,65 @@ msgstr ""
 msgid "Total Price"
 msgstr ""
 
-#: helper/invoice/invoice-helper.php:52
+#: helper/invoice/invoice-helper.php:53
+#. translators: %s: number of items sold.
 msgid "%s Item(s) Sold"
 msgstr ""
 
-#: helper/invoice/invoice-helper.php:53
+#: helper/invoice/invoice-helper.php:54
 msgid "Sub Total"
 msgstr ""
 
-#: helper/invoice/invoice-helper.php:54
+#: helper/invoice/invoice-helper.php:55
 #: templates/admin/dashboard/dashboard-template.php:279
 #: assets/js/pos.js:387
 msgid "Total"
 msgstr ""
 
-#: helper/invoice/invoice-helper.php:55
+#: helper/invoice/invoice-helper.php:56
 msgid "Refunded"
 msgstr ""
 
-#: helper/invoice/invoice-helper.php:56
+#: helper/invoice/invoice-helper.php:57
 msgid "Total Tendered"
 msgstr ""
 
-#: helper/invoice/invoice-helper.php:57
+#: helper/invoice/invoice-helper.php:58
 #: assets/js/pos.js:392
 #: assets/js/pos.js:365
 msgid "Change"
 msgstr ""
 
-#: helper/invoice/invoice-helper.php:58
+#: helper/invoice/invoice-helper.php:59
 msgid "THANK YOU, HAVE A NICE DAY."
 msgstr ""
 
-#: helper/invoice/invoice-helper.php:59
+#: helper/invoice/invoice-helper.php:60
 #: templates/admin/outlet/manage-outlet-template.php:305
 #: assets/js/pos.js:159
 msgid "Phone"
 msgstr ""
 
-#: helper/invoice/invoice-helper.php:60
+#: helper/invoice/invoice-helper.php:61
 #: templates/admin/outlet/manage-outlet-template.php:314
 #: assets/js/pos.js:154
 #: assets/js/pos.js:86
 msgid "Email"
 msgstr ""
 
-#: helper/outlet/outlet-helper.php:304
+#: helper/outlet/outlet-helper.php:312
 msgid "Grocery/Retail"
 msgstr ""
 
-#: helper/outlet/outlet-helper.php:305
+#: helper/outlet/outlet-helper.php:313
 msgid "Restaurant/Cafe"
 msgstr ""
 
-#: includes/admin/admin-ajax-functions.php:48
-msgid "Barcode number editing is available in MultiPOS Pro."
-msgstr ""
-
-#: includes/admin/admin-ajax-functions.php:53
-msgid "Outlet-specific stock management is available in MultiPOS Pro."
-msgstr ""
-
-#: includes/admin/admin-ajax-functions.php:60
-#: includes/admin/admin-ajax-functions.php:74
+#: includes/admin/admin-ajax-functions.php:42
 msgid "Security check failed!"
 msgstr ""
 
-#: includes/admin/admin-ajax-functions.php:78
+#: includes/admin/admin-ajax-functions.php:46
 #: includes/admin/setup-wizard.php:346
 #: templates/admin/cashier/cashiers-list-template.php:264
 #: templates/admin/outlet/manage-outlet-template.php:96
@@ -461,76 +469,66 @@ msgstr ""
 msgid "Insufficient permissions."
 msgstr ""
 
-#: includes/admin/admin-ajax-functions.php:86
+#: includes/admin/admin-ajax-functions.php:54
 msgid "Invalid barcode data."
 msgstr ""
 
-#: includes/admin/admin-ajax-functions.php:124
+#: includes/admin/admin-ajax-functions.php:92
 msgid "Could not generate barcode image."
 msgstr ""
 
-#: includes/admin/admin-functions.php:99 includes/globals-variables.php:55
+#: includes/admin/admin-functions.php:100 includes/globals-variables.php:55
 #: includes/globals-variables.php:63
 msgid "Cash"
 msgstr ""
 
-#: includes/admin/admin-functions.php:164 includes/globals-variables.php:82
+#: includes/admin/admin-functions.php:165 includes/globals-variables.php:82
 #: includes/globals-variables.php:91
 msgid "Default Invoice"
 msgstr ""
 
-#: includes/admin/admin-functions.php:197
+#: includes/admin/admin-functions.php:198
 msgid ""
 "The free version supports one POS cashier. Upgrade to Pro to add more "
 "cashiers."
 msgstr ""
 
-#: includes/admin/admin-functions.php:202
+#: includes/admin/admin-functions.php:203
 msgid "Please select the assigned outlets."
 msgstr ""
 
-#: includes/admin/admin-functions.php:257
+#: includes/admin/admin-functions.php:258
 msgid "MultiPOS Outlet Details"
 msgstr ""
 
-#: includes/admin/admin-functions.php:258
+#: includes/admin/admin-functions.php:259
 msgid "Assign specific store locations to this user for POS access."
 msgstr ""
 
-#: includes/admin/admin-functions.php:266
+#: includes/admin/admin-functions.php:267
 #: templates/admin/cashier/cashiers-list-template.php:311
 msgid "Assigned Outlets"
 msgstr ""
 
-#: includes/admin/admin-functions.php:267
+#: includes/admin/admin-functions.php:268
 msgid "(required)"
 msgstr ""
 
-#: includes/admin/admin-functions.php:272
+#: includes/admin/admin-functions.php:273
 msgid "Select Outlet(s)"
 msgstr ""
 
-#: includes/admin/admin-functions.php:281
+#: includes/admin/admin-functions.php:282
 msgid "The user will only be able to log in to the POS of the assigned outlets."
 msgstr ""
 
-#: includes/admin/admin-functions.php:344 includes/admin-dashboard.php:342
+#: includes/admin/admin-functions.php:345 includes/admin-dashboard.php:342
 #: templates/admin/outlet/outlets-list-template.php:165
 msgid "Visit POS"
 msgstr ""
 
-#: includes/admin/admin-functions.php:361
+#: includes/admin/admin-functions.php:362
 msgid "Order Type"
-msgstr ""
-
-#: includes/admin/admin-functions.php:412
-#. translators: %1$s: opening strong tag, %2$s: closing strong tag, %3$s:
-#. opening anchor tag, %4$s: closing anchor tag
-msgid ""
-"Want to take your point of sale to the next level? %1$sUpgrade to MultiPOS "
-"Pro%2$s now to unlock advanced features like Unlimited Outlets & Cashiers, "
-"Custom Payment Methods, Assign Stock, Reports, and more! %3$sGet Pro "
-"Version &gt;%4$s"
 msgstr ""
 
 #: includes/admin/setup-wizard.php:56 includes/admin-dashboard.php:72
@@ -1064,42 +1062,42 @@ msgstr ""
 msgid "Barcode"
 msgstr ""
 
-#: templates/admin/barcode/product-barcodes-list-template.php:231
+#: templates/admin/barcode/product-barcodes-list-template.php:229
 #: assets/js/pos.js:271
 msgid "Print"
 msgstr ""
 
-#: templates/admin/barcode/product-barcodes-list-template.php:262
+#: templates/admin/barcode/product-barcodes-list-template.php:260
 #: templates/admin/stock/product-stocks-list-template.php:264
 msgid "No products avaliable."
 msgstr ""
 
-#: templates/admin/barcode/product-barcodes-list-template.php:281
+#: templates/admin/barcode/product-barcodes-list-template.php:279
 #: templates/admin/stock/product-stocks-list-template.php:283
 msgid "Product"
 msgstr ""
 
-#: templates/admin/barcode/product-barcodes-list-template.php:282
+#: templates/admin/barcode/product-barcodes-list-template.php:280
 msgid "Barcode Management"
 msgstr ""
 
-#: templates/admin/barcode/product-barcodes-list-template.php:322
+#: templates/admin/barcode/product-barcodes-list-template.php:320
 #: templates/admin/cashier/cashiers-list-template.php:366
 #: templates/admin/outlet/outlets-list-template.php:366
 #: templates/admin/stock/product-stocks-list-template.php:318
 msgid "Edit"
 msgstr ""
 
-#: templates/admin/barcode/product-barcodes-list-template.php:323
+#: templates/admin/barcode/product-barcodes-list-template.php:321
 #: templates/admin/stock/product-stocks-list-template.php:319
 msgid "View"
 msgstr ""
 
-#: templates/admin/barcode/product-barcodes-list-template.php:368
+#: templates/admin/barcode/product-barcodes-list-template.php:366
 msgid "Barcode Number"
 msgstr ""
 
-#: templates/admin/barcode/product-barcodes-list-template.php:371
+#: templates/admin/barcode/product-barcodes-list-template.php:369
 msgid "Print Label"
 msgstr ""
 
@@ -1622,86 +1620,88 @@ msgid "Show MultiPOS branding link"
 msgstr ""
 
 #: templates/admin/configuration/login-configuration-template.php:65
-msgid "Display the MultiPOS product link on the POS login screen."
+msgid ""
+"Optional. When enabled, shows a \"Powered by MultiPOS\" link on the POS "
+"login screen. Disabled by default."
 msgstr ""
 
-#: templates/admin/configuration/login-configuration-template.php:78
+#: templates/admin/configuration/login-configuration-template.php:73
 msgid "Login Access"
 msgstr ""
 
-#: templates/admin/configuration/login-configuration-template.php:79
+#: templates/admin/configuration/login-configuration-template.php:74
 msgid "Choose login and session options for cashiers."
 msgstr ""
 
-#: templates/admin/configuration/login-configuration-template.php:84
+#: templates/admin/configuration/login-configuration-template.php:79
 msgid "Extended Session Access"
 msgstr ""
 
-#: templates/admin/configuration/login-configuration-template.php:85
+#: templates/admin/configuration/login-configuration-template.php:80
 msgid "Enable \"Remember Me\" Option"
 msgstr ""
 
-#: templates/admin/configuration/login-configuration-template.php:86
+#: templates/admin/configuration/login-configuration-template.php:81
 msgid "Let cashiers stay signed in on trusted devices."
 msgstr ""
 
-#: templates/admin/configuration/login-configuration-template.php:92
+#: templates/admin/configuration/login-configuration-template.php:87
 msgid "Password Recovery"
 msgstr ""
 
-#: templates/admin/configuration/login-configuration-template.php:93
+#: templates/admin/configuration/login-configuration-template.php:88
 msgid "Enable Forgot Password Flow"
 msgstr ""
 
-#: templates/admin/configuration/login-configuration-template.php:94
+#: templates/admin/configuration/login-configuration-template.php:89
 msgid "Show forgot password link on login screen."
 msgstr ""
 
-#: templates/admin/configuration/login-configuration-template.php:102
+#: templates/admin/configuration/login-configuration-template.php:97
 msgid "Login Colors"
 msgstr ""
 
-#: templates/admin/configuration/login-configuration-template.php:103
+#: templates/admin/configuration/login-configuration-template.php:98
 msgid "Set colors used on login screen."
 msgstr ""
 
-#: templates/admin/configuration/login-configuration-template.php:108
+#: templates/admin/configuration/login-configuration-template.php:103
 msgid "Mesh Gradient (Color 1)"
 msgstr ""
 
-#: templates/admin/configuration/login-configuration-template.php:109
+#: templates/admin/configuration/login-configuration-template.php:104
 msgid "Main background accent color."
 msgstr ""
 
-#: templates/admin/configuration/login-configuration-template.php:115
+#: templates/admin/configuration/login-configuration-template.php:110
 msgid "Mesh Gradient (Color 2)"
 msgstr ""
 
-#: templates/admin/configuration/login-configuration-template.php:116
+#: templates/admin/configuration/login-configuration-template.php:111
 msgid "Second background accent color."
 msgstr ""
 
-#: templates/admin/configuration/login-configuration-template.php:122
+#: templates/admin/configuration/login-configuration-template.php:117
 msgid "Canvas Base Color"
 msgstr ""
 
-#: templates/admin/configuration/login-configuration-template.php:123
+#: templates/admin/configuration/login-configuration-template.php:118
 msgid "Base color for full login page."
 msgstr ""
 
-#: templates/admin/configuration/login-configuration-template.php:129
+#: templates/admin/configuration/login-configuration-template.php:124
 msgid "Card Backdrop Color"
 msgstr ""
 
-#: templates/admin/configuration/login-configuration-template.php:130
+#: templates/admin/configuration/login-configuration-template.php:125
 msgid "Background color for login card."
 msgstr ""
 
-#: templates/admin/configuration/login-configuration-template.php:136
+#: templates/admin/configuration/login-configuration-template.php:131
 msgid "Font Color"
 msgstr ""
 
-#: templates/admin/configuration/login-configuration-template.php:137
+#: templates/admin/configuration/login-configuration-template.php:132
 msgid "Text color for headings and labels."
 msgstr ""
 
@@ -2000,7 +2000,7 @@ msgid "Add and manage tables available in restaurant POS."
 msgstr ""
 
 #: templates/admin/dashboard/dashboard-template.php:81
-#: templates/admin/order/orders-list-template.php:298
+#: templates/admin/order/orders-list-template.php:300
 msgid "Revenue"
 msgstr ""
 
@@ -2133,48 +2133,48 @@ msgid ""
 "and extra templates are available in Pro."
 msgstr ""
 
-#: templates/admin/order/orders-list-template.php:207
+#: templates/admin/order/orders-list-template.php:208
 #. translators: %d: notes count
 msgid "Plus %d other note"
 msgid_plural "Plus %d other notes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/admin/order/orders-list-template.php:210
+#: templates/admin/order/orders-list-template.php:211
 #. translators: %d: notes count
 msgid "%d note"
 msgid_plural "%d notes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/admin/order/orders-list-template.php:235
+#: templates/admin/order/orders-list-template.php:237
 msgid "M j, Y"
 msgstr ""
 
-#: templates/admin/order/orders-list-template.php:247
+#: templates/admin/order/orders-list-template.php:249
 #. translators: %s: method
 msgid "via %s"
 msgstr ""
 
-#: templates/admin/order/orders-list-template.php:297
+#: templates/admin/order/orders-list-template.php:299
 msgid "Status & Date"
 msgstr ""
 
-#: templates/admin/order/orders-list-template.php:299
+#: templates/admin/order/orders-list-template.php:301
 #: templates/admin/transaction/transactions-list-template.php:309
 msgid "Staff Attribution"
 msgstr ""
 
-#: templates/admin/order/orders-list-template.php:309
+#: templates/admin/order/orders-list-template.php:311
 msgid "No orders avaliable."
 msgstr ""
 
-#: templates/admin/order/orders-list-template.php:386
+#: templates/admin/order/orders-list-template.php:388
 msgid "Offline ID:"
 msgstr ""
 
-#: templates/admin/order/orders-list-template.php:464
-#: templates/admin/order/orders-list-template.php:465
+#: templates/admin/order/orders-list-template.php:466
+#: templates/admin/order/orders-list-template.php:467
 #: templates/admin/stock/product-stocks-list-template.php:380
 #: templates/admin/stock/product-stocks-list-template.php:381
 #: templates/admin/transaction/transactions-list-template.php:480
@@ -2183,13 +2183,13 @@ msgstr ""
 msgid "Select Outlet"
 msgstr ""
 
-#: templates/admin/order/orders-list-template.php:477
+#: templates/admin/order/orders-list-template.php:479
 #: templates/admin/stock/product-stocks-list-template.php:393
 #: templates/admin/transaction/transactions-list-template.php:524
 msgid "Filter"
 msgstr ""
 
-#: templates/admin/order/orders-list-template.php:487
+#: templates/admin/order/orders-list-template.php:489
 #: templates/admin/stock/product-stocks-list-template.php:403
 #: templates/admin/transaction/transactions-list-template.php:534
 #: assets/js/pos.js:143
@@ -2576,13 +2576,11 @@ msgid "Your browser does not support JavaScript!"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "MultiPOS for WooCommerce"
+msgid "DevDiggers MultiPOS for WooCommerce"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid ""
-"https://devdiggers.com/product/multipos-point-of-sale-for-woocommerce/?utm_"
-"source=MultiPOS&utm_medium=plugins-list&utm_campaign=woocommerce-extensions"
+msgid "https://devdiggers.com/product/multipos-point-of-sale-for-woocommerce/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -2600,13 +2598,13 @@ msgstr ""
 msgid "https://devdiggers.com/"
 msgstr ""
 
-#: includes/admin/admin-functions.php:388
+#: includes/admin/admin-functions.php:389
 #. translators: %1$s opening span tag %2$s closing span tag
 msgctxt "POS Order Icon"
 msgid "%1$sPOS%2$s"
 msgstr ""
 
-#: includes/admin/admin-functions.php:391
+#: includes/admin/admin-functions.php:392
 #. translators: %1$s opening span tag %2$s closing span tag
 msgctxt "Website Order Icon"
 msgid "%1$sWebsite%2$s"
@@ -2618,7 +2616,7 @@ msgctxt "full name"
 msgid "%1$s %2$s"
 msgstr ""
 
-#: templates/admin/order/orders-list-template.php:231
+#: templates/admin/order/orders-list-template.php:232
 #. translators: %s: human-readable time difference
 msgctxt "%s = human-readable time difference"
 msgid "%s ago"

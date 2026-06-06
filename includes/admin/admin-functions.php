@@ -53,6 +53,7 @@ if ( ! class_exists( 'DDWCPOS_Admin_Functions' ) ) {
 				register_setting( 'ddwcpos-login-configuration-fields', '_ddwcpos_login_button_text', [ 'sanitize_callback' => 'sanitize_text_field' ] );
 				register_setting( 'ddwcpos-login-configuration-fields', '_ddwcpos_login_rememberme_enabled', [ 'sanitize_callback' => 'sanitize_text_field' ] );
 				register_setting( 'ddwcpos-login-configuration-fields', '_ddwcpos_login_forgot_enabled', [ 'sanitize_callback' => 'sanitize_text_field' ] );
+				register_setting( 'ddwcpos-login-configuration-fields', '_ddwcpos_login_branding_enabled', [ 'sanitize_callback' => 'sanitize_text_field' ] );
 				register_setting( 'ddwcpos-login-configuration-fields', '_ddwcpos_login_bg_primary_color', [ 'sanitize_callback' => 'sanitize_hex_color' ] );
 				register_setting( 'ddwcpos-login-configuration-fields', '_ddwcpos_login_bg_secondary_color', [ 'sanitize_callback' => 'sanitize_hex_color' ] );
 				register_setting( 'ddwcpos-login-configuration-fields', '_ddwcpos_login_canvas_bg_color', [ 'sanitize_callback' => 'sanitize_hex_color' ] );
@@ -395,28 +396,5 @@ if ( ! class_exists( 'DDWCPOS_Admin_Functions' ) ) {
 			}
 		}
 
-		/**
-		 * Display Pro Upgrade Admin Notice
-		 *
-		 * @return void
-		 */
-		public function ddwcpos_show_pro_upgrade_notice() {
-			if ( ! current_user_can( 'manage_woocommerce' ) ) {
-				return;
-			}
-
-			$upgrade_url = 'https://devdiggers.com/product/multipos-point-of-sale-for-woocommerce/?utm_source=MultiPOS&utm_medium=plugins_notice&utm_campaign=upgrade_to_pro';
-
-			$message = sprintf(
-				/* translators: %1$s: opening strong tag, %2$s: closing strong tag, %3$s: opening anchor tag, %4$s: closing anchor tag */
-				esc_html__( 'Want to take your point of sale to the next level? %1$sUpgrade to MultiPOS Pro%2$s now to unlock advanced features like Unlimited Outlets & Cashiers, Custom Payment Methods, Assign Stock, Reports, and more! %3$sGet Pro Version &gt;%4$s', 'devdiggers-multipos-for-woocommerce' ),
-				'<strong>',
-				'</strong>',
-				'<a href="' . esc_url( $upgrade_url ) . '" target="_blank" style="margin-left: 10px; font-weight: bold; text-decoration: none; color: #0256ff;">',
-				'</a>'
-			);
-
-			ddfw_print_notification( $message, 'info', true );
-		}
 	}
 }

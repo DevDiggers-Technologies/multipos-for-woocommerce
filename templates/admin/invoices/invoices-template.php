@@ -57,7 +57,7 @@ if ( ! class_exists( 'DDWCPOS_Invoices_Template' ) ) {
 						esc_html__( 'Multiple invoice templates for different outlets', 'devdiggers-multipos-for-woocommerce' ),
 						esc_html__( 'Restore factory template controls', 'devdiggers-multipos-for-woocommerce' ),
 					],
-					'upgrade_url'   => '//devdiggers.com/product/multipos-point-of-sale-for-woocommerce/?utm_source=plugin_dashboard&utm_medium=upgrade_notice&utm_campaign=invoice_composer_pro_feature',
+					'upgrade_url'   => '//devdiggers.com/product/multipos-point-of-sale-for-woocommerce/',
 				]
 			);
 		}

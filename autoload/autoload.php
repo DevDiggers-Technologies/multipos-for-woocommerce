@@ -40,8 +40,8 @@ function ddwcpos_namespace_class_autoload( $class_name ) {
 	}
 
 	wp_die(
-		/* translators: %s for File path. */
 		sprintf(
+			/* translators: %s: File path. */
 			esc_html__( 'The file attempting to be loaded at %s does not exist.', 'devdiggers-multipos-for-woocommerce' ),
 			esc_html( $filepath )
 		)

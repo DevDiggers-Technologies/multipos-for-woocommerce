@@ -4,11 +4,11 @@ Plugin URI: https://devdiggers.com/product/multipos-point-of-sale-for-woocommerc
 Author: DevDiggers
 Author URI: https://devdiggers.com/
 Tags: woocommerce pos, point of sale, pos system, barcode scanner, cashier
-Requires at least: 5.0
-Tested up to: 6.9
+Requires at least: 6.0
+Tested up to: 7.0
 Requires PHP: 7.4
 WC requires at least: 9.0.0
-WC tested up to: 10.7.0
+WC tested up to: 10.8.1
 Stable tag: 1.0.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -28,6 +28,7 @@ Because orders are created as real WooCommerce orders, you can still use your no
 = Quick Links =
 
 * [View Product Page](https://devdiggers.com/product/multipos-point-of-sale-for-woocommerce/)
+* [Live Demo](https://demo.devdiggers.com/multipos-point-of-sale-for-woocommerce-free/)
 * [Full Documentation](https://devdiggers.com/multipos-point-of-sale-for-woocommerce/)
 * [Contact Support](https://devdiggers.com/contact/)
 * [Upgrade to Pro](https://devdiggers.com/product/multipos-point-of-sale-for-woocommerce/)
@@ -234,6 +235,42 @@ The Pro version is built for stores with more than one counter, branch, cashier,
 * More receipt and invoice templates
 
 [Upgrade to MultiPOS Pro](https://devdiggers.com/product/multipos-point-of-sale-for-woocommerce/)
+
+== External services ==
+
+This plugin relies on the following third-party services provided by DevDiggers (https://devdiggers.com). These connections only happen inside the WordPress admin area and are described below so you know exactly what is sent, why, and when.
+
+**1. DevDiggers extensions directory**
+
+* What it is: A read-only API on devdiggers.com that returns the public list of DevDiggers WooCommerce extensions.
+* What it is used for: To display available DevDiggers extensions on the plugin's "Extensions" admin page.
+* When data is sent: Only when a logged-in administrator opens the "Extensions" admin page. The response is cached for 24 hours, so the request is not repeated on every page load.
+* What data is sent: A standard outbound HTTP request only (your server's IP address and a plugin user-agent string, as with any web request). No personal data and no store data are sent.
+* Endpoint: https://devdiggers.com/wp-json/ddwcs/v1/plugins
+
+**2. Newsletter subscription (optional)**
+
+* What it is: A contact/newsletter endpoint on devdiggers.com.
+* What it is used for: To add your email address to the DevDiggers newsletter, only if you explicitly choose to subscribe.
+* When data is sent: Only when an administrator submits the optional newsletter form in the plugin dashboard. Nothing is sent automatically.
+* What data is sent: The email address you enter and your site URL.
+* Endpoint: https://devdiggers.com/
+
+These services are provided by DevDiggers. By using them you agree to the DevDiggers Terms and Conditions (https://devdiggers.com/terms-and-conditions/) and Privacy Policy (https://devdiggers.com/privacy-policy/).
+
+== Source code and build tools ==
+
+The JavaScript and CSS shipped in this plugin are compiled with webpack. The complete, human-readable source code (including the POS React app, admin, login, dashboard and user-page scripts/styles, the bundled framework source, and all build configuration) is published in our public GitHub repository:
+
+https://github.com/DevDiggers-Technologies/multipos-for-woocommerce
+
+To rebuild the compiled assets from source:
+
+1. Clone the repository above and install Node.js (16+).
+2. Run `npm install` to install the build dependencies listed in `package.json`.
+3. Run `npm run build` to generate the production files in `assets/js/` and `assets/css/`.
+
+Build tools used: webpack, Babel, and the `@wordpress/*` script dependencies declared in `package.json`.
 
 == Installation ==
 

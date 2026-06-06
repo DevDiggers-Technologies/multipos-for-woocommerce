@@ -50,8 +50,6 @@ if ( ! class_exists( 'DDWCPOS_Admin_Hooks' ) ) {
 			add_action( "manage_{$order_screen_id}_custom_column", [ $this, 'ddwcpos_add_custom_woocommerce_orders_column_content' ], 10, 2 );
 
 			add_action( "manage_{$order_screen_id}_posts_custom_column", [ $this, 'ddwcpos_add_custom_woocommerce_orders_column_content' ], 10, 2 );
-
-			add_action( 'admin_notices', [ $this, 'ddwcpos_show_pro_upgrade_notice' ] );
 		}
 	}
 }

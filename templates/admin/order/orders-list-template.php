@@ -177,6 +177,7 @@ if ( ! class_exists( 'DDWCPOS_Orders_List_Template' ) ) {
 					 * @param string   $buyer Buyer name.
 					 * @param WC_Order $order Order data.
 					 */
+					// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- Reusing WooCommerce core filter for consistent buyer-name formatting.
 					$buyer = apply_filters( 'woocommerce_admin_order_buyer_name', $buyer, $order );
 
 					if ( 'trash' === $order->get_status() ) {
@@ -232,7 +233,8 @@ if ( ! class_exists( 'DDWCPOS_Orders_List_Template' ) ) {
 							human_time_diff( $order->get_date_created()->getTimestamp(), time() )
 						);
 					} else {
-						$show_date = $order->get_date_created()->date_i18n( apply_filters( 'woocommerce_admin_order_date_format', __( 'M j, Y', 'devdiggers-multipos-for-woocommerce' ) ) );
+						// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- Reusing WooCommerce core filter for consistent admin order date format.
+					$show_date = $order->get_date_created()->date_i18n( apply_filters( 'woocommerce_admin_order_date_format', __( 'M j, Y', 'devdiggers-multipos-for-woocommerce' ) ) );
 					}
 
 					$date = sprintf(

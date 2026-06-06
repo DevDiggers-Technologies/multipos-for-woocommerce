@@ -588,8 +588,7 @@ if ( ! class_exists( 'DDFW_Form_Field' ) ) {
 			if ( $args[ 'return' ] ) {
 				return $field;
 			} else {
-				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-				echo $field;
+				echo wp_kses( $field, ddfw_kses_allowed_form_html() );
 			}
 		}
 	}

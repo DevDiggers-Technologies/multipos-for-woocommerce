@@ -161,10 +161,18 @@ if ( ! class_exists( 'DDWCPOS_Outlet_Helper' ) ) {
 				return apply_filters( 'ddwcpos_modify_outlets_data', [], $ids );
 			}
 
-			$in_str_arr = array_fill( 0, count( $ids ), '%d' );
-			$in_str = join( ',', $in_str_arr );
+			$ids          = array_map( 'intval', $ids );
+			$placeholders = implode( ', ', array_fill( 0, count( $ids ), '%d' ) );
+			$params       = array_merge( $ids, [ 'enabled' ] );
 
-	            $data = $this->wpdb->get_results( $this->wpdb->prepare( "SELECT * FROM $this->outlet_table WHERE id IN ($in_str) AND status='enabled'", ...$ids ), ARRAY_A );
+			$data = $this->wpdb->get_results(
+				$this->wpdb->prepare(
+					// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Table name is a trusted internal property; $placeholders is only %d tokens and all values are bound via prepare().
+					"SELECT * FROM {$this->outlet_table} WHERE id IN ($placeholders) AND status = %s",
+					$params
+				),
+				ARRAY_A
+			);
 
 			return apply_filters( 'ddwcpos_modify_outlets_data', $data, $ids );
         }

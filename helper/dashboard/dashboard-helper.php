@@ -433,7 +433,7 @@ if ( ! class_exists( 'DDWCPOS_Dashboard_Helper' ) ) {
 
             foreach ( $raw_data as $outlet_id => $revenue ) {
                 // Fetch outlet name from custom table.
-                // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Custom table name is built from $wpdb->prefix and a static suffix.
+                // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- Custom table name is built from $wpdb->prefix and a static suffix.
                 $outlet_name = $wpdb->get_var( $wpdb->prepare( "SELECT name FROM {$outlet_table} WHERE id = %d", $outlet_id ) );
                 
                 $data[] = [

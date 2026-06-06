@@ -44,6 +44,15 @@ if ( ! class_exists( 'DDWCPOS_API_Save_Cashier' ) ) {
 			$cashier_id = intval( $request['cashier_id'] );
 			$cashier_data = $request['cashier_data'];
 
+			// A cashier may only update their own account. Editing another user requires the edit_users capability.
+			if ( get_current_user_id() !== $cashier_id && ! current_user_can( 'edit_user', $cashier_id ) ) {
+				return $this->error_response(
+					esc_html__( 'You are not allowed to edit this account.', 'devdiggers-multipos-for-woocommerce' ),
+					'cannot_edit_user',
+					403
+				);
+			}
+
 			// Validate user permissions
 			$user_validation = $this->validate_user_permissions( $cashier_id );
 			if ( is_wp_error( $user_validation ) ) {
@@ -183,6 +192,7 @@ if ( ! class_exists( 'DDWCPOS_API_Save_Cashier' ) ) {
 			// Re-authenticate user
 			wp_set_auth_cookie( $cashier_id );
 			wp_set_current_user( $cashier_id );
+			// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- Firing WordPress core login action so other plugins react to the re-authentication.
 			do_action( 'wp_login', $cashier_user->user_login, $cashier_user );
 
 			return true;

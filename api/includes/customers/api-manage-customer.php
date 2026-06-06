@@ -138,6 +138,24 @@ if ( ! class_exists( 'DDWCPOS_API_Manage_Customer' ) ) {
 					);
 				}
 
+				// Only POS customer accounts may be edited here, never a privileged account.
+				$existing_roles = (array) $existing_customer->roles;
+				if (
+					get_current_user_id() !== (int) $customer_id && (
+						in_array( 'administrator', $existing_roles, true ) ||
+						in_array( 'shop_manager', $existing_roles, true ) ||
+						user_can( $existing_customer, 'manage_woocommerce' ) ||
+						user_can( $existing_customer, 'edit_users' ) ||
+						! in_array( 'customer', $existing_roles, true )
+					)
+				) {
+					return $this->error_response(
+						esc_html__( 'This user cannot be edited from the point of sale.', 'devdiggers-multipos-for-woocommerce' ),
+						'not_a_customer',
+						403
+					);
+				}
+
 				// Update user data
 				$update_result = wp_update_user( [
 					'ID'         => $customer_id,

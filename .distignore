@@ -18,6 +18,10 @@ webpack.config.js
 babel.config.js
 *.tar.gz
 *.zip
+WPORG-FIX-STATUS.md
+
+# Source (src/) + build tooling are excluded from the zip. Human-readable source is
+# published at the public GitHub repo documented in readme.txt (WP.org guideline #4).
 
 # Operating System files
 .DS_Store

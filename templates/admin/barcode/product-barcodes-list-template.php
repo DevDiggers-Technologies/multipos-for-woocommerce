@@ -222,9 +222,7 @@ if ( ! class_exists( 'DDWCPOS_Product_Barcodes_List_Template' ) ) {
 						ob_start();
 						?>
 						<div class="ddwcpos-barcode-print-content">
-							<?php // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Barcode print markup is generated from escaped plugin markup and filter output.
-							echo $barcode_print_content;
-							?>
+							<?php echo wp_kses_post( $barcode_print_content ); ?>
 						</div>
 
 						<input type="number" min="1" class="ddwcpos-barcode-quantity ddwcpos-width-60" placeholder="<?php esc_attr_e( 'Quantity', 'devdiggers-multipos-for-woocommerce' ); ?>" />

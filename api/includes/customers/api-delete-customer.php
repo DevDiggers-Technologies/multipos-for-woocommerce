@@ -74,12 +74,37 @@ if ( ! class_exists( 'DDWCPOS_API_Delete_Customer' ) ) {
 		 */
 		protected function validate_customer_exists( $customer_id ) {
 			$customer = get_user_by( 'ID', $customer_id );
-			
+
 			if ( ! $customer ) {
 				return $this->error_response(
 					esc_html__( 'Customer not found', 'devdiggers-multipos-for-woocommerce' ),
 					'customer_not_found',
 					404
+				);
+			}
+
+			// Never allow deleting yourself or any privileged account through the POS endpoint.
+			if ( get_current_user_id() === (int) $customer_id ) {
+				return $this->error_response(
+					esc_html__( 'You cannot delete your own account.', 'devdiggers-multipos-for-woocommerce' ),
+					'cannot_delete_self',
+					403
+				);
+			}
+
+			$roles = (array) $customer->roles;
+
+			if (
+				in_array( 'administrator', $roles, true ) ||
+				in_array( 'shop_manager', $roles, true ) ||
+				user_can( $customer, 'manage_woocommerce' ) ||
+				user_can( $customer, 'edit_users' ) ||
+				! in_array( 'customer', $roles, true )
+			) {
+				return $this->error_response(
+					esc_html__( 'This user cannot be deleted from the point of sale.', 'devdiggers-multipos-for-woocommerce' ),
+					'not_a_customer',
+					403
 				);
 			}
 

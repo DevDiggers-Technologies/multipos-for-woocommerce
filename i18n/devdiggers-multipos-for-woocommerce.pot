@@ -1,0 +1,3652 @@
+# Copyright (C) 2026 DevDiggers
+# This file is distributed under the GNU General Public License v3.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: MultiPOS for WooCommerce 1.0.0\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/devdiggers-multipos-for-woocommerce\n"
+"POT-Creation-Date: 2026-06-05 12:56:57+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: api/includes/common/api-base-controller.php:112
+#. translators: %s: parameter name
+msgid "Missing required parameter: %s"
+msgstr ""
+
+#: api/includes/common/api-base-controller.php:172
+msgid "Request processed successfully"
+msgstr ""
+
+#: api/includes/common/api-base-controller.php:188
+msgid "An error occurred while processing your request"
+msgstr ""
+
+#: api/includes/common/api-base-controller.php:208
+msgid "Operation completed successfully"
+msgstr ""
+
+#: api/includes/common/api-base-controller.php:236
+msgid "Invalid user ID"
+msgstr ""
+
+#: api/includes/common/api-base-controller.php:255
+msgid "Insufficient permissions"
+msgstr ""
+
+#: api/includes/common/api-base-controller.php:275
+msgid "Invalid outlet ID"
+msgstr ""
+
+#: api/includes/common/api-base-controller.php:287
+msgid "This outlet is not available in the free version."
+msgstr ""
+
+#: api/includes/common/api-base-controller.php:297
+msgid "Outlet is disabled"
+msgstr ""
+
+#: api/includes/customers/api-delete-customer.php:80
+#: api/includes/customers/api-manage-customer.php:135
+msgid "Customer not found"
+msgstr ""
+
+#: api/includes/customers/api-delete-customer.php:104
+msgid "Cannot delete customer with existing orders"
+msgstr ""
+
+#: api/includes/customers/api-delete-customer.php:128
+msgid "Failed to delete customer"
+msgstr ""
+
+#: api/includes/customers/api-manage-customer.php:78
+msgid "Manage customer custom check error message."
+msgstr ""
+
+#: api/includes/customers/api-manage-customer.php:90
+msgid "Email is required"
+msgstr ""
+
+#: api/includes/customers/api-manage-customer.php:99
+msgid "Invalid email format"
+msgstr ""
+
+#: api/includes/customers/api-manage-customer.php:110
+msgid "Email already exists"
+msgstr ""
+
+#: api/includes/customers/api-manage-customer.php:194
+msgid "Customer updated successfully"
+msgstr ""
+
+#: api/includes/customers/api-manage-customer.php:276
+msgid "Customer created successfully"
+msgstr ""
+
+#: api/includes/misc/api-check-centralized-stock.php:65
+msgid "Cart data is required"
+msgstr ""
+
+#: api/includes/misc/api-check-centralized-stock.php:74
+msgid "Invalid JSON format in cart data"
+msgstr ""
+
+#: api/includes/misc/api-check-centralized-stock.php:82
+msgid "Cart data must be a non-empty array"
+msgstr ""
+
+#: api/includes/misc/api-coupon-check.php:59
+msgid "Invalid customer data"
+msgstr ""
+
+#: api/includes/misc/api-coupon-check.php:68
+msgid "Coupon code is required"
+msgstr ""
+
+#: api/includes/misc/api-coupon-check.php:78
+msgid "Invalid coupon code"
+msgstr ""
+
+#: api/includes/misc/api-coupon-check.php:96
+msgid "Coupon Applied Successfully"
+msgstr ""
+
+#: api/includes/misc/api-coupon-check.php:115
+msgid "Sorry, Coupon Expired. Try another one!"
+msgstr ""
+
+#: api/includes/misc/api-save-cashier.php:72
+msgid "Invalid cashier ID"
+msgstr ""
+
+#: api/includes/misc/api-save-cashier.php:80
+msgid "First name and last name are required"
+msgstr ""
+
+#: api/includes/misc/api-save-cashier.php:90
+msgid "Both current and new passwords are required for password change"
+msgstr ""
+
+#: api/includes/misc/api-save-cashier.php:98
+msgid "New password must be at least 6 characters long"
+msgstr ""
+
+#: api/includes/misc/api-save-cashier.php:130
+msgid "Your account details are saved successfully."
+msgstr ""
+
+#: api/includes/misc/api-save-cashier.php:165
+msgid "Cashier not found"
+msgstr ""
+
+#: api/includes/misc/api-save-cashier.php:174
+msgid "Your current password does not match, please enter the correct password."
+msgstr ""
+
+#: api/includes/orders/api-create-order.php:101
+msgid "Invalid JSON data in order_data"
+msgstr ""
+
+#: api/includes/orders/api-create-order.php:111
+msgid "Offline order sync is not available in the free version."
+msgstr ""
+
+#: api/includes/orders/api-create-order.php:118
+msgid "No order data provided"
+msgstr ""
+
+#: api/includes/orders/api-create-order.php:213
+msgid "Multiple payments are not available in the free version."
+msgstr ""
+
+#: api/includes/orders/api-create-order.php:226
+msgid "Selected payment method is not available."
+msgstr ""
+
+#: api/includes/orders/api-create-order.php:256
+msgid "Custom products are not available in the free version."
+msgstr ""
+
+#: api/includes/orders/api-create-order.php:266
+msgid "Only simple products are supported in the free version."
+msgstr ""
+
+#: api/includes/products/api-get-products.php:92
+msgid "Outlet data not found"
+msgstr ""
+
+#: api/includes/products/api-get-products.php:313
+#: api/includes/products/api-get-products.php:345
+#: templates/admin/stock/product-stocks-list-template.php:208
+#. translators: %s: Product stock quantity.
+#. translators: %s for product stock quantity
+#: assets/js/pos.js:30
+msgid "In Stock(%s)"
+msgstr ""
+
+#: api/includes/products/api-get-products.php:329
+#. translators: %s: Product stock quantity.
+#: assets/js/pos.js:21
+msgid "On Backorder(%s)"
+msgstr ""
+
+#: api/includes/products/api-get-products.php:335
+#: assets/js/pos.js:22
+msgid "On Backorder"
+msgstr ""
+
+#: api/includes/products/api-get-products.php:351
+#: templates/admin/stock/product-stocks-list-template.php:214
+#: assets/js/pos.js:31
+msgid "In Stock"
+msgstr ""
+
+#: api/includes/products/api-get-products.php:357
+#: templates/admin/stock/product-stocks-list-template.php:219
+msgid "Out of Stock"
+msgstr ""
+
+#: autoload/autoload.php:45
+#. translators: %s for File path.
+msgid "The file attempting to be loaded at %s does not exist."
+msgstr ""
+
+#: functions.php:103
+#. translators: %1$s for a opening tag and %2$s for a closing tag
+msgid ""
+"MultiPOS - Point of Sale for WooCommerce is activated but not effective. It "
+"requires %1$sWooCommerce Plugin%2$s in order to use its functionalities."
+msgstr ""
+
+#: functions.php:117
+msgid "MultiPOS - Point of Sale for WooCommerce"
+msgstr ""
+
+#: functions.php:134 includes/admin-dashboard.php:85
+msgid "Dashboard"
+msgstr ""
+
+#: functions.php:136 includes/admin-dashboard.php:130
+#: templates/admin/outlet/manage-outlet-template.php:325
+msgid "Configuration"
+msgstr ""
+
+#: functions.php:138
+msgid "Setup Wizard"
+msgstr ""
+
+#: functions.php:140
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: functions.php:157
+msgid "Support"
+msgstr ""
+
+#: functions.php:158
+msgid "Documentation"
+msgstr ""
+
+#: functions.php:159 includes/admin-dashboard.php:748
+msgid "Review"
+msgstr ""
+
+#: helper/dashboard/dashboard-helper.php:66
+#: templates/admin/dashboard/dashboard-template.php:143
+msgid "Today"
+msgstr ""
+
+#: helper/dashboard/dashboard-helper.php:71
+#: templates/admin/dashboard/dashboard-template.php:144
+msgid "This Week"
+msgstr ""
+
+#: helper/dashboard/dashboard-helper.php:76
+#: templates/admin/dashboard/dashboard-template.php:145
+msgid "Last Week"
+msgstr ""
+
+#: helper/dashboard/dashboard-helper.php:81
+#: templates/admin/dashboard/dashboard-template.php:146
+msgid "This Month"
+msgstr ""
+
+#: helper/dashboard/dashboard-helper.php:86
+#: templates/admin/dashboard/dashboard-template.php:147
+msgid "Last Month"
+msgstr ""
+
+#: helper/dashboard/dashboard-helper.php:91
+#: templates/admin/dashboard/dashboard-template.php:148
+msgid "Last 3 Months"
+msgstr ""
+
+#: helper/dashboard/dashboard-helper.php:96
+#: templates/admin/dashboard/dashboard-template.php:149
+msgid "Last 6 Months"
+msgstr ""
+
+#: helper/dashboard/dashboard-helper.php:101
+#: templates/admin/dashboard/dashboard-template.php:150
+msgid "Year to Date"
+msgstr ""
+
+#: helper/dashboard/dashboard-helper.php:106
+#: templates/admin/dashboard/dashboard-template.php:151
+msgid "Last Year"
+msgstr ""
+
+#: helper/dashboard/dashboard-helper.php:111
+#: templates/admin/dashboard/dashboard-template.php:152
+msgid "All Time"
+msgstr ""
+
+#: helper/dashboard/dashboard-helper.php:123
+msgid "Last 30 Days"
+msgstr ""
+
+#: helper/dashboard/dashboard-helper.php:293
+msgid "Guest"
+msgstr ""
+
+#: helper/dashboard/dashboard-helper.php:441
+#. translators: %d: Outlet ID.
+msgid "Outlet #%d"
+msgstr ""
+
+#: helper/dashboard/dashboard-helper.php:470
+msgid "Other"
+msgstr ""
+
+#: helper/invoice/invoice-helper.php:42
+msgid "Store Logo"
+msgstr ""
+
+#: helper/invoice/invoice-helper.php:43
+msgid "SALES RECEIPT"
+msgstr ""
+
+#: helper/invoice/invoice-helper.php:44
+#: templates/admin/dashboard/dashboard-template.php:275
+#: templates/admin/order/orders-list-template.php:36
+#: templates/admin/order/orders-list-template.php:296
+msgid "Order"
+msgstr ""
+
+#: helper/invoice/invoice-helper.php:45
+#: templates/admin/dashboard/dashboard-template.php:276
+#: templates/admin/outlet/outlets-list-template.php:302
+#: assets/js/pos.js:182
+msgid "Date"
+msgstr ""
+
+#: helper/invoice/invoice-helper.php:46
+msgid "Cashier"
+msgstr ""
+
+#: helper/invoice/invoice-helper.php:47
+#: templates/admin/dashboard/dashboard-template.php:277
+msgid "Customer"
+msgstr ""
+
+#: helper/invoice/invoice-helper.php:48
+msgid "Item Name"
+msgstr ""
+
+#: helper/invoice/invoice-helper.php:49
+msgid "Unit Price"
+msgstr ""
+
+#: helper/invoice/invoice-helper.php:50
+#: templates/admin/barcode/product-barcodes-list-template.php:230
+#: templates/admin/stock/product-stocks-list-template.php:229
+#: assets/js/pos.js:133
+msgid "Quantity"
+msgstr ""
+
+#: helper/invoice/invoice-helper.php:51
+msgid "Total Price"
+msgstr ""
+
+#: helper/invoice/invoice-helper.php:52
+msgid "%s Item(s) Sold"
+msgstr ""
+
+#: helper/invoice/invoice-helper.php:53
+msgid "Sub Total"
+msgstr ""
+
+#: helper/invoice/invoice-helper.php:54
+#: templates/admin/dashboard/dashboard-template.php:279
+#: assets/js/pos.js:387
+msgid "Total"
+msgstr ""
+
+#: helper/invoice/invoice-helper.php:55
+msgid "Refunded"
+msgstr ""
+
+#: helper/invoice/invoice-helper.php:56
+msgid "Total Tendered"
+msgstr ""
+
+#: helper/invoice/invoice-helper.php:57
+#: assets/js/pos.js:392
+#: assets/js/pos.js:365
+msgid "Change"
+msgstr ""
+
+#: helper/invoice/invoice-helper.php:58
+msgid "THANK YOU, HAVE A NICE DAY."
+msgstr ""
+
+#: helper/invoice/invoice-helper.php:59
+#: templates/admin/outlet/manage-outlet-template.php:305
+#: assets/js/pos.js:159
+msgid "Phone"
+msgstr ""
+
+#: helper/invoice/invoice-helper.php:60
+#: templates/admin/outlet/manage-outlet-template.php:314
+#: assets/js/pos.js:154
+#: assets/js/pos.js:86
+msgid "Email"
+msgstr ""
+
+#: helper/outlet/outlet-helper.php:304
+msgid "Grocery/Retail"
+msgstr ""
+
+#: helper/outlet/outlet-helper.php:305
+msgid "Restaurant/Cafe"
+msgstr ""
+
+#: includes/admin/admin-ajax-functions.php:48
+msgid "Barcode number editing is available in MultiPOS Pro."
+msgstr ""
+
+#: includes/admin/admin-ajax-functions.php:53
+msgid "Outlet-specific stock management is available in MultiPOS Pro."
+msgstr ""
+
+#: includes/admin/admin-ajax-functions.php:60
+#: includes/admin/admin-ajax-functions.php:74
+msgid "Security check failed!"
+msgstr ""
+
+#: includes/admin/admin-ajax-functions.php:78
+#: includes/admin/setup-wizard.php:346
+#: templates/admin/cashier/cashiers-list-template.php:264
+#: templates/admin/outlet/manage-outlet-template.php:96
+#: templates/admin/outlet/outlets-list-template.php:196
+#: templates/admin/outlet/outlets-list-template.php:248
+#: templates/admin/transaction/transactions-list-template.php:193
+#: templates/admin/transaction/transactions-list-template.php:253
+msgid "Insufficient permissions."
+msgstr ""
+
+#: includes/admin/admin-ajax-functions.php:86
+msgid "Invalid barcode data."
+msgstr ""
+
+#: includes/admin/admin-ajax-functions.php:124
+msgid "Could not generate barcode image."
+msgstr ""
+
+#: includes/admin/admin-functions.php:99 includes/globals-variables.php:55
+#: includes/globals-variables.php:63
+msgid "Cash"
+msgstr ""
+
+#: includes/admin/admin-functions.php:164 includes/globals-variables.php:82
+#: includes/globals-variables.php:91
+msgid "Default Invoice"
+msgstr ""
+
+#: includes/admin/admin-functions.php:197
+msgid ""
+"The free version supports one POS cashier. Upgrade to Pro to add more "
+"cashiers."
+msgstr ""
+
+#: includes/admin/admin-functions.php:202
+msgid "Please select the assigned outlets."
+msgstr ""
+
+#: includes/admin/admin-functions.php:257
+msgid "MultiPOS Outlet Details"
+msgstr ""
+
+#: includes/admin/admin-functions.php:258
+msgid "Assign specific store locations to this user for POS access."
+msgstr ""
+
+#: includes/admin/admin-functions.php:266
+#: templates/admin/cashier/cashiers-list-template.php:311
+msgid "Assigned Outlets"
+msgstr ""
+
+#: includes/admin/admin-functions.php:267
+msgid "(required)"
+msgstr ""
+
+#: includes/admin/admin-functions.php:272
+msgid "Select Outlet(s)"
+msgstr ""
+
+#: includes/admin/admin-functions.php:281
+msgid "The user will only be able to log in to the POS of the assigned outlets."
+msgstr ""
+
+#: includes/admin/admin-functions.php:344 includes/admin-dashboard.php:342
+#: templates/admin/outlet/outlets-list-template.php:165
+msgid "Visit POS"
+msgstr ""
+
+#: includes/admin/admin-functions.php:361
+msgid "Order Type"
+msgstr ""
+
+#: includes/admin/admin-functions.php:412
+#. translators: %1$s: opening strong tag, %2$s: closing strong tag, %3$s:
+#. opening anchor tag, %4$s: closing anchor tag
+msgid ""
+"Want to take your point of sale to the next level? %1$sUpgrade to MultiPOS "
+"Pro%2$s now to unlock advanced features like Unlimited Outlets & Cashiers, "
+"Custom Payment Methods, Assign Stock, Reports, and more! %3$sGet Pro "
+"Version &gt;%4$s"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:56 includes/admin-dashboard.php:72
+#: includes/admin-dashboard.php:78 templates/front/pos/layout.php:158
+#: assets/js/pos.js:89
+msgid "MultiPOS"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:57
+msgid ""
+"Welcome to MultiPOS - Point of Sale for WooCommerce! Let's get your POS "
+"system up and running in just a few steps."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:74
+msgid "Welcome"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:78 includes/admin-dashboard.php:134
+#: templates/admin/configuration/general-configuration-template.php:33
+msgid "General"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:79
+msgid "Plugin Status & Inventory"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:80
+msgid ""
+"Manage the core status of your POS system and define how inventory should "
+"be tracked across your registers."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:85
+#: assets/js/pos.js:12
+msgid "Checkout"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:86
+#: templates/admin/configuration/general-configuration-template.php:97
+msgid "Checkout Features"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:87
+msgid "Configure specialized functionalities available during the checkout process."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:92 includes/admin-dashboard.php:188
+msgid "Layout"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:93
+msgid "Aesthetics & Display"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:94
+msgid "Customize the visual identity and product presentation of your POS terminal."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:99
+#: templates/admin/configuration/general-configuration-template.php:229
+#: assets/js/pos.js:74
+#: assets/js/pos.js:183
+#: assets/js/pos.js:6
+msgid "Customers"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:100
+msgid "Customer Preferences"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:101
+msgid "Manage how customers and guest shoppers are handled at the point of sale."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:106
+msgid "Ready!"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:107
+msgid "Your POS system is ready to go!"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:108
+msgid ""
+"You can now create outlets, assign cashiers, and start processing orders. "
+"Visit the Configuration page anytime to adjust these settings."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:137
+msgid "Welcome to MultiPOS!"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:139
+msgid ""
+"Let's quickly set up your Point of Sale system so you can start selling in "
+"your physical store. This wizard will guide you through the essential "
+"settings."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:159
+#: templates/admin/configuration/general-configuration-template.php:39
+msgid "Plugin Status"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:160
+#: templates/admin/configuration/general-configuration-template.php:40
+msgid "Enable Point of Sale System"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:161
+msgid ""
+"Turn on or off the complete Point of Sale functionality across your entire "
+"WordPress site."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:168
+#: templates/admin/configuration/general-configuration-template.php:62
+msgid "Initial Order Status"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:169
+msgid ""
+"Select the initial status applied to all orders processed through the POS "
+"interface."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:177
+#: templates/admin/configuration/general-configuration-template.php:83
+msgid "Barcode Synchronization"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:178
+msgid ""
+"Select which product property should be used to synchronize and generate "
+"barcodes for your store items."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:180
+#: templates/admin/configuration/general-configuration-template.php:86
+msgid "Use Product ID"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:181
+#: templates/admin/configuration/general-configuration-template.php:87
+msgid "Use Product SKU"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:189
+#: templates/admin/configuration/general-configuration-template.php:286
+msgid "POS Terminal URL Path"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:190
+msgid ""
+"Define the custom URL slug for your point of sale front-end terminal (e.g., "
+"yoursite.com/pos)."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:221
+#: templates/admin/configuration/general-configuration-template.php:103
+msgid "Order Notifications"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:222
+#: templates/admin/configuration/general-configuration-template.php:104
+msgid "Enable Automated Order Mails"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:223
+msgid ""
+"Automatically trigger standard WooCommerce order emails for both admin and "
+"customers upon POS checkout."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:254
+#: templates/admin/configuration/general-configuration-template.php:219
+msgid "POS Terminal Branding Logo"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:255
+msgid ""
+"This logo will appear on receipts and the administrative dashboard. Ideal "
+"size: 200x60 pixels."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:263
+#: templates/admin/configuration/layout-configuration-template.php:35
+msgid "Primary Brand Color"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:264
+msgid ""
+"Main color used for active states, buttons, and top-level navigation "
+"gradients."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:271
+#: templates/admin/configuration/layout-configuration-template.php:143
+msgid "Product Card Orientation"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:272
+msgid ""
+"Determine the visual stack of product images and their descriptive text "
+"metadata."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:274
+#: templates/admin/configuration/layout-configuration-template.php:146
+msgid "Horizontal (Image Left, Text Right)"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:275
+#: templates/admin/configuration/layout-configuration-template.php:147
+msgid "Vertical (Image Top, Text Bottom)"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:283
+#: templates/admin/configuration/layout-configuration-template.php:190
+msgid "Real-time Stock Indicators"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:284
+#: templates/admin/configuration/layout-configuration-template.php:191
+msgid "Display Current Stock Count"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:285
+msgid ""
+"If enabled, numeric stock availability indicators will be displayed on "
+"every product card."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:316
+#: templates/admin/configuration/general-configuration-template.php:235
+msgid "Default Guest Account"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:317
+msgid ""
+"Select a WordPress user account to represent all guest/anonymous "
+"transactions."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:322
+#: templates/admin/configuration/general-configuration-template.php:240
+msgid "Search for a customer..."
+msgstr ""
+
+#: includes/admin-dashboard.php:77
+msgid "MultiPOS - Point of Sale"
+msgstr ""
+
+#: includes/admin-dashboard.php:90 includes/admin-dashboard.php:325
+msgid "Outlets"
+msgstr ""
+
+#: includes/admin-dashboard.php:95 includes/admin-dashboard.php:382
+#: templates/admin/dashboard/dashboard-template.php:212
+msgid "Cashiers"
+msgstr ""
+
+#: includes/admin-dashboard.php:100
+msgid "Assign Barcodes"
+msgstr ""
+
+#: includes/admin-dashboard.php:105
+#: templates/admin/outlet/outlets-list-template.php:166
+msgid "Assign Stocks"
+msgstr ""
+
+#: includes/admin-dashboard.php:110 includes/admin-dashboard.php:526
+#: templates/admin/dashboard/dashboard-template.php:82
+#: templates/admin/order/orders-list-template.php:37
+#: assets/js/pos.js:91
+#: assets/js/pos.js:8
+msgid "Orders"
+msgstr ""
+
+#: includes/admin-dashboard.php:115
+msgid "Reports"
+msgstr ""
+
+#: includes/admin-dashboard.php:120 includes/admin-dashboard.php:559
+msgid "Transactions"
+msgstr ""
+
+#: includes/admin-dashboard.php:125
+msgid "Invoices"
+msgstr ""
+
+#: includes/admin-dashboard.php:143
+#: templates/admin/configuration/payments-configuration-template.php:111
+msgid "Payments"
+msgstr ""
+
+#: includes/admin-dashboard.php:152
+msgid "Login"
+msgstr ""
+
+#: includes/admin-dashboard.php:161
+msgid "Printer"
+msgstr ""
+
+#: includes/admin-dashboard.php:170
+msgid "PWA"
+msgstr ""
+
+#: includes/admin-dashboard.php:179
+#: templates/admin/configuration/tables-configuration-template.php:110
+#: assets/js/pos.js:83
+#: assets/js/pos.js:7
+msgid "Tables"
+msgstr ""
+
+#: includes/admin-dashboard.php:215
+msgid "Results Per Page"
+msgstr ""
+
+#: includes/admin-dashboard.php:268
+msgid "Advanced POS Reports in One Place"
+msgstr ""
+
+#: includes/admin-dashboard.php:269
+msgid ""
+"Upgrade to Pro to unlock easy-to-read sales, order, product, coupon, and "
+"tax reports for your store."
+msgstr ""
+
+#: includes/admin-dashboard.php:271
+msgid "Sales and revenue summaries with date filters"
+msgstr ""
+
+#: includes/admin-dashboard.php:272
+msgid "Product performance and stock insights"
+msgstr ""
+
+#: includes/admin-dashboard.php:273
+msgid "Coupon usage and discount tracking"
+msgstr ""
+
+#: includes/admin-dashboard.php:274
+msgid "Outlet-level order and sales reports"
+msgstr ""
+
+#: includes/admin-dashboard.php:275
+msgid "Tax totals and easy summary views"
+msgstr ""
+
+#: includes/admin-dashboard.php:276
+msgid "POS analytics with outlet breakdowns"
+msgstr ""
+
+#: includes/admin-dashboard.php:297
+msgid "Manage Unlimited Outlets"
+msgstr ""
+
+#: includes/admin-dashboard.php:298
+msgid ""
+"The free version allows only one outlet. Upgrade to Pro to add more "
+"locations, registers, and outlet-specific settings."
+msgstr ""
+
+#: includes/admin-dashboard.php:300
+msgid "Create unlimited POS outlets"
+msgstr ""
+
+#: includes/admin-dashboard.php:301
+msgid "Assign multiple cashiers for multiple outlets"
+msgstr ""
+
+#: includes/admin-dashboard.php:302
+msgid "Set stock and settings per location"
+msgstr ""
+
+#: includes/admin-dashboard.php:303
+msgid "Enable offline mode with Custom (Manual POS Stock) management"
+msgstr ""
+
+#: includes/admin-dashboard.php:304
+msgid "Design different invoices for different outlets."
+msgstr ""
+
+#: includes/admin-dashboard.php:305
+msgid "Add more custom payment options for outlets."
+msgstr ""
+
+#: includes/admin-dashboard.php:314
+msgid "Outlet saved successfully."
+msgstr ""
+
+#: includes/admin-dashboard.php:334 includes/admin-dashboard.php:339
+#: includes/admin-dashboard.php:391 includes/admin-dashboard.php:395
+#: includes/admin-dashboard.php:432 includes/admin-dashboard.php:471
+#: assets/js/pos.js:186
+msgid "Add New"
+msgstr ""
+
+#: includes/admin-dashboard.php:349 includes/admin-dashboard.php:403
+#: includes/admin-dashboard.php:441 includes/admin-dashboard.php:481
+#: includes/admin-dashboard.php:534 includes/admin-dashboard.php:570
+msgid "Search"
+msgstr ""
+
+#: includes/admin-dashboard.php:364
+msgid "Cashier created successfully."
+msgstr ""
+
+#: includes/admin-dashboard.php:424 includes/admin-dashboard.php:463
+#: assets/js/pos.js:494
+msgid "Products"
+msgstr ""
+
+#: includes/admin-dashboard.php:497
+msgid "Assign/Track Stock by Outlet"
+msgstr ""
+
+#: includes/admin-dashboard.php:498
+msgid ""
+"Upgrade to Pro to manage inventory separately for each outlet and keep "
+"stock levels accurate across all locations."
+msgstr ""
+
+#: includes/admin-dashboard.php:500
+msgid "Set stock levels for each outlet"
+msgstr ""
+
+#: includes/admin-dashboard.php:501
+msgid "Use custom outlet stock or central WooCommerce inventory"
+msgstr ""
+
+#: includes/admin-dashboard.php:502
+msgid "Show only available products per location"
+msgstr ""
+
+#: includes/admin-dashboard.php:503
+msgid "Keep inventory accurate across multiple stores"
+msgstr ""
+
+#: includes/admin-dashboard.php:504
+msgid "Bulk stock updates using CSV import"
+msgstr ""
+
+#: includes/admin-dashboard.php:685
+msgid "Please enter"
+msgstr ""
+
+#: includes/admin-dashboard.php:686
+msgid "or more character"
+msgstr ""
+
+#: includes/admin-dashboard.php:687
+msgid "No result Found"
+msgstr ""
+
+#: includes/admin-dashboard.php:688
+msgid "Upload Icon"
+msgstr ""
+
+#: includes/admin-dashboard.php:689
+msgid "Barcode field is empty."
+msgstr ""
+
+#: includes/admin-dashboard.php:690
+msgid "Barcode quantity field is empty."
+msgstr ""
+
+#: includes/admin-dashboard.php:691
+msgid "Custom stock value is invalid."
+msgstr ""
+
+#: includes/admin-dashboard.php:748
+#. translators: %s for a tag
+msgid ""
+"If you really like our plugin, please leave us a %s rating, we'll really "
+"appreciate it."
+msgstr ""
+
+#: includes/globals-variables.php:112
+msgid "Point of Sale"
+msgstr ""
+
+#: includes/globals-variables.php:113
+msgid "POS"
+msgstr ""
+
+#: includes/globals-variables.php:114
+msgid "A Progressive Web App for Point of Sale"
+msgstr ""
+
+#: includes/globals-variables.php:117
+msgid "Welcome to Point of Sale"
+msgstr ""
+
+#: includes/globals-variables.php:118
+msgid "Access your point of sale terminal to manage orders and retail operations."
+msgstr ""
+
+#: includes/globals-variables.php:119
+msgid "Thanks for using the Point of Sale"
+msgstr ""
+
+#: includes/globals-variables.php:120
+msgid "Log in"
+msgstr ""
+
+#: templates/admin/barcode/product-barcodes-list-template.php:43
+#: templates/admin/stock/product-stocks-list-template.php:62
+msgid "Product List"
+msgstr ""
+
+#: templates/admin/barcode/product-barcodes-list-template.php:44
+#: templates/admin/stock/product-stocks-list-template.php:63
+msgid "Products List"
+msgstr ""
+
+#: templates/admin/barcode/product-barcodes-list-template.php:185
+#: templates/admin/stock/product-stocks-list-template.php:190
+msgid "Simple"
+msgstr ""
+
+#: templates/admin/barcode/product-barcodes-list-template.php:195
+#: templates/admin/stock/product-stocks-list-template.php:230
+#: assets/js/pos.js:145
+msgid "Update"
+msgstr ""
+
+#: templates/admin/barcode/product-barcodes-list-template.php:212
+#: templates/admin/barcode/product-barcodes-list-template.php:218
+msgid "Barcode"
+msgstr ""
+
+#: templates/admin/barcode/product-barcodes-list-template.php:231
+#: assets/js/pos.js:271
+msgid "Print"
+msgstr ""
+
+#: templates/admin/barcode/product-barcodes-list-template.php:262
+#: templates/admin/stock/product-stocks-list-template.php:264
+msgid "No products avaliable."
+msgstr ""
+
+#: templates/admin/barcode/product-barcodes-list-template.php:281
+#: templates/admin/stock/product-stocks-list-template.php:283
+msgid "Product"
+msgstr ""
+
+#: templates/admin/barcode/product-barcodes-list-template.php:282
+msgid "Barcode Management"
+msgstr ""
+
+#: templates/admin/barcode/product-barcodes-list-template.php:322
+#: templates/admin/cashier/cashiers-list-template.php:366
+#: templates/admin/outlet/outlets-list-template.php:366
+#: templates/admin/stock/product-stocks-list-template.php:318
+msgid "Edit"
+msgstr ""
+
+#: templates/admin/barcode/product-barcodes-list-template.php:323
+#: templates/admin/stock/product-stocks-list-template.php:319
+msgid "View"
+msgstr ""
+
+#: templates/admin/barcode/product-barcodes-list-template.php:368
+msgid "Barcode Number"
+msgstr ""
+
+#: templates/admin/barcode/product-barcodes-list-template.php:371
+msgid "Print Label"
+msgstr ""
+
+#: templates/admin/cashier/cashiers-list-template.php:31
+msgid "Cashier List"
+msgstr ""
+
+#: templates/admin/cashier/cashiers-list-template.php:32
+msgid "Cashiers List"
+msgstr ""
+
+#: templates/admin/cashier/cashiers-list-template.php:174
+msgid "All Outlets"
+msgstr ""
+
+#: templates/admin/cashier/cashiers-list-template.php:231
+#. translators: %d: Number of cashiers deleted.
+msgid "%d cashier(s) deleted successfully."
+msgstr ""
+
+#: templates/admin/cashier/cashiers-list-template.php:237
+#. translators: %d: Number of cashiers not found.
+msgid "%d cashier(s) not exists."
+msgstr ""
+
+#: templates/admin/cashier/cashiers-list-template.php:242
+msgid "Select cashier(s) to delete."
+msgstr ""
+
+#: templates/admin/cashier/cashiers-list-template.php:271
+msgid "Cashier is deleted successfully."
+msgstr ""
+
+#: templates/admin/cashier/cashiers-list-template.php:274
+msgid "Cashier not exists."
+msgstr ""
+
+#: templates/admin/cashier/cashiers-list-template.php:288
+msgid "No cashiers avaliable."
+msgstr ""
+
+#: templates/admin/cashier/cashiers-list-template.php:308
+#: templates/admin/outlet/outlets-list-template.php:299
+msgid "ID"
+msgstr ""
+
+#: templates/admin/cashier/cashiers-list-template.php:309
+msgid "Username"
+msgstr ""
+
+#: templates/admin/cashier/cashiers-list-template.php:310
+msgid "Role"
+msgstr ""
+
+#: templates/admin/cashier/cashiers-list-template.php:367
+#: templates/admin/cashier/cashiers-list-template.php:390
+#: templates/admin/outlet/outlets-list-template.php:367
+#: templates/admin/outlet/outlets-list-template.php:421
+#: templates/admin/transaction/transactions-list-template.php:361
+#: templates/admin/transaction/transactions-list-template.php:458
+#: assets/js/pos.js:312
+msgid "Delete"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:34
+msgid ""
+"Turn POS features on, choose how stock works, and set core behavior for "
+"your registers."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:41
+msgid "Turn POS on or off for this site."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:47
+#: templates/admin/outlet/manage-outlet-template.php:226
+msgid "Inventory Management"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:48
+msgid ""
+"Choose \"Centralized\" to sync directly with WooCommerce stock, or "
+"\"Custom\" for manual stock levels independent of your online store."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:50
+msgid "Centralized (Sync with WooCommerce)"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:63
+msgid "Choose default status for new POS orders."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:71
+msgid "Order Status Visibility"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:72
+msgid "Show Current Order Status in Orders"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:73
+msgid "Display each order status badge in the POS Orders list. Available in Pro."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:84
+msgid "Choose whether barcodes use product ID or SKU."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:98
+msgid "Control checkout options your cashiers can use in POS."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:105
+msgid "Send WooCommerce order emails after POS checkout."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:111
+msgid "Multi-Payment Support"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:112
+msgid "Enable Split/Multiple Payments"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:113
+msgid "Let cashiers split payment across multiple methods."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:123
+msgid "Customer & Order Notes"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:124
+msgid "Allow Order Notes"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:125
+msgid "Let cashiers add notes during checkout."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:134
+msgid "Offline Order Resilience"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:135
+msgid "Enable Fast Offline-Online Sync"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:136
+msgid "Let POS save orders offline and sync them when connection comes back."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:146
+msgid "Custom Product Entries"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:147
+msgid "Allow Adding Custom Products"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:148
+msgid "Let cashiers add custom items not saved in product catalog."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:157
+msgid "Cash Management"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:158
+msgid "Enable Cash Drawer Popup"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:159
+msgid "Show prompt when cash drawer opens so staff can record it."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:169
+msgid "Calculated Unit Pricing"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:170
+msgid "Enable Weight-Based Pricing"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:171
+msgid "Update price by weight while adding weighted items."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:183
+msgid "Kitchen"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:184
+msgid "Restaurant and kitchen options for food service workflows. Available in Pro."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:189
+msgid "Automatic Kitchen Routing"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:190
+msgid "Auto-Send Held Orders to Kitchen"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:191
+msgid "Send held orders to kitchen automatically."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:200
+msgid "Workflow Defaults"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:201
+msgid "Default Print to Kitchen Checked"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:202
+msgid "Keep \"Send to Kitchen\" checked by default at payment."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:213
+msgid "Branding"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:214
+msgid "Set logo used across POS admin and receipts."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:220
+msgid "Shown on receipts and POS admin screens. Recommended size: 200x60 pixels."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:230
+msgid "Choose how POS handles guest and saved customers."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:236
+msgid "Choose user account used for guest orders."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:246
+msgid "Restricted Customer Logic"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:247
+msgid "Strict Guest-Only Mode"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:248
+msgid "Use guest account for every order and hide customer search."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:257
+msgid "Post-Checkout Cart Behavior"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:258
+msgid "Reset Customer After Checkout"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:259
+msgid "Clear selected customer after checkout completes."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:270
+msgid "Advanced"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:271
+msgid "Set performance limits and POS URLs."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:276
+msgid "Order Sync Threshold"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:277
+msgid "Load only recent orders to keep POS fast."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:287
+msgid "Choose URL path for POS screen, like /pos."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:293
+msgid "Kitchen Display URL Path"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:294
+msgid "Choose URL path for kitchen screen, like /kitchen."
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:29
+msgid "Colors"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:30
+msgid "Choose colors used across POS screens and buttons."
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:36
+msgid "Main color for active states and primary buttons."
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:42
+msgid "Secondary Brand Color"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:43
+msgid "Secondary color used in gradients and highlights."
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:49
+msgid "Primary Text Color"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:50
+msgid "Main text color across POS."
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:56
+msgid "Surface Color"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:57
+msgid "Background color for cards, panels, and inputs."
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:63
+msgid "Muted Background Color 1"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:64
+msgid "Muted background for smaller secondary elements."
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:70
+msgid "Muted Background Color 2"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:71
+msgid "Muted background for larger secondary sections."
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:77
+msgid "Button Text Color"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:78
+msgid "Text and icon color on primary buttons."
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:84
+msgid "Border Color"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:85
+msgid "Default border color for cards, inputs, and sections."
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:91
+msgid "Success Color"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:92
+msgid "Color used for success states and positive amounts."
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:100
+msgid "Typography"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:101
+msgid "Set font style and size for POS screens."
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:106
+msgid "POS Font Family"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:107
+msgid "Choose font used in POS only."
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:109
+msgid "Open Sans"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:110
+msgid "Poppins"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:111
+msgid "Lato"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:112
+msgid "Montserrat"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:113
+msgid "Nunito"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:121
+msgid "Base Font Size"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:122
+msgid "Base font size in pixels."
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:128
+msgid "Global Corner Radius"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:129
+msgid "Corner radius in pixels for buttons, inputs, and cards."
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:137
+msgid "Product Display"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:138
+msgid "Choose how products and variations appear to cashiers."
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:144
+msgid "Choose whether product image sits left or top."
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:155
+msgid "Variation Picker Style"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:156
+msgid "Choose how cashiers pick variation options."
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:158
+msgid "Inline Grid (High Efficiency)"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:159
+msgid "Modal Popup (Clean Design)"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:173
+msgid "Product Details"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:174
+msgid "Choose which product details stay visible in grid."
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:179
+msgid "Individual Variation Display"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:180
+msgid "Show Variations as Individual Items"
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:181
+msgid "Turn off to group variations under parent product."
+msgstr ""
+
+#: templates/admin/configuration/layout-configuration-template.php:192
+msgid "Show stock count on each product card."
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:29
+msgid "Login Text"
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:30
+msgid "Edit text shown on POS login screen."
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:35
+msgid "Welcome Heading"
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:36
+msgid "Main title at top of login screen."
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:42
+msgid "Welcome Subtitle"
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:43
+msgid "Short line shown below heading."
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:49
+msgid "Footer"
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:50
+msgid "Text shown at bottom of login screen."
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:56
+msgid "Log in Button Label"
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:57
+msgid "Text shown on main login button."
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:63
+msgid "MultiPOS Branding"
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:64
+msgid "Show MultiPOS branding link"
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:65
+msgid "Display the MultiPOS product link on the POS login screen."
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:78
+msgid "Login Access"
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:79
+msgid "Choose login and session options for cashiers."
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:84
+msgid "Extended Session Access"
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:85
+msgid "Enable \"Remember Me\" Option"
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:86
+msgid "Let cashiers stay signed in on trusted devices."
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:92
+msgid "Password Recovery"
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:93
+msgid "Enable Forgot Password Flow"
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:94
+msgid "Show forgot password link on login screen."
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:102
+msgid "Login Colors"
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:103
+msgid "Set colors used on login screen."
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:108
+msgid "Mesh Gradient (Color 1)"
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:109
+msgid "Main background accent color."
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:115
+msgid "Mesh Gradient (Color 2)"
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:116
+msgid "Second background accent color."
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:122
+msgid "Canvas Base Color"
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:123
+msgid "Base color for full login page."
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:129
+msgid "Card Backdrop Color"
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:130
+msgid "Background color for login card."
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:136
+msgid "Font Color"
+msgstr ""
+
+#: templates/admin/configuration/login-configuration-template.php:137
+msgid "Text color for headings and labels."
+msgstr ""
+
+#: templates/admin/configuration/payments-configuration-template.php:32
+msgid "Payment Method Label"
+msgstr ""
+
+#: templates/admin/configuration/payments-configuration-template.php:33
+#: templates/admin/configuration/tables-configuration-template.php:33
+msgid "Unique Slug"
+msgstr ""
+
+#: templates/admin/configuration/payments-configuration-template.php:34
+msgid "Enable/Disable Status"
+msgstr ""
+
+#: templates/admin/configuration/payments-configuration-template.php:51
+#: templates/admin/configuration/payments-configuration-template.php:89
+#: templates/admin/configuration/tables-configuration-template.php:54
+#: templates/admin/configuration/tables-configuration-template.php:88
+msgid "Select Status"
+msgstr ""
+
+#: templates/admin/configuration/payments-configuration-template.php:52
+#: templates/admin/configuration/payments-configuration-template.php:90
+#: templates/admin/configuration/tables-configuration-template.php:55
+#: templates/admin/configuration/tables-configuration-template.php:89
+#: templates/admin/invoices/invoices-template.php:82
+#: templates/admin/invoices/invoices-template.php:96
+#: templates/admin/outlet/manage-outlet-template.php:374
+#: templates/admin/outlet/outlets-list-template.php:155
+msgid "Active"
+msgstr ""
+
+#: templates/admin/configuration/payments-configuration-template.php:53
+#: templates/admin/configuration/payments-configuration-template.php:91
+#: templates/admin/configuration/tables-configuration-template.php:56
+#: templates/admin/configuration/tables-configuration-template.php:90
+#: templates/admin/outlet/manage-outlet-template.php:375
+#: templates/admin/outlet/outlets-list-template.php:155
+msgid "Inactive"
+msgstr ""
+
+#: templates/admin/configuration/payments-configuration-template.php:58
+#: templates/admin/configuration/payments-configuration-template.php:93
+#: templates/admin/configuration/tables-configuration-template.php:58
+#: templates/admin/configuration/tables-configuration-template.php:92
+msgid "Remove"
+msgstr ""
+
+#: templates/admin/configuration/payments-configuration-template.php:70
+msgid "Register Custom Method"
+msgstr ""
+
+#: templates/admin/configuration/payments-configuration-template.php:101
+msgid "Some fields are missing or contain invalid formats."
+msgstr ""
+
+#: templates/admin/configuration/payments-configuration-template.php:112
+msgid "Add, edit, and enable payment methods available in POS."
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:29
+msgid "Barcode Paper"
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:30
+msgid "Set paper size for barcode labels."
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:35
+msgid "Page Width"
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:36
+msgid "Label width in millimeters."
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:42
+msgid "Page Height"
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:43
+msgid "Label height in millimeters. Use 0 for continuous rolls."
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:49
+msgid "Page Margins"
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:50
+msgid "Label margins in millimeters."
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:58
+msgid "Barcode Layout"
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:59
+msgid "Set barcode size and spacing."
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:64
+msgid "Generated Barcode Height"
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:65
+msgid "Barcode height in millimeters."
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:71
+msgid "Unit Spacing Offset"
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:72
+msgid "Space between barcodes in millimeters."
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:78
+msgid "Print Output Orientation"
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:79
+msgid "Choose barcode print direction."
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:81
+msgid "Vertical (Portrait)"
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:82
+msgid "Horizontal (Landscape)"
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:92
+#: assets/js/pos.js:115
+msgid "Receipt Size"
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:93
+msgid "Set default size for printed receipts."
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:98
+msgid "Thermal Roll Width"
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:99
+msgid "Receipt width in millimeters, like 80 or 58."
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:105
+msgid "Thermal Content Height"
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:106
+msgid "Receipt height in millimeters. Leave empty for automatic height."
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:112
+msgid "Safe Content Margins"
+msgstr ""
+
+#: templates/admin/configuration/printer-configuration-template.php:113
+msgid "Receipt margins in millimeters to keep text from clipping."
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:36
+msgid "App Details"
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:37
+msgid "Set app name and details used when POS is installed as PWA."
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:42
+msgid "Full Application Name"
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:43
+msgid "Shown on splash screen and install prompts."
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:51
+msgid "Interface Short Name"
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:52
+msgid "Short name shown under app icon."
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:60
+msgid "App Description"
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:61
+msgid "Short description of your POS app."
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:72
+msgid "App Colors"
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:73
+msgid "Choose colors used by device when PWA opens."
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:78
+msgid "OS Theme Color"
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:79
+msgid "Color used for browser and device bars."
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:87
+msgid "Splash Background"
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:88
+msgid "Background color for splash screen."
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:99
+msgid "App Icons"
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:100
+msgid "Upload app icons for different screen sizes."
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:105
+msgid "Standard UI Asset (48x48)"
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:106
+msgid "Small icon for simple UI use."
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:113
+msgid "Desktop Asset (96x96)"
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:114
+msgid "Used in browser tabs and desktop shortcuts."
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:121
+msgid "High-Density Asset (144x144)"
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:122
+msgid "Used on sharper mobile and laptop screens."
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:129
+msgid "Enhanced Resolution Asset (196x196)"
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:130
+msgid "Used where larger app icon is needed."
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:137
+msgid "Master Branding Asset (512x512)"
+msgstr ""
+
+#: templates/admin/configuration/pwa-configuration-template.php:138
+msgid "Largest app icon used for splash and install screens."
+msgstr ""
+
+#: templates/admin/configuration/tables-configuration-template.php:32
+msgid "Identification Name"
+msgstr ""
+
+#: templates/admin/configuration/tables-configuration-template.php:34
+msgid "Seating Capacity"
+msgstr ""
+
+#: templates/admin/configuration/tables-configuration-template.php:35
+#: templates/admin/dashboard/dashboard-template.php:278
+#: templates/admin/outlet/outlets-list-template.php:303
+msgid "Status"
+msgstr ""
+
+#: templates/admin/configuration/tables-configuration-template.php:67
+msgid "Add Guest Table"
+msgstr ""
+
+#: templates/admin/configuration/tables-configuration-template.php:100
+msgid "Required table attributes are missing or invalid."
+msgstr ""
+
+#: templates/admin/configuration/tables-configuration-template.php:111
+msgid "Add and manage tables available in restaurant POS."
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:81
+#: templates/admin/order/orders-list-template.php:298
+msgid "Revenue"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:83
+msgid "Outlets Breakdown"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:84
+#: templates/admin/dashboard/dashboard-template.php:258
+#: templates/admin/outlet/manage-outlet-template.php:331
+msgid "Payment Methods"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:85
+msgid "No data available"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:108
+#. translators: %s: Current user's display name.
+msgid "Welcome back, %s! 👋🏻"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:111
+msgid "Here's what's happening with your POS stores."
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:141
+msgid "Quick Select"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:157
+msgid "Custom Range"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:161
+msgid "From"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:165
+msgid "To"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:169
+msgid "Apply"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:187
+msgid "Total Orders"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:195
+msgid "Total Revenue"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:204
+msgid "Active Outlets"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:220
+#: assets/js/pos.js:393
+#: assets/js/pos.js:383
+msgid "N/A"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:222
+msgid "Top Payment"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:237
+msgid "Revenue Overview"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:249
+msgid "Sales by Outlet"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:271
+msgid "Recent POS Orders"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:295
+msgid "No recent orders found."
+msgstr ""
+
+#: templates/admin/invoices/invoices-template.php:52
+msgid "Customize Invoice Templates"
+msgstr ""
+
+#: templates/admin/invoices/invoices-template.php:53
+msgid ""
+"Upgrade to Pro to edit receipt HTML, style custom CSS, restore factory "
+"templates, and create multiple invoice layouts."
+msgstr ""
+
+#: templates/admin/invoices/invoices-template.php:55
+msgid "Visual receipt editor with HTML source mode"
+msgstr ""
+
+#: templates/admin/invoices/invoices-template.php:56
+msgid "Custom CSS for branded receipt styling"
+msgstr ""
+
+#: templates/admin/invoices/invoices-template.php:57
+msgid "Multiple invoice templates for different outlets"
+msgstr ""
+
+#: templates/admin/invoices/invoices-template.php:58
+msgid "Restore factory template controls"
+msgstr ""
+
+#: templates/admin/invoices/invoices-template.php:89
+msgid "Template Name"
+msgstr ""
+
+#: templates/admin/invoices/invoices-template.php:103
+msgid "Customize"
+msgstr ""
+
+#: templates/admin/invoices/invoices-template.php:111
+msgid "Create New Template"
+msgstr ""
+
+#: templates/admin/invoices/invoices-template.php:122
+msgid "Invoice Templates"
+msgstr ""
+
+#: templates/admin/invoices/invoices-template.php:123
+msgid ""
+"Free uses one fixed, translatable receipt template. Receipt customization "
+"and extra templates are available in Pro."
+msgstr ""
+
+#: templates/admin/order/orders-list-template.php:207
+#. translators: %d: notes count
+msgid "Plus %d other note"
+msgid_plural "Plus %d other notes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/admin/order/orders-list-template.php:210
+#. translators: %d: notes count
+msgid "%d note"
+msgid_plural "%d notes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/admin/order/orders-list-template.php:235
+msgid "M j, Y"
+msgstr ""
+
+#: templates/admin/order/orders-list-template.php:247
+#. translators: %s: method
+msgid "via %s"
+msgstr ""
+
+#: templates/admin/order/orders-list-template.php:297
+msgid "Status & Date"
+msgstr ""
+
+#: templates/admin/order/orders-list-template.php:299
+#: templates/admin/transaction/transactions-list-template.php:309
+msgid "Staff Attribution"
+msgstr ""
+
+#: templates/admin/order/orders-list-template.php:309
+msgid "No orders avaliable."
+msgstr ""
+
+#: templates/admin/order/orders-list-template.php:386
+msgid "Offline ID:"
+msgstr ""
+
+#: templates/admin/order/orders-list-template.php:464
+#: templates/admin/order/orders-list-template.php:465
+#: templates/admin/stock/product-stocks-list-template.php:380
+#: templates/admin/stock/product-stocks-list-template.php:381
+#: templates/admin/transaction/transactions-list-template.php:480
+#: templates/admin/transaction/transactions-list-template.php:481
+#: assets/js/pos.js:131
+msgid "Select Outlet"
+msgstr ""
+
+#: templates/admin/order/orders-list-template.php:477
+#: templates/admin/stock/product-stocks-list-template.php:393
+#: templates/admin/transaction/transactions-list-template.php:524
+msgid "Filter"
+msgstr ""
+
+#: templates/admin/order/orders-list-template.php:487
+#: templates/admin/stock/product-stocks-list-template.php:403
+#: templates/admin/transaction/transactions-list-template.php:534
+#: assets/js/pos.js:143
+msgid "Reset"
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:120
+msgid "The free version supports one outlet. Upgrade to Pro to add more outlets."
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:142
+msgid "Fields are either empty or invalid."
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:159
+msgid "Edit Outlet"
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:161
+msgid "Add Outlet"
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:199
+msgid ""
+"Configure and manage your physical store locations. Each outlet can have "
+"its own operating mode, inventory tracking, and payment settings."
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:204
+msgid "Outlet Name"
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:205
+msgid "A descriptive name to identify this store location (e.g., Downtown Branch)."
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:215
+msgid "Operation Mode"
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:216
+msgid ""
+"Select how this outlet operates. \"Restaurant/Cafe\" mode enables "
+"additional features like Table management."
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:227
+msgid ""
+"Decide how stock is tracked. \"Centralized\" syncs with WooCommerce, while "
+"\"Custom\" allows manual stock entries distinct from your online store."
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:233
+msgid "Centralized (WooCommerce Sync)"
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:246
+msgid "Location & Contact"
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:247
+msgid ""
+"Enter the physical address and contact information for this outlet. These "
+"details appear on printed invoices and receipts."
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:252
+#: assets/js/pos.js:164
+msgid "Address Line 1"
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:253
+msgid "Primary street address. This will appear on printed invoices."
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:261
+#: assets/js/pos.js:169
+msgid "Address Line 2"
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:262
+msgid "Apartment, suite, unit, etc. (optional)."
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:269
+#: assets/js/pos.js:198
+msgid "City"
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:270
+msgid "City where the outlet is physically located."
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:278
+#: assets/js/pos.js:176
+msgid "Country"
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:279
+msgid "The region or country for tax and shipping calculations."
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:287
+msgid "State/Province"
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:288
+msgid "Specific state, province, or county."
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:296
+msgid "Postcode/ZIP"
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:297
+msgid "Postal code for the store location."
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:306
+msgid "Enter the contact phone number for the outlet."
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:315
+msgid "Enter the contact email for the outlet."
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:326
+msgid ""
+"Manage logistical settings for this outlet, including payment options, "
+"receipt templates, and dining table assignments."
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:332
+msgid ""
+"Choose the payment options that will be available for customers at this POS "
+"outlet."
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:344
+msgid "Invoice Template"
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:345
+msgid "The design layout for printed customer receipts at this location."
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:355
+msgid "Dining Tables"
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:356
+msgid ""
+"Select the active tables for this outlet. (Applicable only in "
+"\"Restaurant/Cafe\" mode)."
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:367
+msgid "Outlet Status"
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:368
+msgid "Set to \"Inactive\" to temporarily prevent POS access for this store."
+msgstr ""
+
+#: templates/admin/outlet/manage-outlet-template.php:382
+msgid "Save Outlet"
+msgstr ""
+
+#: templates/admin/outlet/outlets-list-template.php:48
+msgid "Outlet List"
+msgstr ""
+
+#: templates/admin/outlet/outlets-list-template.php:49
+msgid "Outlets List"
+msgstr ""
+
+#: templates/admin/outlet/outlets-list-template.php:145
+#. translators: 1: Address line 1, 2: Address line 2, 3: City, 4: State, 5:
+#. Country, 6: Postcode.
+msgid ""
+"Address 1: %1$s Address 2: %2$s City: %3$s State: %4$s Country: %5$s "
+"Postcode: %6$s"
+msgstr ""
+
+#: templates/admin/outlet/outlets-list-template.php:222
+#. translators: %d: Number of outlets deleted.
+msgid "%d outlet(s) deleted successfully."
+msgstr ""
+
+#: templates/admin/outlet/outlets-list-template.php:228
+#. translators: %d: Number of outlets not found.
+msgid "%d outlet(s) not exits."
+msgstr ""
+
+#: templates/admin/outlet/outlets-list-template.php:233
+msgid "Select outlet(s) to delete."
+msgstr ""
+
+#: templates/admin/outlet/outlets-list-template.php:262
+msgid "Outlet is deleted successfully."
+msgstr ""
+
+#: templates/admin/outlet/outlets-list-template.php:265
+msgid "Outlet not exists."
+msgstr ""
+
+#: templates/admin/outlet/outlets-list-template.php:279
+msgid "No outlets avaliable."
+msgstr ""
+
+#: templates/admin/outlet/outlets-list-template.php:300
+msgid "Name"
+msgstr ""
+
+#: templates/admin/outlet/outlets-list-template.php:301
+msgid "Address"
+msgstr ""
+
+#: templates/admin/outlet/outlets-list-template.php:304
+msgid "Actions"
+msgstr ""
+
+#: templates/admin/outlet/outlets-list-template.php:384
+msgid "Email: "
+msgstr ""
+
+#: templates/admin/outlet/outlets-list-template.php:387
+msgid "Phone: "
+msgstr ""
+
+#: templates/admin/outlet/outlets-list-template.php:401
+msgid "Created"
+msgstr ""
+
+#: templates/admin/outlet/outlets-list-template.php:401
+msgid "Updated"
+msgstr ""
+
+#: templates/admin/stock/product-stocks-list-template.php:193
+msgid "Variation"
+msgstr ""
+
+#: templates/admin/stock/product-stocks-list-template.php:234
+msgid "Select Outlet First!"
+msgstr ""
+
+#: templates/admin/stock/product-stocks-list-template.php:284
+msgid "Stock Management"
+msgstr ""
+
+#: templates/admin/stock/product-stocks-list-template.php:363
+msgid "WooCommerce Stock"
+msgstr ""
+
+#: templates/admin/stock/product-stocks-list-template.php:365
+msgid "Manual POS Stock"
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:57
+msgid "Transaction List"
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:58
+msgid "Transactions List"
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:146
+msgid "Open Cash Drawer Amount"
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:148
+#: assets/js/pos.js:16
+msgid "Manual"
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:150
+msgid "Split"
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:152
+msgid "Refund"
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:220
+#. translators: %d: Number of transactions deleted.
+msgid "%d Transaction(s) deleted successfully."
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:226
+#. translators: %d: Number of transactions not found.
+msgid "%d Transaction(s) not exits."
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:231
+msgid "Select transaction(s) to delete."
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:236
+#: templates/admin/transaction/transactions-list-template.php:276
+msgid "Invalid nonce. Security check failed!!!"
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:267
+msgid "Transaction is deleted successfully."
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:270
+msgid "Transaction not exists."
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:288
+msgid "No transactions avaliable."
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:308
+msgid "ID & Date"
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:310
+msgid "Transaction Context"
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:311
+msgid "Financial Totals"
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:419
+msgid "Order:"
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:421
+msgid "Ref:"
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:444
+msgid "In:"
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:446
+msgid "Out:"
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:493
+msgid "From:"
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:496
+msgid "To:"
+msgstr ""
+
+#: templates/admin/transaction/transactions-list-template.php:499
+#: templates/admin/transaction/transactions-list-template.php:500
+msgid "Select Cashier"
+msgstr ""
+
+#: templates/front/pos/layout.php:65
+msgid "Wrong Credentials, Try Again!"
+msgstr ""
+
+#: templates/front/pos/layout.php:74
+msgid "Username or Email"
+msgstr ""
+
+#: templates/front/pos/layout.php:75
+#: assets/js/pos.js:91
+msgid "Password"
+msgstr ""
+
+#: templates/front/pos/layout.php:76
+msgid "Remember Me"
+msgstr ""
+
+#: templates/front/pos/layout.php:131
+msgid "Forgot Password?"
+msgstr ""
+
+#: templates/front/pos/layout.php:158
+#: assets/js/pos.js:89
+msgid "Powered by "
+msgstr ""
+
+#: templates/front/pos/layout.php:170
+msgid "Your browser does not support JavaScript!"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "MultiPOS for WooCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid ""
+"https://devdiggers.com/product/multipos-point-of-sale-for-woocommerce/?utm_"
+"source=MultiPOS&utm_medium=plugins-list&utm_campaign=woocommerce-extensions"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Make your WooCommerce store work like a real shop. Sell in person, keep "
+"stock synced, run your retail or restaurant outlet, and keep selling even "
+"if the internet goes slow."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "DevDiggers"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://devdiggers.com/"
+msgstr ""
+
+#: includes/admin/admin-functions.php:388
+#. translators: %1$s opening span tag %2$s closing span tag
+msgctxt "POS Order Icon"
+msgid "%1$sPOS%2$s"
+msgstr ""
+
+#: includes/admin/admin-functions.php:391
+#. translators: %1$s opening span tag %2$s closing span tag
+msgctxt "Website Order Icon"
+msgid "%1$sWebsite%2$s"
+msgstr ""
+
+#: templates/admin/order/orders-list-template.php:165
+#. translators: 1: first name 2: last name
+msgctxt "full name"
+msgid "%1$s %2$s"
+msgstr ""
+
+#: templates/admin/order/orders-list-template.php:231
+#. translators: %s: human-readable time difference
+msgctxt "%s = human-readable time difference"
+msgid "%s ago"
+msgstr ""
+
+#: assets/js/pos.js:132
+msgid "Please select a terminal to begin your session."
+msgstr ""
+
+#: assets/js/pos.js:139
+msgid "You do not have any assigned outlet!!"
+msgstr ""
+
+#: assets/js/pos.js:320
+#: assets/js/pos.js:49
+#: assets/js/pos.js:188
+msgid "Coupon Error"
+msgstr ""
+
+#: assets/js/pos.js:321
+msgid "This coupon is not applicable as per restrictions."
+msgstr ""
+
+#: assets/js/pos.js:26
+#: assets/js/pos.js:111
+msgid "Stock Error"
+msgstr ""
+
+#: assets/js/pos.js:27
+msgid "No stock available for this product."
+msgstr ""
+
+#: assets/js/pos.js:18
+msgid "Loading Categories"
+msgstr ""
+
+#: assets/js/pos.js:19
+msgid "Loading Categories in the POS"
+msgstr ""
+
+#: assets/js/pos.js:24
+msgid "Categories Loaded"
+msgstr ""
+
+#: assets/js/pos.js:25
+msgid "All Categories are loaded successfully"
+msgstr ""
+
+#: assets/js/pos.js:20
+msgid "Loading Countries & States"
+msgstr ""
+
+#: assets/js/pos.js:21
+msgid "Loading Countries & States in the POS"
+msgstr ""
+
+#: assets/js/pos.js:26
+msgid "Countries & States Loaded"
+msgstr ""
+
+#: assets/js/pos.js:27
+msgid "All Countries & States are loaded successfully"
+msgstr ""
+
+#: assets/js/pos.js:43
+msgid "Coupon Applied"
+msgstr ""
+
+#: assets/js/pos.js:44
+msgid "Coupon is applied successfully in the cart."
+msgstr ""
+
+#: assets/js/pos.js:50
+msgid "Coupon is already applied in the cart."
+msgstr ""
+
+#: assets/js/pos.js:55
+msgid "Coupon Removed"
+msgstr ""
+
+#: assets/js/pos.js:56
+msgid "Coupon is successfully removed from the cart."
+msgstr ""
+
+#: assets/js/pos.js:217
+#: assets/js/pos.js:13
+#: assets/js/pos.js:250
+#: assets/js/pos.js:91
+#: assets/js/pos.js:117
+#: assets/js/pos.js:22
+#: assets/js/pos.js:26
+msgid "Error"
+msgstr ""
+
+#: assets/js/pos.js:255
+#: assets/js/pos.js:13
+msgid "Success"
+msgstr ""
+
+#: assets/js/pos.js:256
+msgid "Customer deleted successfully."
+msgstr ""
+
+#: assets/js/pos.js:32
+msgid "Request failed."
+msgstr ""
+
+#: assets/js/pos.js:35
+msgid "Loading Customers"
+msgstr ""
+
+#: assets/js/pos.js:36
+msgid "Loading Customers in the POS"
+msgstr ""
+
+#: assets/js/pos.js:41
+msgid "Customers Loaded"
+msgstr ""
+
+#: assets/js/pos.js:42
+msgid "All Customers are loaded successfully"
+msgstr ""
+
+#: assets/js/pos.js:47
+msgid "Customer Set"
+msgstr ""
+
+#: assets/js/pos.js:48
+msgid "Customer is set successfully for the order."
+msgstr ""
+
+#: assets/js/pos.js:135
+msgid "Fee Removed"
+msgstr ""
+
+#: assets/js/pos.js:135
+msgid "Fee is removed successfully in the cart."
+msgstr ""
+
+#: assets/js/pos.js:76
+msgid "Fee Added"
+msgstr ""
+
+#: assets/js/pos.js:76
+msgid "Fee is added successfully in the cart."
+msgstr ""
+
+#: assets/js/pos.js:99
+msgid "Fee Updated"
+msgstr ""
+
+#: assets/js/pos.js:99
+msgid "Fee is updated successfully in the cart."
+msgstr ""
+
+#: assets/js/pos.js:33
+msgid "Hold Order Success"
+msgstr ""
+
+#: assets/js/pos.js:34
+msgid "Your current cart is put to hold succesfully."
+msgstr ""
+
+#: assets/js/pos.js:130
+#: assets/js/pos.js:387
+#: assets/js/pos.js:295
+msgid "Tax"
+msgstr ""
+
+#: assets/js/pos.js:146
+#: assets/js/pos.js:399
+msgid "Coupon"
+msgstr ""
+
+#: assets/js/pos.js:100
+msgid "Loading Orders"
+msgstr ""
+
+#: assets/js/pos.js:101
+msgid "Loading Orders in the POS"
+msgstr ""
+
+#: assets/js/pos.js:130
+#: assets/js/pos.js:377
+msgid "No Orders Found"
+msgstr ""
+
+#: assets/js/pos.js:131
+msgid "No orders have been placed yet in this outlet."
+msgstr ""
+
+#: assets/js/pos.js:155
+msgid "Orders Loaded"
+msgstr ""
+
+#: assets/js/pos.js:156
+msgid "All Orders are loaded successfully."
+msgstr ""
+
+#: assets/js/pos.js:219
+#: assets/js/pos.js:158
+msgid "System is Offline"
+msgstr ""
+
+#: assets/js/pos.js:220
+msgid "Orders cannot be placed while the system is offline."
+msgstr ""
+
+#: assets/js/pos.js:121
+msgid "Loading Products"
+msgstr ""
+
+#: assets/js/pos.js:122
+msgid "Loading Products in the POS."
+msgstr ""
+
+#: assets/js/pos.js:169
+msgid "Products Loaded"
+msgstr ""
+
+#: assets/js/pos.js:170
+msgid "All Products are loaded successfully."
+msgstr ""
+
+#: assets/js/pos.js:14
+msgid "Request completed."
+msgstr ""
+
+#: assets/js/pos.js:119
+msgid "Table Set"
+msgstr ""
+
+#: assets/js/pos.js:119
+msgid "Take Away Order"
+msgstr ""
+
+#: assets/js/pos.js:120
+msgid "Table is set successfully for the order."
+msgstr ""
+
+#: assets/js/pos.js:120
+msgid "No table is selected for take away orders."
+msgstr ""
+
+#: assets/js/pos.js:24
+msgid "Loading Transactions"
+msgstr ""
+
+#: assets/js/pos.js:25
+msgid "Loading Transactions in the POS"
+msgstr ""
+
+#: assets/js/pos.js:30
+msgid "Transactions Loaded"
+msgstr ""
+
+#: assets/js/pos.js:31
+msgid "All Transactions are loaded successfully."
+msgstr ""
+
+#: assets/js/pos.js:36
+msgid "No Transaction Found"
+msgstr ""
+
+#: assets/js/pos.js:37
+msgid "No transaction has been generated for today yet in this outlet."
+msgstr ""
+
+#: assets/js/pos.js:107
+#: assets/js/pos.js:53
+#: assets/js/pos.js:10
+msgid "Settings"
+msgstr ""
+
+#: assets/js/pos.js:115
+msgid ""
+"Do you want to delete the outlet data from the browser? It will load the "
+"latest one when you login."
+msgstr ""
+
+#: assets/js/pos.js:162
+msgid "POS Logo"
+msgstr ""
+
+#: assets/js/pos.js:169
+msgid "Logout"
+msgstr ""
+
+#: assets/js/pos.js:58
+#: assets/js/pos.js:5
+msgid "Home"
+msgstr ""
+
+#: assets/js/pos.js:66
+#: assets/js/pos.js:11
+msgid "Cart"
+msgstr ""
+
+#: assets/js/pos.js:99
+#: assets/js/pos.js:9
+msgid "Statistics"
+msgstr ""
+
+#: assets/js/pos.js:56
+msgid "Add"
+msgstr ""
+
+#: assets/js/pos.js:69
+#: assets/js/pos.js:217
+#: assets/js/pos.js:400
+msgid "Cancel"
+msgstr ""
+
+#: assets/js/pos.js:101
+#: assets/js/pos.js:238
+msgid "Empty Cart"
+msgstr ""
+
+#: assets/js/pos.js:102
+msgid "Cart is already empty."
+msgstr ""
+
+#: assets/js/pos.js:156
+msgid "Select Mode"
+msgstr ""
+
+#: assets/js/pos.js:160
+msgid "Dine in"
+msgstr ""
+
+#: assets/js/pos.js:164
+msgid "Take Away"
+msgstr ""
+
+#: assets/js/pos.js:182
+#: assets/js/pos.js:138
+msgid "Online"
+msgstr ""
+
+#: assets/js/pos.js:182
+msgid "Offline"
+msgstr ""
+
+#: assets/js/pos.js:195
+msgid "Select Customer"
+msgstr ""
+
+#: assets/js/pos.js:214
+msgid "Select Table"
+msgstr ""
+
+#: assets/js/pos.js:224
+msgid "Cart Items"
+msgstr ""
+
+#: assets/js/pos.js:228
+msgid "Check Hold Orders"
+msgstr ""
+
+#: assets/js/pos.js:235
+msgid "Reset Cart"
+msgstr ""
+
+#: assets/js/pos.js:244
+msgid "Your cart is empty"
+msgstr ""
+
+#: assets/js/pos.js:112
+msgid "There is no more stocks available for this product."
+msgstr ""
+
+#: assets/js/pos.js:135
+msgid "Decrease Quantity"
+msgstr ""
+
+#: assets/js/pos.js:139
+msgid "Increase Quantity"
+msgstr ""
+
+#: assets/js/pos.js:133
+msgid "Please add products in the cart first to hold it."
+msgstr ""
+
+#: assets/js/pos.js:159
+msgid "Coupon cannot be applied in offline mode, please apply after getting online."
+msgstr ""
+
+#: assets/js/pos.js:196
+msgid "Empty Field"
+msgstr ""
+
+#: assets/js/pos.js:197
+msgid "Please enter a coupon code first."
+msgstr ""
+
+#: assets/js/pos.js:204
+msgid "Please add products in the cart to apply coupon."
+msgstr ""
+
+#: assets/js/pos.js:231
+msgid "are out of stock now, please remove them from cart"
+msgstr ""
+
+#: assets/js/pos.js:234
+msgid "is out of stock now, kindly remove them from cart"
+msgstr ""
+
+#: assets/js/pos.js:239
+msgid "Cart is empty right now, kindly add products to checkout."
+msgstr ""
+
+#: assets/js/pos.js:244
+msgid "Select Customer First"
+msgstr ""
+
+#: assets/js/pos.js:245
+msgid "Customer is not selected, kindly select the customer to checkout."
+msgstr ""
+
+#: assets/js/pos.js:251
+msgid ""
+"Sorry, orders cannot be processed with centralized inventory in offline "
+"mode."
+msgstr ""
+
+#: assets/js/pos.js:367
+msgid "Enter Order Info"
+msgstr ""
+
+#: assets/js/pos.js:373
+msgid "Apply Coupon"
+msgstr ""
+
+#: assets/js/pos.js:374
+msgid "Enter Coupon Code"
+msgstr ""
+
+#: assets/js/pos.js:382
+#: assets/js/pos.js:372
+msgid "Subtotal"
+msgstr ""
+
+#: assets/js/pos.js:391
+#: assets/js/pos.js:382
+msgid "Applied Coupon(s)"
+msgstr ""
+
+#: assets/js/pos.js:403
+msgid "Hold Order"
+msgstr ""
+
+#: assets/js/pos.js:408
+msgid "Proceed to Pay"
+msgstr ""
+
+#: assets/js/pos.js:154
+#: assets/js/pos.js:65
+msgid "Edit Customer"
+msgstr ""
+
+#: assets/js/pos.js:157
+msgid "Delete Customer"
+msgstr ""
+
+#: assets/js/pos.js:163
+msgid "Current Customer"
+msgstr ""
+
+#: assets/js/pos.js:168
+msgid "Set Customer"
+msgstr ""
+
+#: assets/js/pos.js:192
+msgid "Search Customer by name, email or phone..."
+msgstr ""
+
+#: assets/js/pos.js:210
+msgid "No Customers Found"
+msgstr ""
+
+#: assets/js/pos.js:24
+#: assets/js/pos.js:199
+#: assets/js/pos.js:32
+#: assets/js/pos.js:76
+#: assets/js/pos.js:39
+msgid "Results"
+msgstr ""
+
+#: assets/js/pos.js:86
+msgid "Are you sure you want to delete this customer?"
+msgstr ""
+
+#: assets/js/pos.js:92
+msgid "Sorry, customer cannot be deleted in offline mode."
+msgstr ""
+
+#: assets/js/pos.js:111
+msgid "Kindly fill out the mandatory field(s)."
+msgstr ""
+
+#: assets/js/pos.js:118
+msgid "Sorry, customer cannot be saved in offline mode."
+msgstr ""
+
+#: assets/js/pos.js:143
+#: assets/js/pos.js:77
+msgid "First Name"
+msgstr ""
+
+#: assets/js/pos.js:145
+msgid "Enter First Name"
+msgstr ""
+
+#: assets/js/pos.js:148
+#: assets/js/pos.js:81
+msgid "Last Name"
+msgstr ""
+
+#: assets/js/pos.js:150
+msgid "Enter Last Name"
+msgstr ""
+
+#: assets/js/pos.js:156
+msgid "Enter Email"
+msgstr ""
+
+#: assets/js/pos.js:161
+msgid "Enter Phone Number"
+msgstr ""
+
+#: assets/js/pos.js:166
+msgid "Enter Address Line 1"
+msgstr ""
+
+#: assets/js/pos.js:171
+msgid "Enter Address Line 2"
+msgstr ""
+
+#: assets/js/pos.js:184
+msgid "State"
+msgstr ""
+
+#: assets/js/pos.js:191
+msgid "Enter State"
+msgstr ""
+
+#: assets/js/pos.js:200
+msgid "Enter City"
+msgstr ""
+
+#: assets/js/pos.js:203
+msgid "Postcode"
+msgstr ""
+
+#: assets/js/pos.js:205
+msgid "Enter Postcode"
+msgstr ""
+
+#: assets/js/pos.js:213
+msgid "Save"
+msgstr ""
+
+#: assets/js/pos.js:65
+msgid "Add New Customer"
+msgstr ""
+
+#: assets/js/pos.js:213
+msgid "All"
+msgstr ""
+
+#: assets/js/pos.js:358
+msgid "Enter/Scan Barcode"
+msgstr ""
+
+#: assets/js/pos.js:359
+msgid "Press enter after entering barcode to add products."
+msgstr ""
+
+#: assets/js/pos.js:371
+msgid "Done"
+msgstr ""
+
+#: assets/js/pos.js:388
+msgid "All Categories"
+msgstr ""
+
+#: assets/js/pos.js:408
+msgid "View All"
+msgstr ""
+
+#: assets/js/pos.js:414
+msgid "Select Category"
+msgstr ""
+
+#: assets/js/pos.js:436
+msgid "Barcode Error"
+msgstr ""
+
+#: assets/js/pos.js:437
+msgid "No product exists with this barcode \"%s\"."
+msgstr ""
+
+#: assets/js/pos.js:499
+msgid "Search Product by title, ID, SKU or Barcode Number"
+msgstr ""
+
+#: assets/js/pos.js:501
+msgid "Add Product via Barcode"
+msgstr ""
+
+#: assets/js/pos.js:526
+msgid "No Products Found"
+msgstr ""
+
+#: assets/js/pos.js:197
+msgid ""
+"There are items present in the cart, proceeding will replace these items. "
+"Please confirm"
+msgstr ""
+
+#: assets/js/pos.js:208
+msgid "Delete Success"
+msgstr ""
+
+#: assets/js/pos.js:209
+msgid "Hold order is deleted successfully."
+msgstr ""
+
+#: assets/js/pos.js:269
+msgid "Table Order"
+msgstr ""
+
+#: assets/js/pos.js:269
+msgid "Cart Details"
+msgstr ""
+
+#: assets/js/pos.js:303
+msgid "Info: %s"
+msgstr ""
+
+#: assets/js/pos.js:308
+msgid "Add to Cart"
+msgstr ""
+
+#: assets/js/pos.js:35
+msgid "No Order Details Found"
+msgstr ""
+
+#: assets/js/pos.js:358
+#: assets/js/pos.js:104
+msgid "Order #%s"
+msgstr ""
+
+#: assets/js/pos.js:364
+msgid "X"
+msgstr ""
+
+#: assets/js/pos.js:378
+msgid "Discount"
+msgstr ""
+
+#: assets/js/pos.js:398
+msgid "Print Invoice"
+msgstr ""
+
+#: assets/js/pos.js:103
+msgid "Cart #%s"
+msgstr ""
+
+#: assets/js/pos.js:139
+msgid "Hold"
+msgstr ""
+
+#: assets/js/pos.js:155
+msgid "Order Status: %s"
+msgstr ""
+
+#: assets/js/pos.js:341
+msgid "%d Item(s)"
+msgstr ""
+
+#: assets/js/pos.js:359
+msgid "Search Order..."
+msgstr ""
+
+#: assets/js/pos.js:45
+msgid "Search By Customer or Table..."
+msgstr ""
+
+#: assets/js/pos.js:45
+msgid "Search By Customer..."
+msgstr ""
+
+#: assets/js/pos.js:258
+msgid "Print Receipt"
+msgstr ""
+
+#: assets/js/pos.js:259
+msgid "Order #%s is %s."
+msgstr ""
+
+#: assets/js/pos.js:334
+msgid "Please add products in the cart to place the order"
+msgstr ""
+
+#: assets/js/pos.js:353
+msgid "Total Due"
+msgstr ""
+
+#: assets/js/pos.js:357
+msgid "Total Paying"
+msgstr ""
+
+#: assets/js/pos.js:361
+msgid "Pay Left"
+msgstr ""
+
+#: assets/js/pos.js:372
+msgid "Amount"
+msgstr ""
+
+#: assets/js/pos.js:373
+#: assets/js/pos.js:180
+msgid "Method"
+msgstr ""
+
+#: assets/js/pos.js:388
+msgid "clear"
+msgstr ""
+
+#: assets/js/pos.js:396
+msgid "Pay"
+msgstr ""
+
+#: assets/js/pos.js:100
+msgid "New password"
+msgstr ""
+
+#: assets/js/pos.js:104
+msgid "Confirm New Password"
+msgstr ""
+
+#: assets/js/pos.js:105
+msgid "Confirm new password"
+msgstr ""
+
+#: assets/js/pos.js:111
+msgid "Save Changes"
+msgstr ""
+
+#: assets/js/pos.js:17
+msgid "You need to be online to update account details."
+msgstr ""
+
+#: assets/js/pos.js:23
+msgid "Check password fields and try again."
+msgstr ""
+
+#: assets/js/pos.js:71
+msgid "Account Settings"
+msgstr ""
+
+#: assets/js/pos.js:72
+msgid "Update cashier details for this account."
+msgstr ""
+
+#: assets/js/pos.js:78
+msgid "First name"
+msgstr ""
+
+#: assets/js/pos.js:82
+msgid "Last name"
+msgstr ""
+
+#: assets/js/pos.js:87
+msgid "Email address"
+msgstr ""
+
+#: assets/js/pos.js:88
+msgid "Email address cannot be changed here."
+msgstr ""
+
+#: assets/js/pos.js:92
+msgid "Leave password fields empty if you do not want to change password."
+msgstr ""
+
+#: assets/js/pos.js:94
+msgid "Current Password"
+msgstr ""
+
+#: assets/js/pos.js:95
+msgid "Current password"
+msgstr ""
+
+#: assets/js/pos.js:99
+msgid "New Password"
+msgstr ""
+
+#: assets/js/pos.js:55
+#: assets/js/pos.js:38
+msgid "Unassigned"
+msgstr ""
+
+#: assets/js/pos.js:69
+msgid "Reset Defaults"
+msgstr ""
+
+#: assets/js/pos.js:72
+msgid ""
+"Choose shortcuts that feel natural for your keyboard. Each shortcut can be "
+"used only once."
+msgstr ""
+
+#: assets/js/pos.js:76
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: assets/js/pos.js:78
+#: assets/js/pos.js:108
+msgid "Enabled"
+msgstr ""
+
+#: assets/js/pos.js:79
+#: assets/js/pos.js:109
+msgid "Disabled"
+msgstr ""
+
+#: assets/js/pos.js:81
+msgid "Turn shortcuts on or off for this POS screen."
+msgstr ""
+
+#: assets/js/pos.js:102
+msgid "Show product categories on home screen for faster browsing."
+msgstr ""
+
+#: assets/js/pos.js:106
+msgid "Play POS Sounds"
+msgstr ""
+
+#: assets/js/pos.js:111
+msgid "Use sound alerts for actions and updates in POS."
+msgstr ""
+
+#: assets/js/pos.js:116
+msgid "These values control default paper size for printed receipts."
+msgstr ""
+
+#: assets/js/pos.js:119
+msgid "Receipt Width (mm)"
+msgstr ""
+
+#: assets/js/pos.js:124
+msgid "Receipt Height (mm)"
+msgstr ""
+
+#: assets/js/pos.js:129
+msgid "Receipt Margin (mm)"
+msgstr ""
+
+#: assets/js/pos.js:138
+msgid "Reset Outlet Data"
+msgstr ""
+
+#: assets/js/pos.js:139
+msgid "Clear saved outlet data in this browser and reload fresh data."
+msgstr ""
+
+#: assets/js/pos.js:149
+msgid "Switch Outlet"
+msgstr ""
+
+#: assets/js/pos.js:150
+msgid "Go back and start a session in another outlet."
+msgstr ""
+
+#: assets/js/pos.js:154
+msgid "Switch"
+msgstr ""
+
+#: assets/js/pos.js:16
+msgid "Resetting"
+msgstr ""
+
+#: assets/js/pos.js:17
+msgid "Clearing saved outlet data for this browser."
+msgstr ""
+
+#: assets/js/pos.js:21
+msgid "Switching"
+msgstr ""
+
+#: assets/js/pos.js:22
+msgid "Returning to outlet selection."
+msgstr ""
+
+#: assets/js/pos.js:68
+msgid "You need to be online to reset outlet data."
+msgstr ""
+
+#: assets/js/pos.js:79
+msgid "You need to be online to switch outlets."
+msgstr ""
+
+#: assets/js/pos.js:92
+msgid "Outlet Settings"
+msgstr ""
+
+#: assets/js/pos.js:93
+msgid "Manage how this outlet looks and prints in POS."
+msgstr ""
+
+#: assets/js/pos.js:97
+msgid "Show Category Cards"
+msgstr ""
+
+#: assets/js/pos.js:10
+msgid "Shortcuts"
+msgstr ""
+
+#: assets/js/pos.js:54
+msgid "Review POS preferences, account details, and shortcuts in one place."
+msgstr ""
+
+#: assets/js/pos.js:55
+msgid "Settings Sections"
+msgstr ""
+
+#: assets/js/pos.js:8
+msgid "Outlet"
+msgstr ""
+
+#: assets/js/pos.js:9
+msgid "Account"
+msgstr ""
+
+#: assets/js/pos.js:147
+msgid "Today's Cash Sale"
+msgstr ""
+
+#: assets/js/pos.js:152
+msgid "Today's Total Sale"
+msgstr ""
+
+#: assets/js/pos.js:156
+msgid "Expected Drawer Amount"
+msgstr ""
+
+#: assets/js/pos.js:162
+msgid "Today's Transactions"
+msgstr ""
+
+#: assets/js/pos.js:167
+msgid "Search Transaction by ID or Order ID"
+msgstr ""
+
+#: assets/js/pos.js:176
+msgid "Transaction ID"
+msgstr ""
+
+#: assets/js/pos.js:177
+msgid "Order ID"
+msgstr ""
+
+#: assets/js/pos.js:178
+msgid "In"
+msgstr ""
+
+#: assets/js/pos.js:179
+msgid "Out"
+msgstr ""
+
+#: assets/js/pos.js:181
+msgid "Reference"
+msgstr ""
+
+#: assets/js/pos.js:199
+msgid "No Transactions Found"
+msgstr ""
+
+#: assets/js/pos.js:110
+msgid "Current Table"
+msgstr ""
+
+#: assets/js/pos.js:118
+msgid "View Order"
+msgstr ""
+
+#: assets/js/pos.js:126
+msgid "Set Table"
+msgstr ""
+
+#: assets/js/pos.js:143
+msgid "Vacant"
+msgstr ""
+
+#: assets/js/pos.js:144
+msgid "Occupied"
+msgstr ""
+
+#: assets/js/pos.js:180
+msgid "Not Selected"
+msgstr ""
+
+#: assets/js/pos.js:207
+msgid "Floor Plan"
+msgstr ""
+
+#: assets/js/pos.js:208
+msgid "Main Dining Room • %s Active Tables"
+msgstr ""
+
+#: assets/js/pos.js:212
+msgid "Current: %s"
+msgstr ""
+
+#: assets/js/pos.js:221
+msgid "Search by seats (e.g. 4, 6, 8)..."
+msgstr ""
+
+#: assets/js/pos.js:227
+msgid "All Tables (%s)"
+msgstr ""
+
+#: assets/js/pos.js:228
+msgid "Occupied (%s)"
+msgstr ""
+
+#: assets/js/pos.js:229
+msgid "Vacant (%s)"
+msgstr ""
+

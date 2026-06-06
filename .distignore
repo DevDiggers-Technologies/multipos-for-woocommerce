@@ -1,0 +1,24 @@
+# A set of files you probably don't want in your plugin zip
+.distignore
+.git
+.gitignore
+build
+bin
+node_modules
+landing-page
+src
+composer.json
+composer.lock
+Gruntfile.js
+package.json
+package-lock.json
+phpcs.xml
+config
+webpack.config.js
+babel.config.js
+*.tar.gz
+*.zip
+
+# Operating System files
+.DS_Store
+Thumbs.db

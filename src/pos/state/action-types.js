@@ -1,0 +1,14 @@
+export const CART = 'CART';
+export const CATEGORIES = 'CATEGORIES';
+export const COUNTRY_AND_STATES = 'COUNTRY_AND_STATES';
+export const COUPON = 'COUPON';
+export const CUSTOMERS = 'CUSTOMERS';
+export const FEES = 'FEES';
+export const HOLD_CARTS = 'HOLD_CARTS';
+export const ORDERS = 'ORDERS';
+export const OUTLET = 'OUTLET';
+export const PRODUCTS = 'PRODUCTS';
+export const SETTINGS = 'SETTINGS';
+export const TABLES = 'TABLES';
+export const TAXES = 'TAXES';
+export const TRANSACTIONS = 'TRANSACTIONS';

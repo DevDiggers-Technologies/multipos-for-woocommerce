@@ -1,0 +1,1 @@
+# multipos-for-woocommerce

@@ -1,0 +1,518 @@
+/**
+ * Dashboard Styles
+ */
+
+@import '../admin/admin.less';
+
+@primary: #0256ff;
+
+.ddwcpos-card-base,
+.ddwcpos-widget-base {
+    background: #fff;
+    border: 1px solid #f2f2f2;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.ddwcpos-widget-base h3 {
+    align-items: center;
+    color: #111827;
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    gap: 8px;
+    margin: 0 0 16px;
+}
+
+.ddwcpos-grid-responsive {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 16px;
+    
+    @media (max-width: 1200px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.ddwcpos-no-data {
+    color: #9ca3af;
+    font-style: italic;
+    padding: 16px;
+    text-align: center;
+}
+
+.ddwcpos-dashboard {
+    padding: 0 20px 20px 0;
+
+    .ddwcpos-dashboard-header {
+        .ddwcpos-header-top {
+            align-items: center;
+            display: flex;
+            gap: 16px;
+            justify-content: space-between;
+            margin-bottom: 16px;
+
+            .ddwcpos-header-left {
+                flex: 1;
+                min-width: 0;
+
+                .ddwcpos-welcome-section {
+                    .ddwcpos-welcome-content {
+                        align-items: center;
+                        display: flex;
+                        gap: 20px;
+
+                        .ddwcpos-admin-avatar {
+                            flex-shrink: 0;
+                            position: relative;
+
+                            .ddwcpos-avatar-image {
+                                border: 3px solid #fff;
+                                border-radius: 50%;
+                                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+                                height: 56px;
+                                object-fit: cover;
+                                width: 56px;
+                            }
+                        }
+
+                        .ddwcpos-welcome-message {
+                            flex: 1;
+                            min-width: 0;
+
+                            h1 {
+                                color: #111827;
+                                font-size: 24px;
+                                font-weight: 700;
+                                padding: 0;
+                                margin: 0 0 4px;
+                                letter-spacing: -0.02em;
+                            }
+
+                            .ddwcpos-welcome-subtitle {
+                                color: #6b7280;
+                                font-size: 15px;
+                                line-height: 1.4;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .ddwcpos-header-right {
+                flex-shrink: 0;
+
+                .ddwcpos-dashboard-filters {
+                    .ddwcpos-date-filter-form {
+                        .ddwcpos-date-range-container {
+                            position: relative;
+                            z-index: 1;
+
+                            .ddwcpos-date-range-picker {
+                                background: #fff;
+                                border: 1px solid #f2f2f2;
+                                color: #606266;
+                                cursor: pointer;
+                                font-size: 14px;
+                                font-weight: 500;
+                                min-width: 200px;
+                                padding: 4px 20px;
+                                position: relative;
+                                transition: all 0.2s ease;
+                                border-radius: 4px;
+
+                                &:focus, &:hover {
+                                    border-color: @primary;
+                                }
+
+                                &:after {
+                                    color: #6b7280;
+                                    content: "▼";
+                                    font-size: 10px;
+                                    pointer-events: none;
+                                    position: absolute;
+                                    right: 16px;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    transition: all 0.2s ease;
+                                }
+
+                                &:hover:after {
+                                    color: @primary;
+                                }
+                            }
+
+                            .ddwcpos-date-range-dropdown {
+                                background: #fff;
+                                border: 1px solid #f2f2f2;
+                                border-radius: 8px;
+                                box-shadow: 0 20px 40px -12px rgba(14, 18, 27, 0.15);
+                                display: none;
+                                position: absolute;
+                                right: 0;
+                                transform: translateY(-10px);
+                                transition: all 0.2s ease-out;
+                                margin-top: 8px;
+
+                                &.show {
+                                    display: block;
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+
+                                .ddwcpos-dropdown-content {
+                                    border-radius: 8px;
+                                    max-height: 100%;
+                                    min-height: 280px;
+                                    overflow-y: auto;
+                                    display: flex;
+
+                                    .ddwcpos-date-presets {
+                                        background: #fff;
+                                        padding: 0;
+                                        border-right: 1px solid #f3f4f6;
+                                        flex: 0 0 200px;
+
+                                        .ddwcpos-presets-header {
+                                            background: #f8fafc;
+                                            border-bottom: 1px solid #f3f4f6;
+                                            padding: 16px 20px 12px;
+
+                                            h4 {
+                                                color: #111827;
+                                                font-size: 12px;
+                                                font-weight: 600;
+                                                letter-spacing: 0.8px;
+                                                margin: 0;
+                                                text-transform: uppercase;
+                                            }
+                                        }
+
+                                        .ddwcpos-date-preset {
+                                            background: none;
+                                            border: none;
+                                            color: #6b7280;
+                                            cursor: pointer;
+                                            display: block;
+                                            font-size: 13px;
+                                            font-weight: 500;
+                                            padding: 12px 20px;
+                                            position: relative;
+                                            text-align: left;
+                                            transition: all 0.2s ease;
+                                            width: 100%;
+                                            border-radius: 0;
+
+                                            &:hover {
+                                                background: #f8fafc;
+                                                color: @primary;
+                                            }
+                                        }
+                                    }
+
+                                    .ddwcpos-custom-date-range {
+                                        background: #fff;
+                                        padding: 20px;
+                                        flex: 1;
+
+                                        .ddwcpos-custom-header {
+                                            margin-bottom: 16px;
+                                            text-align: center;
+
+                                            h4 {
+                                                color: #111827;
+                                                font-size: 14px;
+                                                font-weight: 600;
+                                                margin: 0 0 4px;
+                                            }
+                                        }
+
+                                        .ddwcpos-date-inputs {
+                                            display: flex;
+                                            gap: 12px;
+                                            margin-bottom: 20px;
+
+                                            .ddwcpos-date-input-group {
+                                                display: flex;
+                                                flex: 1;
+                                                flex-direction: column;
+                                                gap: 4px;
+
+                                                label {
+                                                    color: #6b7280;
+                                                    font-size: 11px;
+                                                    font-weight: 600;
+                                                    letter-spacing: 0.5px;
+                                                    text-transform: uppercase;
+                                                }
+
+                                                input[type=date] {
+                                                    font-size: 13px;
+                                                    padding: 4px 12px;
+                                                    transition: all 0.2s ease;
+                                                    border: 1px solid #dcdcde;
+                                                    border-radius: 4px;
+                                                    width: 100%;
+                                                }
+                                            }
+                                        }
+
+                                        .ddwcpos-apply-custom-range {
+                                            width: 100%;
+                                            justify-content: center;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ddwcpos-summary-cards {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(5, 1fr);
+        margin-bottom: 24px;
+
+        @media (max-width: 1200px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+
+        .ddwcpos-summary-card {
+            background: #fff;
+            border: 1px solid #f2f2f2;
+            border-radius: 12px;
+            padding: 20px;
+            position: relative;
+
+            .ddwcpos-card-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 16px;
+
+                .ddwcpos-card-icon {
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    background-color: var(--ddfw-body-background-color);
+
+                    svg {
+                        color: #111827;
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+
+                .ddwcpos-change-indicator {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    font-size: 12px;
+                    font-weight: 600;
+
+                    &.positive {
+                        color: #01CC44;
+                    }
+
+                    &.negative {
+                        color: #FF4800;
+                    }
+
+                    svg {
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+            }
+
+            .ddwcpos-card-content {
+                h4 {
+                    margin: 0 0 8px 0;
+                    font-size: 13px;
+                    font-weight: 500;
+                    line-height: 1.4;
+                    color: #6b7280;
+                }
+
+                .ddwcpos-card-value {
+                    color: #111827;
+
+                    .ddwcpos-value-number,
+                    .ddwcpos-value-text {
+                        font-size: 18px;
+                        font-weight: 700;
+                        line-height: 1.1;
+                        display: block;
+                    }
+
+                    // span {
+                    //     display: block;
+                    // }
+                }
+            }
+        }
+    }
+
+    .ddwcpos-dashboard-charts {
+        margin-bottom: 24px;
+
+        .ddwcpos-chart-container {
+            background: #fff;
+            border: 1px solid #f2f2f2;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 24px;
+
+            h3 {
+                align-items: center;
+                color: #111827;
+                display: flex;
+                font-size: 16px;
+                font-weight: 600;
+                gap: 8px;
+                margin: 0 0 16px;
+                
+                .ddwcpos-chart-subtitle {
+                    color: #6b7280;
+                    font-size: 12px;
+                    font-weight: 400;
+                    margin-left: auto;
+                }
+            }
+
+            .ddwcpos-chart-placeholder {
+                height: 350px;
+                position: relative;
+                width: 100%;
+                
+                canvas {
+                    max-height: 100%;
+                }
+            }
+        }
+
+        .ddwcpos-charts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+
+            @media (max-width: 1024px) {
+                grid-template-columns: 1fr;
+            }
+            
+            .ddwcpos-chart-container {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .ddwcpos-dashboard-tables {
+        .ddwcpos-table-widget {
+            background: #fff;
+            border: 1px solid #f2f2f2;
+            border-radius: 12px;
+            padding: 20px;
+
+            h3 {
+                align-items: center;
+                color: #111827;
+                display: flex;
+                font-size: 16px;
+                font-weight: 600;
+                gap: 8px;
+                margin: 0 0 16px;
+            }
+
+            .ddwcpos-table {
+                width: 100%;
+                border-collapse: collapse;
+
+                th {
+                    text-align: left;
+                    padding: 12px 0;
+                    border-bottom: 1px solid #f3f4f6;
+                    color: #6b7280;
+                    font-weight: 600;
+                    font-size: 13px;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                }
+
+                td {
+                    padding: 12px 0;
+                    border-bottom: 1px solid #f3f4f6;
+                    font-size: 14px;
+                    color: #111827;
+
+                    &.ddwcpos-no-data {
+                        text-align: center;
+                        color: #9ca3af;
+                        padding: 32px;
+                        font-style: italic;
+                    }
+
+                    a {
+                        color: @primary;
+                        text-decoration: none;
+                        font-weight: 600;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                tr:last-child td {
+                    border-bottom: none;
+                }
+                
+                .ddwcpos-status-badge {
+                    display: inline-flex;
+                    align-items: center;
+                    padding: 2px 8px;
+                    border-radius: 6px;
+                    font-size: 12px;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    line-height: 1.5;
+
+                    &.status-completed {
+                        background: #dcfce7;
+                        color: #166534;
+                    }
+
+                    &.status-processing {
+                        background: #fef9c3;
+                        color: #854d0e;
+                    }
+
+                    &.status-on-hold {
+                        background: #dbeafe;
+                        color: #1e40af;
+                    }
+
+                    &.status-cancelled,
+                    &.status-pending,
+                    &.status-refunded,
+                    &.status-failed {
+                        background: #fee2e2;
+                        color: #991b1b;
+                    }
+                }
+            }
+        }
+    }
+}

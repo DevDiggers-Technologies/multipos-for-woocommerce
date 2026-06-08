@@ -190,10 +190,7 @@ if ( ! class_exists( 'DDWCPOS_Product_Barcodes_List_Template' ) ) {
 
 						ob_start();
 						?>
-						<div class="ddfw-upgrade-to-pro-tag-wrapper">
-							<input type="text" class="ddwcpos-barcode ddwcpos-width-60" value="<?php echo esc_attr( $barcode_init ); ?>" disabled="disabled" />
-							<button type="button" class="button" disabled="disabled"><?php esc_html_e( 'Update', 'devdiggers-multipos-for-woocommerce' ); ?></button>
-						</div>
+						<span class="ddwcpos-barcode ddwcpos-width-60"><?php echo esc_html( $barcode_init ); ?></span>
 						<?php
 						$barcode_init_html = ob_get_clean();
 

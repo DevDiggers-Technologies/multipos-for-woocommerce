@@ -76,10 +76,6 @@ if ( ! class_exists( 'DDWCPOS_Outlet_Helper' ) ) {
 
 			$data = wp_parse_args( $data, $default_data );
 
-			if ( empty( $data['id'] ) && $this->ddwcpos_get_saved_outlets_count() >= 1 ) {
-				return 0;
-			}
-
 			$data['mode']           = in_array( $data['mode'], [ 'grocery', 'restaurant' ], true ) ? $data['mode'] : 'grocery';
 			$data['inventory_type'] = 'centralized';
 			$data['tables']         = 'restaurant' === $data['mode'] ? $data['tables'] : maybe_serialize( [] );
@@ -133,6 +129,7 @@ if ( ! class_exists( 'DDWCPOS_Outlet_Helper' ) ) {
 		 */
 		public function ddwcpos_get_all_outlets_count( $search ) {
 			$primary_outlet_id = $this->ddwcpos_get_primary_outlet_id();
+			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- Count on a trusted internal table name; no user input.
 			$data              = $primary_outlet_id ? intval( $this->wpdb->get_var( $this->wpdb->prepare( "SELECT count(id) FROM $this->outlet_table WHERE id=%d AND name LIKE %s", $primary_outlet_id, '%' . $search . '%' ), ARRAY_A ) ) : 0;
 
 			return apply_filters( 'ddwcpos_modify_outlets_count_data', min( $data, 1 ), $search );
@@ -332,6 +329,7 @@ if ( ! class_exists( 'DDWCPOS_Outlet_Helper' ) ) {
 		 * @return int
 		 */
 		protected function ddwcpos_get_primary_outlet_id() {
+			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- Trusted internal table name; no user input.
 			return intval( $this->wpdb->get_var( "SELECT id FROM $this->outlet_table ORDER BY id ASC LIMIT 1" ) );
 		}
     }

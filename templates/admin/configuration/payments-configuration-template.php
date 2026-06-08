@@ -65,17 +65,32 @@ if ( ! class_exists( 'DDWCPOS_Payments_Configuration_Template' ) ) {
 							}
 						}
 						?>
-						<tr>
-							<td colspan="3">
-								<a href="javascript:void(0);" class="button ddfw-upgrade-to-pro-tag-wrapper"><?php esc_html_e( 'Register Custom Method', 'devdiggers-multipos-for-woocommerce' ); ?></a>
-							</td>
-						</tr>
 					</tbody>
 				</table>
 
 				<input type="hidden" id="ddwcpos-max-index" value="<?php echo esc_attr( isset( $key ) ? $key : 0 ); ?>">
 
-				<!-- Payments Configuration Row Template -->
+				</div>
+			<?php
+			$custom_html = ob_get_clean();
+
+			$args = [
+				[
+					'header'            => [
+						'heading'     => esc_html__( 'Payments', 'devdiggers-multipos-for-woocommerce' ),
+						'description' => esc_html__( 'Edit and enable the payment methods available in POS.', 'devdiggers-multipos-for-woocommerce' ),
+					],
+					'after_header_html' => $custom_html,
+					'fields'            => [],
+				],
+			];
+
+			$layout = new DDFW_Layout();
+			$layout->get_form_section_layout( $args, 'ddwcpos-payments-configuration-fields', '', 'ddwcpos-payments-container' );
+
+			// Inert wp.template markup. Printed raw (static, no variables) so wp_kses does not strip the <script> wrappers.
+			?>
+			<!-- Payments Configuration Row Template -->
 				<script id="tmpl-ddwcpos-payments-configuration-row" type="text/html">
 					<tr valign="top">
 						<td class="forminp forminp-text">
@@ -101,23 +116,7 @@ if ( ! class_exists( 'DDWCPOS_Payments_Configuration_Template' ) ) {
 						<p><?php esc_html_e( 'Some fields are missing or contain invalid formats.', 'devdiggers-multipos-for-woocommerce' ); ?></p>
 					</div>
 				</script>
-			</div>
 			<?php
-			$custom_html = ob_get_clean();
-
-			$args = [
-				[
-					'header'            => [
-						'heading'     => esc_html__( 'Payments', 'devdiggers-multipos-for-woocommerce' ),
-						'description' => esc_html__( 'Add, edit, and enable payment methods available in POS.', 'devdiggers-multipos-for-woocommerce' ),
-					],
-					'after_header_html' => $custom_html,
-					'fields'            => [],
-				],
-			];
-
-			$layout = new DDFW_Layout();
-			$layout->get_form_section_layout( $args, 'ddwcpos-payments-configuration-fields', '', 'ddwcpos-payments-container' );
 		}
 	}
 }

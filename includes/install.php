@@ -22,8 +22,8 @@ if ( ! class_exists( 'DDWCPOS_Install' ) ) {
 			// Trigger setup wizard for new installations.
 			set_transient( 'ddfw_activation_redirect_devdiggers-multipos-for-woocommerce', true, 30 );
 
-			if ( ! get_option( '_ddwcpos_installed_at' ) ) {
-				update_option( '_ddwcpos_installed_at', time() );
+			if ( ! get_option( 'ddwcpos_installed_at' ) ) {
+				update_option( 'ddwcpos_installed_at', time() );
 			}
 
 			self::ddwcpos_create_schema();

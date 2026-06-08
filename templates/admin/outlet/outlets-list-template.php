@@ -163,7 +163,6 @@ if ( ! class_exists( 'DDWCPOS_Outlets_List_Template' ) ) {
 					ob_start();
 					?>
 					<a class="button button-primary" href="<?php echo esc_url( site_url( $this->ddwcpos_configuration['endpoint'] . '?outlet_id=' . $outlet['id'] ) ); ?>" target="_blank"><?php esc_html_e( 'Visit POS', 'devdiggers-multipos-for-woocommerce' ); ?></a>
-					<a class="button ddfw-upgrade-to-pro-tag-wrapper" href="<?php echo esc_url( admin_url( 'admin.php?page=' . $page . '&menu=product-stocks&outlet-id=' . $outlet[ 'id' ] ) ); ?>"><?php esc_html_e( 'Assign Stocks', 'devdiggers-multipos-for-woocommerce' ); ?></a>
 					<?php
 					$action = ob_get_clean();
 

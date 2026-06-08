@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: DevDiggers Framework 1.0.0\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/devdiggers-framework\n"
-"POT-Creation-Date: 2026-06-06 13:17:30+00:00\n"
+"POT-Creation-Date: 2026-06-08 21:20:21+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -241,26 +241,23 @@ msgstr ""
 msgid "Setup wizard not found for this plugin."
 msgstr ""
 
-#: devdiggers-framework/includes/class-ddfw-review-notice.php:105
-#: includes/class-ddfw-review-notice.php:105
+#: devdiggers-framework/includes/class-ddfw-review-notice.php:118
+#: includes/class-ddfw-review-notice.php:118
 #. translators: %s: Plugin Name
 msgid ""
 "Enjoying %s? We would love to hear your feedback! Could you take a moment "
 "to leave a review?"
 msgstr ""
 
-#: devdiggers-framework/includes/class-ddfw-review-notice.php:109
-#: includes/class-ddfw-review-notice.php:109
+#: devdiggers-framework/includes/class-ddfw-review-notice.php:122
 msgid "Leave a Review"
 msgstr ""
 
-#: devdiggers-framework/includes/class-ddfw-review-notice.php:110
-#: includes/class-ddfw-review-notice.php:110
+#: devdiggers-framework/includes/class-ddfw-review-notice.php:123
 msgid "Maybe Later"
 msgstr ""
 
-#: devdiggers-framework/includes/class-ddfw-review-notice.php:111
-#: includes/class-ddfw-review-notice.php:111
+#: devdiggers-framework/includes/class-ddfw-review-notice.php:124
 msgid "Already Did"
 msgstr ""
 
@@ -588,8 +585,8 @@ msgstr ""
 msgid "Back"
 msgstr ""
 
-#: devdiggers-framework/templates/layout/field-section.php:48
-#: devdiggers-framework/templates/layout/field-section.php:55
+#: devdiggers-framework/templates/layout/field-section.php:49
+#: devdiggers-framework/templates/layout/field-section.php:56
 #: devdiggers-framework/templates/layout/form-section.php:44
 #: devdiggers-framework/templates/layout/form-section.php:51
 #: templates/layout/field-section.php:49 templates/layout/field-section.php:56
@@ -672,6 +669,18 @@ msgstr ""
 
 #: includes/class-ddfw-plugin-updater.php:297
 msgid "Renew your license"
+msgstr ""
+
+#: includes/class-ddfw-review-notice.php:122
+msgid "Leave a review"
+msgstr ""
+
+#: includes/class-ddfw-review-notice.php:123
+msgid "Maybe later"
+msgstr ""
+
+#: includes/class-ddfw-review-notice.php:124
+msgid "I already did"
 msgstr ""
 
 #: templates/layout/license.php:34

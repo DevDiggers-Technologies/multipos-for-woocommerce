@@ -114,13 +114,6 @@ if ( ! class_exists( 'DDWCPOS_Manage_Outlet_Template' ) ) {
 				$tables         = ! empty( $_POST[ 'ddwcpos_outlet_tables' ] ) ? maybe_serialize( array_map( 'sanitize_text_field', wp_unslash( $_POST[ 'ddwcpos_outlet_tables' ] ) ) ) : maybe_serialize( [] );
 				$status         = ! empty( $_POST[ 'ddwcpos_outlet_status' ] ) ? sanitize_text_field( wp_unslash( $_POST[ 'ddwcpos_outlet_status' ] ) ) : '';
 
-				$existing_outlets = $this->outlet_helper->ddwcpos_get_saved_outlets_count();
-
-				if ( empty( $id ) && $existing_outlets >= 1 ) {
-					$this->ddwcpos_print_notification( esc_html__( 'The free version supports one outlet. Upgrade to Pro to add more outlets.', 'devdiggers-multipos-for-woocommerce' ), 'error' );
-					return;
-				}
-
 				$inventory_type = 'centralized';
 				$tables         = 'restaurant' === $mode ? $tables : maybe_serialize( [] );
 
@@ -220,24 +213,6 @@ if ( ! class_exists( 'DDWCPOS_Manage_Outlet_Template' ) ) {
 							'required'    => true,
 							'options'     => $outlet_modes,
 							'class'       => 'ddwcpos-select2',
-						],
-						[
-							'type'        => 'select',
-							'label'       => esc_html__( 'Inventory Management', 'devdiggers-multipos-for-woocommerce' ),
-							'description' => esc_html__( 'Decide how stock is tracked. "Centralized" syncs with WooCommerce, while "Custom" allows manual stock entries distinct from your online store.', 'devdiggers-multipos-for-woocommerce' ),
-							'value'       => $inventory_type,
-							'id'          => 'ddwcpos-outlet-inventory-type',
-							'name'        => 'ddwcpos_outlet_inventory_type',
-							'required'    => true,
-							'options'     => [
-								'centralized' => esc_html__( 'Centralized (WooCommerce Sync)', 'devdiggers-multipos-for-woocommerce' ),
-							],
-							'class'       => 'ddwcpos-select2',
-							'field_class' => [ 'ddfw-upgrade-to-pro-tag-wrapper' ],
-							'custom_attributes' => [
-								'disabled' => 'disabled',
-							],
-							'after_field_text' => '<input type="hidden" name="ddwcpos_outlet_inventory_type" value="centralized" />',
 						],
 					],
 				],

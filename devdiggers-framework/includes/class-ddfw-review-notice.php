@@ -24,8 +24,18 @@ if ( ! class_exists( 'DDFW_Review_Notice' ) ) {
 		protected $args = [];
 
 		/**
+		 * Registry of plugin prefixes that have registered a review notice.
+		 *
+		 * Used to validate the prefix received over AJAX so the option name can
+		 * never be built from an arbitrary, user-supplied value.
+		 *
+		 * @var array
+		 */
+		protected static $registered_prefixes = [];
+
+		/**
 		 * Constructor to initialize hooks.
-		 * 
+		 *
 		 * @param array $args Plugin specific arguments.
 		 */
 		public function __construct( $args = [] ) {
@@ -41,6 +51,9 @@ if ( ! class_exists( 'DDFW_Review_Notice' ) ) {
 				return;
 			}
 
+			// Record this prefix so the AJAX handler can validate against known prefixes.
+			self::$registered_prefixes[ $this->args['plugin_prefix'] ] = true;
+
 			add_action( 'admin_notices', [ $this, 'display_review_notice' ] );
 			add_action( 'wp_ajax_ddfw_dismiss_review_notice', [ $this, 'dismiss_review_notice' ] );
 		}
@@ -54,12 +67,12 @@ if ( ! class_exists( 'DDFW_Review_Notice' ) ) {
 			$prefix = $this->args['plugin_prefix'];
 
 			// Check if dismissed permanently.
-			if ( 'yes' === get_option( "_{$prefix}_review_notice_dismissed" ) ) {
+			if ( 'yes' === get_option( "{$prefix}_review_notice_dismissed" ) ) {
 				return false;
 			}
 
 			// Check install time.
-			$installed_at = get_option( "_{$prefix}_installed_at" );
+			$installed_at = get_option( "{$prefix}_installed_at" );
 			if ( ! $installed_at ) {
 				return false;
 			}
@@ -72,7 +85,7 @@ if ( ! class_exists( 'DDFW_Review_Notice' ) ) {
 			}
 
 			// Check "Maybe Later" delay.
-			$remind_at = get_option( "_{$prefix}_review_notice_remind_at" );
+			$remind_at = get_option( "{$prefix}_review_notice_remind_at" );
 			if ( $remind_at && $current_time < $remind_at ) {
 				return false;
 			}
@@ -106,9 +119,9 @@ if ( ! class_exists( 'DDFW_Review_Notice' ) ) {
 					?>
 				</p>
 				<p>
-					<a href="<?php echo esc_url( $review_url ); ?>" class="button button-primary ddfw-review-notice-action" data-action="already-did" target="_blank"><?php esc_html_e( 'Leave a Review', 'devdiggers-multipos-for-woocommerce' ); ?></a>
-					<button class="button button-secondary ddfw-review-notice-action" data-action="maybe-later"><?php esc_html_e( 'Maybe Later', 'devdiggers-multipos-for-woocommerce' ); ?></button>
-					<button class="button button-link ddfw-review-notice-action" data-action="already-did"><?php esc_html_e( 'Already Did', 'devdiggers-multipos-for-woocommerce' ); ?></button>
+					<a href="<?php echo esc_url( $review_url ); ?>" class="ddfw-review-notice-action" data-action="already-did" target="_blank"><?php esc_html_e( 'Leave a review', 'devdiggers-multipos-for-woocommerce' ); ?></a> |
+					<button type="button" class="button-link ddfw-review-notice-action" data-action="maybe-later"><?php esc_html_e( 'Maybe later', 'devdiggers-multipos-for-woocommerce' ); ?></button> |
+					<button type="button" class="button-link ddfw-review-notice-action" data-action="already-did"><?php esc_html_e( 'I already did', 'devdiggers-multipos-for-woocommerce' ); ?></button>
 				</p>
 			</div>
 			<?php
@@ -126,18 +139,20 @@ if ( ! class_exists( 'DDFW_Review_Notice' ) ) {
 				wp_send_json_error();
 			}
 
-			$prefix = ! empty( $_POST['prefix'] ) ? sanitize_text_field( wp_unslash( $_POST['prefix'] ) ) : '';
+			$prefix = ! empty( $_POST['prefix'] ) ? sanitize_key( wp_unslash( $_POST['prefix'] ) ) : '';
 			$dismiss_action = ! empty( $_POST['dismiss_action'] ) ? sanitize_text_field( wp_unslash( $_POST['dismiss_action'] ) ) : '';
 
-			if ( empty( $prefix ) ) {
+			// Only accept a prefix that an active review-notice instance actually registered.
+			// This prevents the option name from being built out of arbitrary user input.
+			if ( empty( $prefix ) || empty( self::$registered_prefixes[ $prefix ] ) ) {
 				wp_send_json_error();
 			}
 
 			if ( 'maybe-later' === $dismiss_action ) {
 				$remind_at = time() + ( $this->args['remind_days'] * DAY_IN_SECONDS );
-				update_option( "_{$prefix}_review_notice_remind_at", $remind_at );
+				update_option( "{$prefix}_review_notice_remind_at", $remind_at );
 			} else {
-				update_option( "_{$prefix}_review_notice_dismissed", 'yes' );
+				update_option( "{$prefix}_review_notice_dismissed", 'yes' );
 			}
 
 			wp_send_json_success();

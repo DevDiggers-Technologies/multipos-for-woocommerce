@@ -192,12 +192,6 @@ if ( ! class_exists( 'DDWCPOS_Admin_Functions' ) ) {
 				$submitted_role = ! empty( $_POST['role'] ) ? sanitize_key( wp_unslash( $_POST['role'] ) ) : '';
 
 			if ( 'ddwcpos_cashier' === $submitted_role ) {
-				$is_existing_cashier = $update && $user instanceof \WP_User && in_array( 'ddwcpos_cashier', (array) $user->roles, true );
-
-				if ( $this->ddwcpos_get_pos_cashiers_count() >= 1 && ! $is_existing_cashier ) {
-					$errors->add( 'ddwcpos_cashier_limit_error', esc_html__( 'The free version supports one POS cashier. Upgrade to Pro to add more cashiers.', 'devdiggers-multipos-for-woocommerce' ) );
-				}
-
 					// phpcs:ignore WordPress.Security.NonceVerification.Missing -- WordPress user form nonce is verified by core before this validation hook.
 					if ( empty( $_POST['ddwcpos_assigned_outlets'] ) ) {
 					$errors->add( 'ddwcpos_assigned_outlets_error', esc_html__( 'Please select the assigned outlets.', 'devdiggers-multipos-for-woocommerce' ) );
@@ -217,7 +211,7 @@ if ( ! class_exists( 'DDWCPOS_Admin_Functions' ) ) {
 				// phpcs:ignore WordPress.Security.NonceVerification.Missing -- WordPress user form nonce is verified by core before this save hook.
 				if ( ! empty( $_POST[ 'createuser' ] ) && ! empty( $_POST[ 'role' ] ) && 'ddwcpos_cashier' === sanitize_key( wp_unslash( $_POST[ 'role' ] ) ) ) {
 					// phpcs:ignore WordPress.Security.NonceVerification.Missing -- WordPress user form nonce is verified by core before this save hook.
-					$assigned_outlets  = ! empty( $_POST[ 'ddwcpos_assigned_outlets' ] ) ? array_slice( array_map( 'absint', (array) wp_unslash( $_POST[ 'ddwcpos_assigned_outlets' ] ) ), 0, 1 ) : [];
+					$assigned_outlets  = ! empty( $_POST[ 'ddwcpos_assigned_outlets' ] ) ? array_map( 'absint', (array) wp_unslash( $_POST[ 'ddwcpos_assigned_outlets' ] ) ) : [];
 					// phpcs:ignore WordPress.Security.NonceVerification.Missing -- WordPress user form nonce is verified by core before this save hook.
 					$from_cashier_page = ! empty( $_POST[ 'ddwcpos_from_cashier_page' ] ) ? absint( wp_unslash( $_POST[ 'ddwcpos_from_cashier_page' ] ) ) : 0;
 				update_user_meta( $user_id, '_ddwcpos_assigned_outlets', $assigned_outlets );
@@ -300,7 +294,7 @@ if ( ! class_exists( 'DDWCPOS_Admin_Functions' ) ) {
 				$nonce          = ! empty( $_POST[ '_wpnonce' ] ) ? sanitize_text_field( wp_unslash( $_POST[ '_wpnonce' ] ) ) : '';
 				$submitted_role = ! empty( $_POST[ 'role' ] ) ? sanitize_key( wp_unslash( $_POST[ 'role' ] ) ) : '';
 				if ( ! empty( $nonce ) && wp_verify_nonce( $nonce, 'update-user_' . $user_id ) && current_user_can( 'edit_user', $user_id ) && 'ddwcpos_cashier' === $submitted_role ) {
-				$assigned_outlets = ! empty( $_POST[ 'ddwcpos_assigned_outlets' ] ) ? array_slice( array_map( 'absint', (array) wp_unslash( $_POST[ 'ddwcpos_assigned_outlets' ] ) ), 0, 1 ) : [];
+				$assigned_outlets = ! empty( $_POST[ 'ddwcpos_assigned_outlets' ] ) ? array_map( 'absint', (array) wp_unslash( $_POST[ 'ddwcpos_assigned_outlets' ] ) ) : [];
 				update_user_meta( $user_id, '_ddwcpos_assigned_outlets', $assigned_outlets );
 			}
 		}

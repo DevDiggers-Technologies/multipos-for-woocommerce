@@ -150,22 +150,6 @@ if ( ! class_exists( 'DDWCPOS_Layout_Configuration_Template' ) ) {
 							'value'       => $ddwcpos_configuration['product_layout'],
 							'input_class' => [ 'ddwcpos-select2' ],
 						],
-						[
-							'type'        => 'select',
-							'label'       => esc_html__( 'Variation Picker Style', 'devdiggers-multipos-for-woocommerce' ),
-							'description' => esc_html__( 'Choose how cashiers pick variation options.', 'devdiggers-multipos-for-woocommerce' ),
-							'options'     => [
-								'grid'  => esc_html__( 'Inline Grid (High Efficiency)', 'devdiggers-multipos-for-woocommerce' ),
-								'popup' => esc_html__( 'Modal Popup (Clean Design)', 'devdiggers-multipos-for-woocommerce' ),
-							],
-							'id'          => 'ddwcpos-product-variation-layout',
-							'value'       => $ddwcpos_configuration['product_variation_layout'],
-							'input_class' => [ 'ddwcpos-select2' ],
-							'field_class' => [ 'ddfw-upgrade-to-pro-tag-wrapper' ],
-							'custom_attributes' => [
-								'disabled' => 'disabled',
-							],
-						],
 					],
 				],
 				[
@@ -174,17 +158,6 @@ if ( ! class_exists( 'DDWCPOS_Layout_Configuration_Template' ) ) {
 						'description' => esc_html__( 'Choose which product details stay visible in grid.', 'devdiggers-multipos-for-woocommerce' ),
 					],
 					'fields' => [
-						[
-							'type'           => 'checkbox',
-							'label'          => esc_html__( 'Individual Variation Display', 'devdiggers-multipos-for-woocommerce' ),
-							'checkbox_label' => esc_html__( 'Show Variations as Individual Items', 'devdiggers-multipos-for-woocommerce' ),
-							'description'    => esc_html__( 'Turn off to group variations under parent product.', 'devdiggers-multipos-for-woocommerce' ),
-							'id'             => 'ddwcpos-variation-product-enabled',
-							'field_class'    => [ 'ddfw-upgrade-to-pro-tag-wrapper' ],
-							'custom_attributes' => [
-								'disabled' => 'disabled',
-							],
-						],
 						[
 							'type'           => 'checkbox',
 							'label'          => esc_html__( 'Real-time Stock Indicators', 'devdiggers-multipos-for-woocommerce' ),

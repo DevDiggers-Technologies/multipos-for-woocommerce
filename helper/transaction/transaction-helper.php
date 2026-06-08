@@ -65,6 +65,7 @@ if ( ! class_exists( 'DDWCPOS_Transaction_Helper' ) ) {
 		 */
 		protected function ddwcpos_maybe_create_transactions_table() {
 			$table_name = esc_sql( $this->transactions_table );
+				// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- Table-existence check on a trusted internal table name; no user input.
 				$table      = $this->wpdb->get_var( "SHOW TABLES LIKE '{$table_name}'" );
 
 			if ( $table !== $this->transactions_table && class_exists( '\DDWCPOS_Install' ) ) {
@@ -175,6 +176,7 @@ if ( ! class_exists( 'DDWCPOS_Transaction_Helper' ) ) {
 				$conditions .= $this->wpdb->prepare( " AND transactions.id LIKE %s", '%' . $search . '%' );
 			}
 
+			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- Table names are trusted internal properties; all user filter values are bound via $wpdb->prepare() in $conditions.
 			$data = $this->wpdb->get_var( "SELECT count(DISTINCT transactions.id) FROM $this->transactions_table as transactions JOIN $this->users_table as users ON transactions.cashier_id=users.ID LEFT JOIN $this->outlet_table as outlets ON transactions.outlet_id=outlets.id WHERE 1=1 $conditions" );
 
 			return apply_filters( 'ddwcpos_modify_transactions_count_data', $data, $search );

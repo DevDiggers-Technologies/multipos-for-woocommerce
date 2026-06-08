@@ -98,19 +98,8 @@ if ( ! class_exists( 'DDWCPOS_Invoices_Template' ) ) {
 								</div>
 							</div>
 
-							<div class="ddwcpos-card-footer">
-								<?php // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Page is read-only routing input. ?>
-								<a href="<?php echo esc_url( admin_url( 'admin.php?page=' . ( ! empty( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : 'ddwcpos-dashboard' ) . '&menu=invoices&slug=' . $invoice['slug'] ) ); ?>" class="button ddfw-upgrade-to-pro-tag-wrapper"><?php esc_html_e( 'Customize', 'devdiggers-multipos-for-woocommerce' ); ?></a>
-							</div>
 						</div>
 					<?php endforeach; ?>
-
-					<div class="ddwcpos-invoice-card create-new ddfw-upgrade-to-pro-tag-wrapper">
-						<div class="ddwcpos-create-content">
-							<span class="dashicons dashicons-plus"></span>
-							<h3><?php esc_html_e( 'Create New Template', 'devdiggers-multipos-for-woocommerce' ); ?></h3>
-						</div>
-					</div>
 				</div>
 			</div>
 			<?php

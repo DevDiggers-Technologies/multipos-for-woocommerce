@@ -286,28 +286,10 @@ if ( ! class_exists( 'DDWCPOS_Admin_Dashboard' ) ) {
 		 * @return void
 		 */
 		public function ddwcpos_get_outlets_template() {
-			$outlet_helper = new \DDWCMultiPOS\Helper\Outlet\DDWCPOS_Outlet_Helper();
-			$outlet_count  = $outlet_helper->ddwcpos_get_saved_outlets_count();
-			$action        = ! empty( $_GET['action'] ) ? sanitize_text_field( wp_unslash( $_GET['action'] ) ) : '';
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only routing input.
+			$action = ! empty( $_GET['action'] ) ? sanitize_text_field( wp_unslash( $_GET['action'] ) ) : '';
 
-			if ( 'add' === $action && $outlet_count >= 1 ) {
-				ddfw_upgrade_to_pro_section(
-					[
-						'image_url'     => DDWCPOS_PLUGIN_URL . 'assets/images/pro-pages/add-outlet.webp',
-						'heading'       => esc_html__( 'Manage Unlimited Outlets', 'devdiggers-multipos-for-woocommerce' ),
-						'description'   => esc_html__( 'The free version allows only one outlet. Upgrade to Pro to add more locations, registers, and outlet-specific settings.', 'devdiggers-multipos-for-woocommerce' ),
-						'list_features' => [
-							esc_html__( 'Create unlimited POS outlets', 'devdiggers-multipos-for-woocommerce' ),
-							esc_html__( 'Assign multiple cashiers for multiple outlets', 'devdiggers-multipos-for-woocommerce' ),
-							esc_html__( 'Set stock and settings per location', 'devdiggers-multipos-for-woocommerce' ),
-							esc_html__( 'Enable offline mode with Custom (Manual POS Stock) management', 'devdiggers-multipos-for-woocommerce' ),
-							esc_html__( 'Design different invoices for different outlets.', 'devdiggers-multipos-for-woocommerce' ),
-							esc_html__( 'Add more custom payment options for outlets.', 'devdiggers-multipos-for-woocommerce' ),
-						],
-						'upgrade_url'   => '//devdiggers.com/product/multipos-point-of-sale-for-woocommerce/',
-					]
-				);
-			} elseif ( ! empty( $action ) && ( 'add' === $action || 'edit' === $action ) ) {
+			if ( ! empty( $action ) && ( 'add' === $action || 'edit' === $action ) ) {
 				new Admin\Outlet\DDWCPOS_Manage_Outlet_Template( $this->ddwcpos_configuration );
 			} else {
 				if ( ! empty( $_GET['success'] ) ) {
@@ -323,22 +305,16 @@ if ( ! class_exists( 'DDWCPOS_Admin_Dashboard' ) ) {
 				<form method="get">
 					<hr class="wp-header-end" />
 					<h1 class="wp-heading-inline"><?php esc_html_e( 'Outlets', 'devdiggers-multipos-for-woocommerce' ); ?></h1>
-					<?php if ( $outlet_count < 1 ) : ?>
-						<a href="<?php echo esc_url( admin_url( "admin.php?page={$page}&menu={$menu}&action=add" ) ); ?>" class="page-title-action button-primary button">
-							<?php
-							DDFW_SVG::get_svg_icon(
-								'plus',
-								false,
-								[ 'size' => 15 ]
-							);
-							esc_html_e( 'Add New', 'devdiggers-multipos-for-woocommerce' );
-							?>
-						</a>
-					<?php else : ?>
-						<a href="<?php echo esc_url( admin_url( "admin.php?page={$page}&menu={$menu}&action=add" ) ); ?>" class="page-title-action button ddfw-upgrade-to-pro-tag-wrapper">
-							<?php esc_html_e( 'Add New', 'devdiggers-multipos-for-woocommerce' ); ?>
-						</a>
-						<?php endif; ?>
+					<a href="<?php echo esc_url( admin_url( "admin.php?page={$page}&menu={$menu}&action=add" ) ); ?>" class="page-title-action button-primary button">
+						<?php
+						DDFW_SVG::get_svg_icon(
+							'plus',
+							false,
+							[ 'size' => 15 ]
+						);
+						esc_html_e( 'Add New', 'devdiggers-multipos-for-woocommerce' );
+						?>
+					</a>
 					<a href="<?php echo esc_url( site_url( $this->ddwcpos_configuration['endpoint'] ) ); ?>" class="page-title-action button" target="_blank"><?php esc_html_e( 'Visit POS', 'devdiggers-multipos-for-woocommerce' ); ?></a>
 					<input type="hidden" name="page" value="<?php echo esc_attr( $page ); ?>" />
 					<input type="hidden" name="menu" value="<?php echo esc_attr( $menu ); ?>" />
@@ -364,14 +340,6 @@ if ( ! class_exists( 'DDWCPOS_Admin_Dashboard' ) ) {
 				ddfw_print_notification( esc_html__( 'Cashier created successfully.', 'devdiggers-multipos-for-woocommerce' ), 'success' );
 			}
 			$obj = new Admin\Cashier\DDWCPOS_Cashiers_List_Template();
-			$cashier_query = new \WP_User_Query(
-				[
-					'role'   => 'ddwcpos_cashier',
-					'fields' => 'ID',
-					'number' => 1,
-				]
-			);
-			$cashier_count = intval( $cashier_query->get_total() );
 
 			$page  = isset( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : '';
 			$menu  = isset( $_GET['menu'] ) ? sanitize_text_field( wp_unslash( $_GET['menu'] ) ) : '';
@@ -380,20 +348,16 @@ if ( ! class_exists( 'DDWCPOS_Admin_Dashboard' ) ) {
 			<form method="get">
 				<hr class="wp-header-end" />
 				<h1 class="wp-heading-inline"><?php esc_html_e( 'Cashiers', 'devdiggers-multipos-for-woocommerce' ); ?></h1>
-				<?php if ( $cashier_count < 1 ) : ?>
-					<a href="<?php echo esc_url( admin_url( 'user-new.php' ) ); ?>" class="page-title-action button-primary button">
-						<?php
-						DDFW_SVG::get_svg_icon(
-							'plus',
-							false,
-							[ 'size' => 15 ]
-						);
-						esc_html_e( 'Add New', 'devdiggers-multipos-for-woocommerce' );
-						?>
-					</a>
-				<?php else : ?>
-					<a href="<?php echo esc_url( admin_url( 'user-new.php' ) ); ?>" class="page-title-action button ddfw-upgrade-to-pro-tag-wrapper"><?php esc_html_e( 'Add New', 'devdiggers-multipos-for-woocommerce' ); ?></a>
-				<?php endif; ?>
+				<a href="<?php echo esc_url( admin_url( 'user-new.php' ) ); ?>" class="page-title-action button-primary button">
+					<?php
+					DDFW_SVG::get_svg_icon(
+						'plus',
+						false,
+						[ 'size' => 15 ]
+					);
+					esc_html_e( 'Add New', 'devdiggers-multipos-for-woocommerce' );
+					?>
+				</a>
 				<input type="hidden" name="page" value="<?php echo esc_attr( $page ); ?>" />
 				<input type="hidden" name="menu" value="<?php echo esc_attr( $menu ); ?>" />
 				<input type="hidden" name="paged" value="<?php echo esc_attr( $paged ); ?>" />

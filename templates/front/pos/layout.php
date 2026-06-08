@@ -147,8 +147,7 @@ if ( ! class_exists( 'DDWCPOS_Layout' ) ) {
 									) .
 									'</form>';
 
-									// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Login form markup is assembled from escaped values and filter output.
-									echo $form;
+									echo wp_kses( $form, ddfw_kses_allowed_form_html() );
 
 								?>
 								<div class="ddwcpos-login-footer">

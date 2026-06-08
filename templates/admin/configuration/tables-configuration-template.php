@@ -72,7 +72,27 @@ if ( ! class_exists( 'DDWCPOS_Tables_Configuration_Template' ) ) {
 
 				<input type="hidden" id="ddwcpos-max-index" value="<?php echo esc_attr( isset( $key ) ? $key : -1 ); ?>">
 
-				<!-- Tables Configuration Row Template -->
+				</div>
+			<?php
+			$custom_html = ob_get_clean();
+
+			$args = [
+				[
+					'header'            => [
+						'heading'     => esc_html__( 'Tables', 'devdiggers-multipos-for-woocommerce' ),
+						'description' => esc_html__( 'Add and manage tables available in restaurant POS.', 'devdiggers-multipos-for-woocommerce' ),
+					],
+					'after_header_html' => $custom_html,
+					'fields'            => [],
+				],
+			];
+
+			$layout = new DDFW_Layout();
+			$layout->get_form_section_layout( $args, 'ddwcpos-tables-configuration-fields', '', 'ddwcpos-tables-container' );
+
+			// Inert wp.template markup. Printed raw (static, no variables) so wp_kses does not strip the <script> wrappers.
+			?>
+			<!-- Tables Configuration Row Template -->
 				<script id="tmpl-ddwcpos-tables-configuration-row" type="text/html">
 					<tr valign="top">
 						<td class="forminp forminp-text">
@@ -100,23 +120,7 @@ if ( ! class_exists( 'DDWCPOS_Tables_Configuration_Template' ) ) {
 						<p><?php esc_html_e( 'Required table attributes are missing or invalid.', 'devdiggers-multipos-for-woocommerce' ); ?></p>
 					</div>
 				</script>
-			</div>
 			<?php
-			$custom_html = ob_get_clean();
-
-			$args = [
-				[
-					'header'            => [
-						'heading'     => esc_html__( 'Tables', 'devdiggers-multipos-for-woocommerce' ),
-						'description' => esc_html__( 'Add and manage tables available in restaurant POS.', 'devdiggers-multipos-for-woocommerce' ),
-					],
-					'after_header_html' => $custom_html,
-					'fields'            => [],
-				],
-			];
-
-			$layout = new DDFW_Layout();
-			$layout->get_form_section_layout( $args, 'ddwcpos-tables-configuration-fields', '', 'ddwcpos-tables-container' );
 		}
 	}
 }

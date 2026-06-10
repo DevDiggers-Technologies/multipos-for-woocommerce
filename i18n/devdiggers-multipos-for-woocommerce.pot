@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: DevDiggers MultiPOS for WooCommerce 1.0.0\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/devdiggers-multipos-for-woocommerce\n"
-"POT-Creation-Date: 2026-06-08 21:21:38+00:00\n"
+"POT-Creation-Date: 2026-06-10 20:23:43+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -243,110 +243,110 @@ msgstr ""
 msgid "The file attempting to be loaded at %s does not exist."
 msgstr ""
 
-#: functions.php:103
+#: functions.php:100
 #. translators: %1$s for a opening tag and %2$s for a closing tag
 msgid ""
 "MultiPOS - Point of Sale for WooCommerce is activated but not effective. It "
 "requires %1$sWooCommerce Plugin%2$s in order to use its functionalities."
 msgstr ""
 
-#: functions.php:117
+#: functions.php:114
 msgid "MultiPOS - Point of Sale for WooCommerce"
 msgstr ""
 
-#: functions.php:134 includes/admin-dashboard.php:85
+#: functions.php:131 includes/admin-dashboard.php:85
 msgid "Dashboard"
 msgstr ""
 
-#: functions.php:136 includes/admin-dashboard.php:130
+#: functions.php:133 includes/admin-dashboard.php:130
 #: templates/admin/outlet/manage-outlet-template.php:300
 msgid "Configuration"
 msgstr ""
 
-#: functions.php:138
+#: functions.php:135
 msgid "Setup Wizard"
 msgstr ""
 
-#: functions.php:140
+#: functions.php:137
 msgid "Upgrade to Pro"
 msgstr ""
 
-#: functions.php:157
+#: functions.php:154
 msgid "Support"
 msgstr ""
 
-#: functions.php:158
+#: functions.php:155
 msgid "Documentation"
 msgstr ""
 
-#: functions.php:159 includes/admin-dashboard.php:712
+#: functions.php:156 includes/admin-dashboard.php:712
 msgid "Review"
 msgstr ""
 
-#: helper/dashboard/dashboard-helper.php:66
-#: templates/admin/dashboard/dashboard-template.php:143
+#: helper/dashboard/dashboard-helper.php:67
+#: templates/admin/dashboard/dashboard-template.php:144
 msgid "Today"
 msgstr ""
 
-#: helper/dashboard/dashboard-helper.php:71
-#: templates/admin/dashboard/dashboard-template.php:144
+#: helper/dashboard/dashboard-helper.php:72
+#: templates/admin/dashboard/dashboard-template.php:145
 msgid "This Week"
 msgstr ""
 
-#: helper/dashboard/dashboard-helper.php:76
-#: templates/admin/dashboard/dashboard-template.php:145
+#: helper/dashboard/dashboard-helper.php:77
+#: templates/admin/dashboard/dashboard-template.php:146
 msgid "Last Week"
 msgstr ""
 
-#: helper/dashboard/dashboard-helper.php:81
-#: templates/admin/dashboard/dashboard-template.php:146
+#: helper/dashboard/dashboard-helper.php:82
+#: templates/admin/dashboard/dashboard-template.php:147
 msgid "This Month"
 msgstr ""
 
-#: helper/dashboard/dashboard-helper.php:86
-#: templates/admin/dashboard/dashboard-template.php:147
+#: helper/dashboard/dashboard-helper.php:87
+#: templates/admin/dashboard/dashboard-template.php:148
 msgid "Last Month"
 msgstr ""
 
-#: helper/dashboard/dashboard-helper.php:91
-#: templates/admin/dashboard/dashboard-template.php:148
+#: helper/dashboard/dashboard-helper.php:92
+#: templates/admin/dashboard/dashboard-template.php:149
 msgid "Last 3 Months"
 msgstr ""
 
-#: helper/dashboard/dashboard-helper.php:96
-#: templates/admin/dashboard/dashboard-template.php:149
+#: helper/dashboard/dashboard-helper.php:97
+#: templates/admin/dashboard/dashboard-template.php:150
 msgid "Last 6 Months"
 msgstr ""
 
-#: helper/dashboard/dashboard-helper.php:101
-#: templates/admin/dashboard/dashboard-template.php:150
+#: helper/dashboard/dashboard-helper.php:102
+#: templates/admin/dashboard/dashboard-template.php:151
 msgid "Year to Date"
 msgstr ""
 
-#: helper/dashboard/dashboard-helper.php:106
-#: templates/admin/dashboard/dashboard-template.php:151
+#: helper/dashboard/dashboard-helper.php:107
+#: templates/admin/dashboard/dashboard-template.php:152
 msgid "Last Year"
 msgstr ""
 
-#: helper/dashboard/dashboard-helper.php:111
-#: templates/admin/dashboard/dashboard-template.php:152
+#: helper/dashboard/dashboard-helper.php:112
+#: templates/admin/dashboard/dashboard-template.php:153
 msgid "All Time"
 msgstr ""
 
-#: helper/dashboard/dashboard-helper.php:123
+#: helper/dashboard/dashboard-helper.php:122
 msgid "Last 30 Days"
 msgstr ""
 
-#: helper/dashboard/dashboard-helper.php:293
+#: helper/dashboard/dashboard-helper.php:292
 msgid "Guest"
 msgstr ""
 
-#: helper/dashboard/dashboard-helper.php:441
+#: helper/dashboard/dashboard-helper.php:440
 #. translators: %d: Outlet ID.
 msgid "Outlet #%d"
 msgstr ""
 
-#: helper/dashboard/dashboard-helper.php:470
+#: helper/dashboard/dashboard-helper.php:469
 msgid "Other"
 msgstr ""
 
@@ -359,15 +359,15 @@ msgid "SALES RECEIPT"
 msgstr ""
 
 #: helper/invoice/invoice-helper.php:44
-#: templates/admin/dashboard/dashboard-template.php:275
+#: templates/admin/dashboard/dashboard-template.php:276
 #: templates/admin/order/orders-list-template.php:36
 #: templates/admin/order/orders-list-template.php:298
 msgid "Order"
 msgstr ""
 
 #: helper/invoice/invoice-helper.php:45
-#: templates/admin/dashboard/dashboard-template.php:276
-#: templates/admin/outlet/outlets-list-template.php:301
+#: templates/admin/dashboard/dashboard-template.php:277
+#: templates/admin/outlet/outlets-list-template.php:295
 #: assets/js/pos.js:182
 msgid "Date"
 msgstr ""
@@ -377,7 +377,7 @@ msgid "Cashier"
 msgstr ""
 
 #: helper/invoice/invoice-helper.php:47
-#: templates/admin/dashboard/dashboard-template.php:277
+#: templates/admin/dashboard/dashboard-template.php:278
 msgid "Customer"
 msgstr ""
 
@@ -410,7 +410,7 @@ msgid "Sub Total"
 msgstr ""
 
 #: helper/invoice/invoice-helper.php:55
-#: templates/admin/dashboard/dashboard-template.php:279
+#: templates/admin/dashboard/dashboard-template.php:280
 #: assets/js/pos.js:387
 msgid "Total"
 msgstr ""
@@ -446,11 +446,11 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: helper/outlet/outlet-helper.php:308
+#: helper/outlet/outlet-helper.php:309
 msgid "Grocery/Retail"
 msgstr ""
 
-#: helper/outlet/outlet-helper.php:309
+#: helper/outlet/outlet-helper.php:310
 msgid "Restaurant/Cafe"
 msgstr ""
 
@@ -460,10 +460,10 @@ msgstr ""
 
 #: includes/admin/admin-ajax-functions.php:46
 #: includes/admin/setup-wizard.php:346
-#: templates/admin/cashier/cashiers-list-template.php:264
+#: templates/admin/cashier/cashiers-list-template.php:258
 #: templates/admin/outlet/manage-outlet-template.php:96
-#: templates/admin/outlet/outlets-list-template.php:195
-#: templates/admin/outlet/outlets-list-template.php:247
+#: templates/admin/outlet/outlets-list-template.php:187
+#: templates/admin/outlet/outlets-list-template.php:241
 #: templates/admin/transaction/transactions-list-template.php:193
 #: templates/admin/transaction/transactions-list-template.php:253
 msgid "Insufficient permissions."
@@ -477,51 +477,49 @@ msgstr ""
 msgid "Could not generate barcode image."
 msgstr ""
 
-#: includes/admin/admin-functions.php:100 includes/globals-variables.php:55
-#: includes/globals-variables.php:63
+#: includes/admin/admin-functions.php:125 includes/globals-variables.php:55
 msgid "Cash"
 msgstr ""
 
-#: includes/admin/admin-functions.php:165 includes/globals-variables.php:82
-#: includes/globals-variables.php:91
+#: includes/admin/admin-functions.php:201 includes/globals-variables.php:66
 msgid "Default Invoice"
 msgstr ""
 
-#: includes/admin/admin-functions.php:197
+#: includes/admin/admin-functions.php:241
 msgid "Please select the assigned outlets."
 msgstr ""
 
-#: includes/admin/admin-functions.php:252
+#: includes/admin/admin-functions.php:296
 msgid "MultiPOS Outlet Details"
 msgstr ""
 
-#: includes/admin/admin-functions.php:253
+#: includes/admin/admin-functions.php:297
 msgid "Assign specific store locations to this user for POS access."
 msgstr ""
 
-#: includes/admin/admin-functions.php:261
-#: templates/admin/cashier/cashiers-list-template.php:311
+#: includes/admin/admin-functions.php:305
+#: templates/admin/cashier/cashiers-list-template.php:305
 msgid "Assigned Outlets"
 msgstr ""
 
-#: includes/admin/admin-functions.php:262
+#: includes/admin/admin-functions.php:306
 msgid "(required)"
 msgstr ""
 
-#: includes/admin/admin-functions.php:267
+#: includes/admin/admin-functions.php:311
 msgid "Select Outlet(s)"
 msgstr ""
 
-#: includes/admin/admin-functions.php:276
+#: includes/admin/admin-functions.php:320
 msgid "The user will only be able to log in to the POS of the assigned outlets."
 msgstr ""
 
-#: includes/admin/admin-functions.php:339 includes/admin-dashboard.php:318
-#: templates/admin/outlet/outlets-list-template.php:165
+#: includes/admin/admin-functions.php:383 includes/admin-dashboard.php:318
+#: templates/admin/outlet/outlets-list-template.php:155
 msgid "Visit POS"
 msgstr ""
 
-#: includes/admin/admin-functions.php:356
+#: includes/admin/admin-functions.php:400
 msgid "Order Type"
 msgstr ""
 
@@ -782,7 +780,7 @@ msgid "Outlets"
 msgstr ""
 
 #: includes/admin-dashboard.php:95 includes/admin-dashboard.php:350
-#: templates/admin/dashboard/dashboard-template.php:212
+#: templates/admin/dashboard/dashboard-template.php:213
 msgid "Cashiers"
 msgstr ""
 
@@ -815,7 +813,7 @@ msgid "Invoices"
 msgstr ""
 
 #: includes/admin-dashboard.php:143
-#: templates/admin/configuration/payments-configuration-template.php:80
+#: templates/admin/configuration/payments-configuration-template.php:85
 msgid "Payments"
 msgstr ""
 
@@ -966,31 +964,31 @@ msgid ""
 "appreciate it."
 msgstr ""
 
-#: includes/globals-variables.php:112
+#: includes/globals-variables.php:87
 msgid "Point of Sale"
 msgstr ""
 
-#: includes/globals-variables.php:113
+#: includes/globals-variables.php:88
 msgid "POS"
 msgstr ""
 
-#: includes/globals-variables.php:114
+#: includes/globals-variables.php:89
 msgid "A Progressive Web App for Point of Sale"
 msgstr ""
 
-#: includes/globals-variables.php:117
+#: includes/globals-variables.php:92
 msgid "Welcome to Point of Sale"
 msgstr ""
 
-#: includes/globals-variables.php:118
+#: includes/globals-variables.php:93
 msgid "Access your point of sale terminal to manage orders and retail operations."
 msgstr ""
 
-#: includes/globals-variables.php:119
+#: includes/globals-variables.php:94
 msgid "Thanks for using the Point of Sale"
 msgstr ""
 
-#: includes/globals-variables.php:120
+#: includes/globals-variables.php:95
 msgid "Log in"
 msgstr ""
 
@@ -1034,8 +1032,8 @@ msgid "Barcode Management"
 msgstr ""
 
 #: templates/admin/barcode/product-barcodes-list-template.php:317
-#: templates/admin/cashier/cashiers-list-template.php:366
-#: templates/admin/outlet/outlets-list-template.php:365
+#: templates/admin/cashier/cashiers-list-template.php:360
+#: templates/admin/outlet/outlets-list-template.php:359
 #: templates/admin/stock/product-stocks-list-template.php:318
 msgid "Edit"
 msgstr ""
@@ -1061,53 +1059,53 @@ msgstr ""
 msgid "Cashiers List"
 msgstr ""
 
-#: templates/admin/cashier/cashiers-list-template.php:174
+#: templates/admin/cashier/cashiers-list-template.php:164
 msgid "All Outlets"
 msgstr ""
 
-#: templates/admin/cashier/cashiers-list-template.php:231
+#: templates/admin/cashier/cashiers-list-template.php:223
 #. translators: %d: Number of cashiers deleted.
 msgid "%d cashier(s) deleted successfully."
 msgstr ""
 
-#: templates/admin/cashier/cashiers-list-template.php:237
+#: templates/admin/cashier/cashiers-list-template.php:229
 #. translators: %d: Number of cashiers not found.
 msgid "%d cashier(s) not exists."
 msgstr ""
 
-#: templates/admin/cashier/cashiers-list-template.php:242
+#: templates/admin/cashier/cashiers-list-template.php:234
 msgid "Select cashier(s) to delete."
 msgstr ""
 
-#: templates/admin/cashier/cashiers-list-template.php:271
+#: templates/admin/cashier/cashiers-list-template.php:265
 msgid "Cashier is deleted successfully."
 msgstr ""
 
-#: templates/admin/cashier/cashiers-list-template.php:274
+#: templates/admin/cashier/cashiers-list-template.php:268
 msgid "Cashier not exists."
 msgstr ""
 
-#: templates/admin/cashier/cashiers-list-template.php:288
+#: templates/admin/cashier/cashiers-list-template.php:282
 msgid "No cashiers avaliable."
 msgstr ""
 
-#: templates/admin/cashier/cashiers-list-template.php:308
-#: templates/admin/outlet/outlets-list-template.php:298
+#: templates/admin/cashier/cashiers-list-template.php:302
+#: templates/admin/outlet/outlets-list-template.php:292
 msgid "ID"
 msgstr ""
 
-#: templates/admin/cashier/cashiers-list-template.php:309
+#: templates/admin/cashier/cashiers-list-template.php:303
 msgid "Username"
 msgstr ""
 
-#: templates/admin/cashier/cashiers-list-template.php:310
+#: templates/admin/cashier/cashiers-list-template.php:304
 msgid "Role"
 msgstr ""
 
-#: templates/admin/cashier/cashiers-list-template.php:367
-#: templates/admin/cashier/cashiers-list-template.php:390
-#: templates/admin/outlet/outlets-list-template.php:366
-#: templates/admin/outlet/outlets-list-template.php:420
+#: templates/admin/cashier/cashiers-list-template.php:361
+#: templates/admin/cashier/cashiers-list-template.php:384
+#: templates/admin/outlet/outlets-list-template.php:360
+#: templates/admin/outlet/outlets-list-template.php:414
 #: templates/admin/transaction/transactions-list-template.php:361
 #: templates/admin/transaction/transactions-list-template.php:458
 #: assets/js/pos.js:312
@@ -1472,44 +1470,48 @@ msgid "Enable/Disable Status"
 msgstr ""
 
 #: templates/admin/configuration/payments-configuration-template.php:51
-#: templates/admin/configuration/payments-configuration-template.php:104
+#: templates/admin/configuration/payments-configuration-template.php:109
 #: templates/admin/configuration/tables-configuration-template.php:54
 #: templates/admin/configuration/tables-configuration-template.php:108
 msgid "Select Status"
 msgstr ""
 
 #: templates/admin/configuration/payments-configuration-template.php:52
-#: templates/admin/configuration/payments-configuration-template.php:105
+#: templates/admin/configuration/payments-configuration-template.php:110
 #: templates/admin/configuration/tables-configuration-template.php:55
 #: templates/admin/configuration/tables-configuration-template.php:109
-#: templates/admin/invoices/invoices-template.php:82
-#: templates/admin/invoices/invoices-template.php:96
+#: templates/admin/invoices/invoices-template.php:55
+#: templates/admin/invoices/invoices-template.php:69
 #: templates/admin/outlet/manage-outlet-template.php:349
-#: templates/admin/outlet/outlets-list-template.php:155
+#: templates/admin/outlet/outlets-list-template.php:145
 msgid "Active"
 msgstr ""
 
 #: templates/admin/configuration/payments-configuration-template.php:53
-#: templates/admin/configuration/payments-configuration-template.php:106
+#: templates/admin/configuration/payments-configuration-template.php:111
 #: templates/admin/configuration/tables-configuration-template.php:56
 #: templates/admin/configuration/tables-configuration-template.php:110
 #: templates/admin/outlet/manage-outlet-template.php:350
-#: templates/admin/outlet/outlets-list-template.php:155
+#: templates/admin/outlet/outlets-list-template.php:145
 msgid "Inactive"
 msgstr ""
 
 #: templates/admin/configuration/payments-configuration-template.php:58
-#: templates/admin/configuration/payments-configuration-template.php:108
+#: templates/admin/configuration/payments-configuration-template.php:113
 #: templates/admin/configuration/tables-configuration-template.php:58
 #: templates/admin/configuration/tables-configuration-template.php:112
 msgid "Remove"
 msgstr ""
 
-#: templates/admin/configuration/payments-configuration-template.php:81
-msgid "Edit and enable the payment methods available in POS."
+#: templates/admin/configuration/payments-configuration-template.php:70
+msgid "Add Payment Method"
 msgstr ""
 
-#: templates/admin/configuration/payments-configuration-template.php:116
+#: templates/admin/configuration/payments-configuration-template.php:86
+msgid "Add, edit, and enable the payment methods available in POS."
+msgstr ""
+
+#: templates/admin/configuration/payments-configuration-template.php:121
 msgid "Some fields are missing or contain invalid formats."
 msgstr ""
 
@@ -1649,8 +1651,8 @@ msgid "Seating Capacity"
 msgstr ""
 
 #: templates/admin/configuration/tables-configuration-template.php:35
-#: templates/admin/dashboard/dashboard-template.php:278
-#: templates/admin/outlet/outlets-list-template.php:302
+#: templates/admin/dashboard/dashboard-template.php:279
+#: templates/admin/outlet/outlets-list-template.php:296
 msgid "Status"
 msgstr ""
 
@@ -1676,7 +1678,7 @@ msgid "Outlets Breakdown"
 msgstr ""
 
 #: templates/admin/dashboard/dashboard-template.php:84
-#: templates/admin/dashboard/dashboard-template.php:258
+#: templates/admin/dashboard/dashboard-template.php:259
 #: templates/admin/outlet/manage-outlet-template.php:306
 msgid "Payment Methods"
 msgstr ""
@@ -1694,102 +1696,76 @@ msgstr ""
 msgid "Here's what's happening with your POS stores."
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:141
+#: templates/admin/dashboard/dashboard-template.php:142
 msgid "Quick Select"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:157
+#: templates/admin/dashboard/dashboard-template.php:158
 msgid "Custom Range"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:161
+#: templates/admin/dashboard/dashboard-template.php:162
 msgid "From"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:165
+#: templates/admin/dashboard/dashboard-template.php:166
 msgid "To"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:169
+#: templates/admin/dashboard/dashboard-template.php:170
 msgid "Apply"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:187
+#: templates/admin/dashboard/dashboard-template.php:188
 msgid "Total Orders"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:195
+#: templates/admin/dashboard/dashboard-template.php:196
 msgid "Total Revenue"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:204
+#: templates/admin/dashboard/dashboard-template.php:205
 msgid "Active Outlets"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:220
+#: templates/admin/dashboard/dashboard-template.php:221
 #: assets/js/pos.js:393
 #: assets/js/pos.js:383
 msgid "N/A"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:222
+#: templates/admin/dashboard/dashboard-template.php:223
 msgid "Top Payment"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:237
+#: templates/admin/dashboard/dashboard-template.php:238
 msgid "Revenue Overview"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:249
+#: templates/admin/dashboard/dashboard-template.php:250
 msgid "Sales by Outlet"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:271
+#: templates/admin/dashboard/dashboard-template.php:272
 msgid "Recent POS Orders"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:295
+#: templates/admin/dashboard/dashboard-template.php:296
 msgid "No recent orders found."
 msgstr ""
 
-#: templates/admin/invoices/invoices-template.php:52
-msgid "Customize Invoice Templates"
-msgstr ""
-
-#: templates/admin/invoices/invoices-template.php:53
-msgid ""
-"Upgrade to Pro to edit receipt HTML, style custom CSS, restore factory "
-"templates, and create multiple invoice layouts."
-msgstr ""
-
-#: templates/admin/invoices/invoices-template.php:55
-msgid "Visual receipt editor with HTML source mode"
-msgstr ""
-
-#: templates/admin/invoices/invoices-template.php:56
-msgid "Custom CSS for branded receipt styling"
-msgstr ""
-
-#: templates/admin/invoices/invoices-template.php:57
-msgid "Multiple invoice templates for different outlets"
-msgstr ""
-
-#: templates/admin/invoices/invoices-template.php:58
-msgid "Restore factory template controls"
-msgstr ""
-
-#: templates/admin/invoices/invoices-template.php:89
+#: templates/admin/invoices/invoices-template.php:62
 msgid "Template Name"
 msgstr ""
 
-#: templates/admin/invoices/invoices-template.php:111
+#: templates/admin/invoices/invoices-template.php:84
 msgid "Invoice Templates"
 msgstr ""
 
-#: templates/admin/invoices/invoices-template.php:112
+#: templates/admin/invoices/invoices-template.php:85
 msgid ""
-"Free uses one fixed, translatable receipt template. Receipt customization "
-"and extra templates are available in Pro."
+"Translatable receipt template. Customize receipt and manage extra templates "
+"in Pro."
 msgstr ""
 
 #: templates/admin/order/orders-list-template.php:208
@@ -2011,7 +1987,7 @@ msgstr ""
 msgid "Outlets List"
 msgstr ""
 
-#: templates/admin/outlet/outlets-list-template.php:145
+#: templates/admin/outlet/outlets-list-template.php:135
 #. translators: 1: Address line 1, 2: Address line 2, 3: City, 4: State, 5:
 #. Country, 6: Postcode.
 msgid ""
@@ -2019,57 +1995,57 @@ msgid ""
 "Postcode: %6$s"
 msgstr ""
 
-#: templates/admin/outlet/outlets-list-template.php:221
+#: templates/admin/outlet/outlets-list-template.php:213
 #. translators: %d: Number of outlets deleted.
 msgid "%d outlet(s) deleted successfully."
 msgstr ""
 
-#: templates/admin/outlet/outlets-list-template.php:227
+#: templates/admin/outlet/outlets-list-template.php:219
 #. translators: %d: Number of outlets not found.
 msgid "%d outlet(s) not exits."
 msgstr ""
 
-#: templates/admin/outlet/outlets-list-template.php:232
+#: templates/admin/outlet/outlets-list-template.php:224
 msgid "Select outlet(s) to delete."
 msgstr ""
 
-#: templates/admin/outlet/outlets-list-template.php:261
+#: templates/admin/outlet/outlets-list-template.php:255
 msgid "Outlet is deleted successfully."
 msgstr ""
 
-#: templates/admin/outlet/outlets-list-template.php:264
+#: templates/admin/outlet/outlets-list-template.php:258
 msgid "Outlet not exists."
 msgstr ""
 
-#: templates/admin/outlet/outlets-list-template.php:278
+#: templates/admin/outlet/outlets-list-template.php:272
 msgid "No outlets avaliable."
 msgstr ""
 
-#: templates/admin/outlet/outlets-list-template.php:299
+#: templates/admin/outlet/outlets-list-template.php:293
 msgid "Name"
 msgstr ""
 
-#: templates/admin/outlet/outlets-list-template.php:300
+#: templates/admin/outlet/outlets-list-template.php:294
 msgid "Address"
 msgstr ""
 
-#: templates/admin/outlet/outlets-list-template.php:303
+#: templates/admin/outlet/outlets-list-template.php:297
 msgid "Actions"
 msgstr ""
 
-#: templates/admin/outlet/outlets-list-template.php:383
+#: templates/admin/outlet/outlets-list-template.php:377
 msgid "Email: "
 msgstr ""
 
-#: templates/admin/outlet/outlets-list-template.php:386
+#: templates/admin/outlet/outlets-list-template.php:380
 msgid "Phone: "
 msgstr ""
 
-#: templates/admin/outlet/outlets-list-template.php:400
+#: templates/admin/outlet/outlets-list-template.php:394
 msgid "Created"
 msgstr ""
 
-#: templates/admin/outlet/outlets-list-template.php:400
+#: templates/admin/outlet/outlets-list-template.php:394
 msgid "Updated"
 msgstr ""
 
@@ -2230,7 +2206,7 @@ msgid "DevDiggers MultiPOS for WooCommerce"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "https://devdiggers.com/product/multipos-point-of-sale-for-woocommerce/"
+msgid "https://github.com/DevDiggers-Technologies/multipos-for-woocommerce"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -2248,13 +2224,13 @@ msgstr ""
 msgid "https://devdiggers.com/"
 msgstr ""
 
-#: includes/admin/admin-functions.php:383
+#: includes/admin/admin-functions.php:427
 #. translators: %1$s opening span tag %2$s closing span tag
 msgctxt "POS Order Icon"
 msgid "%1$sPOS%2$s"
 msgstr ""
 
-#: includes/admin/admin-functions.php:386
+#: includes/admin/admin-functions.php:430
 #. translators: %1$s opening span tag %2$s closing span tag
 msgctxt "Website Order Icon"
 msgid "%1$sWebsite%2$s"

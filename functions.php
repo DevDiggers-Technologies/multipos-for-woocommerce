@@ -2,7 +2,7 @@
 /**
  * Plugin Name: DevDiggers MultiPOS for WooCommerce
  * Description: Make your WooCommerce store work like a real shop. Sell in person, keep stock synced, run your retail or restaurant outlet, and keep selling even if the internet goes slow.
- * Plugin URI: https://devdiggers.com/product/multipos-point-of-sale-for-woocommerce/
+ * Plugin URI: https://github.com/DevDiggers-Technologies/multipos-for-woocommerce
  * Author: DevDiggers
  * Author URI: https://devdiggers.com/
  * Version: 1.0.0
@@ -25,9 +25,6 @@ use DDWCMultiPOS\Includes\DDWCPOS_File_Handler;
 use DDWCMultiPOS\API\DDWCPOS_API_Register_Routes;
 
 defined( 'ABSPATH' ) || exit();
-
-// Define Constants.
-defined( 'DEVDIGGERS_FREE_PLUGIN' ) || define( 'DEVDIGGERS_FREE_PLUGIN', true );
 
 if ( ! class_exists( 'DDWCPOS_Free_Init' ) ) {
 	/**

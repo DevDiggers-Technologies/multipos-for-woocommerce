@@ -126,6 +126,7 @@ if ( ! class_exists( 'DDWCPOS_Dashboard_Template' ) ) {
 	                                    ?>
 	                                    <input type="hidden" name="page" value="<?php echo esc_attr( $page ); ?>" />
 	                                    <input type="hidden" name="menu" value="<?php echo esc_attr( $menu ); ?>" />
+	                                    <?php wp_nonce_field( 'ddwcpos_nonce_action', 'ddwcpos_nonce' ); ?>
 
                                     <div class="ddwcpos-date-range-container">
 										<input type="text"

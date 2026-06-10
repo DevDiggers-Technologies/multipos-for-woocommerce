@@ -92,16 +92,6 @@ if ( ! class_exists( 'DDWCPOS_Cashiers_List_Template' ) ) {
 		}
 
 		/**
-		 * Verify Nonce
-		 *
-		 * @return boolean
-		 */
-		protected function ddwcpos_verify_nonce() {
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Nonce is being verified here.
-			return ! empty( $_GET[ 'ddwcpos_nonce' ] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_GET[ 'ddwcpos_nonce' ] ) ), 'ddwcpos_nonce_action' );
-		}
-
-		/**
 		 * Record count
 		 *
 		 * @param string $search Search.
@@ -200,15 +190,17 @@ if ( ! class_exists( 'DDWCPOS_Cashiers_List_Template' ) ) {
 		 * @return void
 		 */
 		public function process_bulk_action() {
-			if ( $this->ddwcpos_verify_nonce() ) {
+			$nonce = isset( $_GET['ddwcpos_nonce'] ) ? sanitize_text_field( wp_unslash( $_GET['ddwcpos_nonce'] ) ) : '';
+
+			if ( wp_verify_nonce( $nonce, 'ddwcpos_nonce_action' ) ) {
 				$action = $this->current_action();
 
 				if ( in_array( $action, [ 'delete' ], true ) ) {
-					// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Verified by ddwcpos_verify_nonce().
+					// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Verified by the inline wp_verify_nonce() check above.
 					if ( ! empty( $_GET[ 'ddwcpos-id' ] ) ) {
-						// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Verified by ddwcpos_verify_nonce().
+						// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Verified by the inline wp_verify_nonce() check above.
 						if ( is_array( $_GET[ 'ddwcpos-id' ] ) ) {
-							// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Verified by ddwcpos_verify_nonce().
+							// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Verified by the inline wp_verify_nonce() check above.
 							$ids     = array_map( 'absint', wp_unslash( $_GET[ 'ddwcpos-id' ] ) );
 							$success = $error = 0;
 
@@ -252,13 +244,15 @@ if ( ! class_exists( 'DDWCPOS_Cashiers_List_Template' ) ) {
 		 * @return void
 		 */
 		public function process_row_action() {
-			if ( $this->ddwcpos_verify_nonce() ) {
+			$nonce = isset( $_GET['ddwcpos_nonce'] ) ? sanitize_text_field( wp_unslash( $_GET['ddwcpos_nonce'] ) ) : '';
+
+			if ( wp_verify_nonce( $nonce, 'ddwcpos_nonce_action' ) ) {
 				$action = $this->current_action();
 
 				if ( in_array( $action, [ 'delete' ], true ) ) {
-					// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Verified by ddwcpos_verify_nonce().
+					// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Verified by the inline wp_verify_nonce() check above.
 					if ( ! empty( $_GET[ 'ddwcpos-id' ] ) && ! is_array( $_GET[ 'ddwcpos-id' ] ) ) {
-						// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Verified by ddwcpos_verify_nonce().
+						// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Verified by the inline wp_verify_nonce() check above.
 						$id       = absint( wp_unslash( $_GET[ 'ddwcpos-id' ] ) );
 						if ( ! current_user_can( 'delete_user', $id ) ) {
 							$this->ddwcpos_print_notification( esc_html__( 'Insufficient permissions.', 'devdiggers-multipos-for-woocommerce' ), 'error' );

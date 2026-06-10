@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: DevDiggers Framework 1.0.0\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/devdiggers-framework\n"
-"POT-Creation-Date: 2026-06-08 21:20:21+00:00\n"
+"POT-Creation-Date: 2026-06-10 20:22:50+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -66,13 +66,14 @@ msgstr ""
 
 #: devdiggers-framework/includes/class-ddfw-ajax.php:158
 #: devdiggers-framework/includes/class-ddfw-setup-wizard.php:60
-#: includes/class-ddfw-ajax.php:264 includes/class-ddfw-setup-wizard.php:60
+#: includes/class-ddfw-ajax.php:264 includes/class-ddfw-setup-wizard.php:62
+#: includes/class-ddfw-setup-wizard.php:67
 msgid "Security check failed."
 msgstr ""
 
 #: devdiggers-framework/includes/class-ddfw-ajax.php:162
 #: devdiggers-framework/includes/class-ddfw-setup-wizard.php:124
-#: includes/class-ddfw-ajax.php:268 includes/class-ddfw-setup-wizard.php:124
+#: includes/class-ddfw-ajax.php:268 includes/class-ddfw-setup-wizard.php:131
 msgid "Insufficient permissions."
 msgstr ""
 
@@ -250,34 +251,37 @@ msgid ""
 msgstr ""
 
 #: devdiggers-framework/includes/class-ddfw-review-notice.php:122
-msgid "Leave a Review"
+#: includes/class-ddfw-review-notice.php:122
+msgid "Leave a review"
 msgstr ""
 
 #: devdiggers-framework/includes/class-ddfw-review-notice.php:123
-msgid "Maybe Later"
+#: includes/class-ddfw-review-notice.php:123
+msgid "Maybe later"
 msgstr ""
 
 #: devdiggers-framework/includes/class-ddfw-review-notice.php:124
-msgid "Already Did"
+#: includes/class-ddfw-review-notice.php:124
+msgid "I already did"
 msgstr ""
 
 #: devdiggers-framework/includes/class-ddfw-setup-wizard.php:138
-#: includes/class-ddfw-setup-wizard.php:138
+#: includes/class-ddfw-setup-wizard.php:145
 msgid "Invalid request."
 msgstr ""
 
 #: devdiggers-framework/includes/class-ddfw-setup-wizard.php:142
-#: includes/class-ddfw-setup-wizard.php:142
+#: includes/class-ddfw-setup-wizard.php:149
 msgid "Step not found."
 msgstr ""
 
 #: devdiggers-framework/includes/class-ddfw-setup-wizard.php:189
-#: includes/class-ddfw-setup-wizard.php:189
+#: includes/class-ddfw-setup-wizard.php:196
 msgid "Congratulations! You are all set."
 msgstr ""
 
 #: devdiggers-framework/includes/class-ddfw-setup-wizard.php:190
-#: includes/class-ddfw-setup-wizard.php:190
+#: includes/class-ddfw-setup-wizard.php:197
 msgid ""
 "You can now start using the plugin and configure more advanced settings "
 "from the dashboard."
@@ -671,18 +675,6 @@ msgstr ""
 msgid "Renew your license"
 msgstr ""
 
-#: includes/class-ddfw-review-notice.php:122
-msgid "Leave a review"
-msgstr ""
-
-#: includes/class-ddfw-review-notice.php:123
-msgid "Maybe later"
-msgstr ""
-
-#: includes/class-ddfw-review-notice.php:124
-msgid "I already did"
-msgstr ""
-
 #: templates/layout/license.php:34
 msgid "License Activation"
 msgstr ""
@@ -754,9 +746,7 @@ msgid "DevDiggers Framework"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid ""
-"https://devdiggers.com/woocommerce-extensions/?utm_source=DevDiggers Plugin "
-"Framework&utm_medium=Plugins List&utm_campaign=WooCommerce Extensions"
+msgid "https://devdiggers.com/woocommerce-extensions/"
 msgstr ""
 
 #. Description of the plugin/theme

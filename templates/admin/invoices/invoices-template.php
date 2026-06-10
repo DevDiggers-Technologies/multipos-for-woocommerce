@@ -32,34 +32,7 @@ if ( ! class_exists( 'DDWCPOS_Invoices_Template' ) ) {
 		public function __construct( $ddwcpos_configuration ) {
 			$this->ddwcpos_configuration = $ddwcpos_configuration;
 
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Slug is read-only routing input.
-			if ( ! empty( $_GET['slug'] ) ) {
-				$this->ddwcpos_invoice_composer_locked();
-			} else {
-				$this->ddwcpos_get_invoice_template();
-			}
-		}
-
-		/**
-		 * Render locked invoice composer page.
-		 *
-		 * @return void
-		 */
-		public function ddwcpos_invoice_composer_locked() {
-			ddfw_upgrade_to_pro_section(
-				[
-					'image_url'     => DDWCPOS_PLUGIN_URL . 'assets/images/pro-pages/customize-invoice.webp',
-					'heading'       => esc_html__( 'Customize Invoice Templates', 'devdiggers-multipos-for-woocommerce' ),
-					'description'   => esc_html__( 'Upgrade to Pro to edit receipt HTML, style custom CSS, restore factory templates, and create multiple invoice layouts.', 'devdiggers-multipos-for-woocommerce' ),
-					'list_features' => [
-						esc_html__( 'Visual receipt editor with HTML source mode', 'devdiggers-multipos-for-woocommerce' ),
-						esc_html__( 'Custom CSS for branded receipt styling', 'devdiggers-multipos-for-woocommerce' ),
-						esc_html__( 'Multiple invoice templates for different outlets', 'devdiggers-multipos-for-woocommerce' ),
-						esc_html__( 'Restore factory template controls', 'devdiggers-multipos-for-woocommerce' ),
-					],
-					'upgrade_url'   => '//devdiggers.com/product/multipos-point-of-sale-for-woocommerce/',
-				]
-			);
+			$this->ddwcpos_get_invoice_template();
 		}
 
 		/**
@@ -109,7 +82,7 @@ if ( ! class_exists( 'DDWCPOS_Invoices_Template' ) ) {
 				[
 					'header'            => [
 						'heading'     => esc_html__( 'Invoice Templates', 'devdiggers-multipos-for-woocommerce' ),
-						'description' => esc_html__( 'Free uses one fixed, translatable receipt template. Receipt customization and extra templates are available in Pro.', 'devdiggers-multipos-for-woocommerce' ),
+						'description' => esc_html__( 'Translatable receipt template. Customize receipt and manage extra templates in Pro.', 'devdiggers-multipos-for-woocommerce' ),
 					],
 					'after_header_html' => $custom_html,
 					'fields'            => [],

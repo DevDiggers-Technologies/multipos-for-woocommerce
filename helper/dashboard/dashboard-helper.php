@@ -53,8 +53,9 @@ if ( ! class_exists( 'DDWCPOS_Dashboard_Helper' ) ) {
          * @return array
          */
         protected function get_date_range() {
-            // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Date range is read-only dashboard filtering.
-            $range_type = ! empty( $_GET['date_range'] ) ? sanitize_text_field( wp_unslash( $_GET['date_range'] ) ) : '30_days';
+            $nonce_verified = isset( $_GET['ddwcpos_nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_GET['ddwcpos_nonce'] ) ), 'ddwcpos_nonce_action' );
+
+            $range_type = ( $nonce_verified && ! empty( $_GET['date_range'] ) ) ? sanitize_text_field( wp_unslash( $_GET['date_range'] ) ) : '30_days';
             $from_date  = '';
             $to_date    = '';
             $label      = '';
@@ -111,10 +112,8 @@ if ( ! class_exists( 'DDWCPOS_Dashboard_Helper' ) ) {
                     $label     = __( 'All Time', 'devdiggers-multipos-for-woocommerce' );
                     break;
                 case 'custom':
-                    // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Date range is read-only dashboard filtering.
-                    $from_date = ! empty( $_GET['from_date'] ) ? sanitize_text_field( wp_unslash( $_GET['from_date'] ) ) : current_time( 'Y-m-d', false, strtotime( '-30 days' ) );
-                    // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Date range is read-only dashboard filtering.
-                    $to_date   = ! empty( $_GET['to_date'] ) ? sanitize_text_field( wp_unslash( $_GET['to_date'] ) ) : current_time( 'Y-m-d' );
+                    $from_date = ( $nonce_verified && ! empty( $_GET['from_date'] ) ) ? sanitize_text_field( wp_unslash( $_GET['from_date'] ) ) : current_time( 'Y-m-d', false, strtotime( '-30 days' ) );
+                    $to_date   = ( $nonce_verified && ! empty( $_GET['to_date'] ) ) ? sanitize_text_field( wp_unslash( $_GET['to_date'] ) ) : current_time( 'Y-m-d' );
                     $label     = sprintf( '%s to %s', $from_date, $to_date );
                     break;
                 default:

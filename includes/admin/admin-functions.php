@@ -45,7 +45,7 @@ if ( ! class_exists( 'DDWCPOS_Admin_Functions' ) ) {
 				register_setting( 'ddwcpos-general-configuration-fields', '_ddwcpos_default_customer', [ 'sanitize_callback' => 'absint' ] );
 				register_setting( 'ddwcpos-general-configuration-fields', '_ddwcpos_endpoint', [ 'sanitize_callback' => 'sanitize_title' ] );
 
-			register_setting( 'ddwcpos-payments-configuration-fields', '_ddwcpos_payment_method', [ 'sanitize_callback' => [ $this, 'ddwcpos_sanitize_free_payment_methods' ] ] );
+			register_setting( 'ddwcpos-payments-configuration-fields', '_ddwcpos_payment_method', [ 'sanitize_callback' => [ $this, 'ddwcpos_sanitize_payment_methods' ] ] );
 
 				register_setting( 'ddwcpos-login-configuration-fields', '_ddwcpos_login_heading_text', [ 'sanitize_callback' => 'sanitize_text_field' ] );
 				register_setting( 'ddwcpos-login-configuration-fields', '_ddwcpos_login_subtitle_text', [ 'sanitize_callback' => 'sanitize_text_field' ] );
@@ -71,7 +71,7 @@ if ( ! class_exists( 'DDWCPOS_Admin_Functions' ) ) {
 				register_setting( 'ddwcpos-printer-configuration-fields', '_ddwcpos_printer_margin', [ 'sanitize_callback' => 'sanitize_text_field' ] );
 
 			register_setting( 'ddwcpos-tables-configuration-fields', '_ddwcpos_tables', [ 'sanitize_callback' => [ $this, 'ddwcpos_sanitize_tables' ] ] );
-			register_setting( 'ddwcpos-invoices-configuration-fields', '_ddwcpos_invoices', [ 'sanitize_callback' => [ $this, 'ddwcpos_sanitize_free_invoices' ] ] );
+			register_setting( 'ddwcpos-invoices-configuration-fields', '_ddwcpos_invoices', [ 'sanitize_callback' => [ $this, 'ddwcpos_sanitize_invoices' ] ] );
 
 				register_setting( 'ddwcpos-layout-configuration-fields', '_ddwcpos_layout_primary_color', [ 'sanitize_callback' => 'sanitize_hex_color' ] );
 				register_setting( 'ddwcpos-layout-configuration-fields', '_ddwcpos_layout_secondary_color', [ 'sanitize_callback' => 'sanitize_hex_color' ] );
@@ -90,30 +90,51 @@ if ( ! class_exists( 'DDWCPOS_Admin_Functions' ) ) {
 		}
 
 		/**
-		 * Keep Free payment settings limited to the built-in cash method.
+		 * Sanitize the POS payment methods.
+		 *
+		 * Keeps every submitted method and guarantees the built-in cash method
+		 * always exists. No method count limit is imposed.
 		 *
 		 * @param mixed $payment_methods Submitted payment methods.
 		 * @return array
 		 */
-		public function ddwcpos_sanitize_free_payment_methods( $payment_methods ) {
-			$cash_method = [
-				'name'      => esc_html__( 'Cash', 'devdiggers-multipos-for-woocommerce' ),
-				'slug'      => 'cash',
-				'permanent' => 'yes',
-				'status'    => 'enabled',
-			];
+		public function ddwcpos_sanitize_payment_methods( $payment_methods ) {
+			$sanitized = [];
 
-			if ( is_array( $payment_methods ) ) {
-				foreach ( $payment_methods as $payment_method ) {
-					if ( ! empty( $payment_method['slug'] ) && 'cash' === sanitize_key( $payment_method['slug'] ) ) {
-						$cash_method['name']   = ! empty( $payment_method['name'] ) ? sanitize_text_field( $payment_method['name'] ) : $cash_method['name'];
-						$cash_method['status'] = ! empty( $payment_method['status'] ) && 'disabled' === $payment_method['status'] ? 'disabled' : 'enabled';
-						break;
-					}
+			foreach ( (array) $payment_methods as $payment_method ) {
+				$name = ! empty( $payment_method['name'] ) ? sanitize_text_field( $payment_method['name'] ) : '';
+				$slug = ! empty( $payment_method['slug'] ) ? sanitize_key( $payment_method['slug'] ) : sanitize_key( $name );
+
+				if ( '' === $name || '' === $slug ) {
+					continue;
 				}
+
+				$sanitized[ $slug ] = [
+					'name'      => $name,
+					'slug'      => $slug,
+					'permanent' => ( ! empty( $payment_method['permanent'] ) && 'yes' === $payment_method['permanent'] ) ? 'yes' : 'no',
+					'status'    => ( ! empty( $payment_method['status'] ) && 'disabled' === $payment_method['status'] ) ? 'disabled' : 'enabled',
+				];
 			}
 
-			return [ $cash_method ];
+			// The built-in cash method is always available and not removable.
+			if ( ! isset( $sanitized['cash'] ) ) {
+				$sanitized = array_merge(
+					[
+						'cash' => [
+							'name'      => esc_html__( 'Cash', 'devdiggers-multipos-for-woocommerce' ),
+							'slug'      => 'cash',
+							'permanent' => 'yes',
+							'status'    => 'enabled',
+						],
+					],
+					$sanitized
+				);
+			} else {
+				$sanitized['cash']['permanent'] = 'yes';
+			}
+
+			return array_values( $sanitized );
 		}
 
 		/**
@@ -145,29 +166,52 @@ if ( ! class_exists( 'DDWCPOS_Admin_Functions' ) ) {
 		}
 
 		/**
-		 * Keep Free invoices limited to the default invoice template.
+		 * Sanitize the POS invoice templates.
+		 *
+		 * Keeps every submitted template and guarantees the built-in receipt
+		 * template always exists. No template count limit is imposed.
 		 *
 		 * @param mixed $invoices Submitted invoice templates.
 		 * @return array
 		 */
-		public function ddwcpos_sanitize_free_invoices( $invoices ) {
-			$current_invoices = get_option( '_ddwcpos_invoices', [] );
-			$current_invoice  = ! empty( $current_invoices ) && is_array( $current_invoices ) ? reset( $current_invoices ) : [];
-			$submitted_invoice = ! empty( $invoices ) && is_array( $invoices ) ? reset( $invoices ) : [];
+		public function ddwcpos_sanitize_invoices( $invoices ) {
+			$sanitized = [];
 
-			$invoice = wp_parse_args(
-				is_array( $submitted_invoice ) ? $submitted_invoice : [],
-				is_array( $current_invoice ) ? $current_invoice : []
-			);
+			foreach ( (array) $invoices as $invoice ) {
+				$name = ! empty( $invoice['name'] ) ? sanitize_text_field( $invoice['name'] ) : '';
+				$slug = ! empty( $invoice['slug'] ) ? sanitize_title( $invoice['slug'] ) : sanitize_title( $name );
 
-			return [
-				[
-					'name'      => ! empty( $invoice['name'] ) ? sanitize_text_field( $invoice['name'] ) : esc_html__( 'Default Invoice', 'devdiggers-multipos-for-woocommerce' ),
-					'slug'      => 'default-invoice',
-					'permanent' => 'yes',
-					'status'    => 'enabled',
-				],
-			];
+				if ( '' === $name || '' === $slug ) {
+					continue;
+				}
+
+				$sanitized[ $slug ] = [
+					'name'      => $name,
+					'slug'      => $slug,
+					'permanent' => ( ! empty( $invoice['permanent'] ) && 'yes' === $invoice['permanent'] ) ? 'yes' : 'no',
+					'status'    => ( ! empty( $invoice['status'] ) && 'disabled' === $invoice['status'] ) ? 'disabled' : 'enabled',
+				];
+			}
+
+			// The built-in receipt template is always available and not removable.
+			if ( ! isset( $sanitized['default-invoice'] ) ) {
+				$sanitized = array_merge(
+					[
+						'default-invoice' => [
+							'name'      => esc_html__( 'Default Invoice', 'devdiggers-multipos-for-woocommerce' ),
+							'slug'      => 'default-invoice',
+							'permanent' => 'yes',
+							'status'    => 'enabled',
+						],
+					],
+					$sanitized
+				);
+			} else {
+				$sanitized['default-invoice']['permanent'] = 'yes';
+				$sanitized['default-invoice']['status']    = 'enabled';
+			}
+
+			return array_values( $sanitized );
 		}
 
 		/**

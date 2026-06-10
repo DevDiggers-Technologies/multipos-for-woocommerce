@@ -56,7 +56,14 @@ if ( ! class_exists( 'DDFW_Setup_Wizard' ) ) {
 			// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Nonce is sanitized and verified before updating the option.
 			if ( isset( $_GET['page'] ) && $_GET['page'] === $config['dashboard_page'] && ! empty( $_GET['setup-wizard-skipped'] ) ) {
 				$nonce = ! empty( $_GET['_wpnonce'] ) ? sanitize_text_field( wp_unslash( $_GET['_wpnonce'] ) ) : '';
-				if ( ( ! current_user_can( 'manage_options' ) && ! current_user_can( 'manage_woocommerce' ) ) || ! wp_verify_nonce( $nonce, 'ddfw_skip_setup_wizard_' . $slug ) ) {
+
+				// Capability check first, kept separate so the condition cannot be bypassed.
+				if ( ! current_user_can( 'manage_options' ) && ! current_user_can( 'manage_woocommerce' ) ) {
+					wp_die( esc_html__( 'Security check failed.', 'devdiggers-multipos-for-woocommerce' ) );
+				}
+
+				// Then verify the nonce on its own.
+				if ( ! wp_verify_nonce( $nonce, 'ddfw_skip_setup_wizard_' . $slug ) ) {
 					wp_die( esc_html__( 'Security check failed.', 'devdiggers-multipos-for-woocommerce' ) );
 				}
 

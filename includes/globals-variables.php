@@ -49,46 +49,21 @@ $layout_pos_font_family   = get_option( '_ddwcpos_layout_pos_font_family' );
 $layout_radius            = get_option( '_ddwcpos_layout_radius' );
 $layout_font_size         = get_option( '_ddwcpos_layout_font_size' );
 
-if ( empty( $payment_method ) ) {
-    $payment_method = [];
-    $payment_method[] = [
-        'name'      => esc_html__( 'Cash', 'devdiggers-multipos-for-woocommerce' ),
-        'slug'      => 'cash',
-        'permanent' => 'yes',
-        'status'    => 'enabled',
+if ( empty( $payment_method ) || ! is_array( $payment_method ) ) {
+    $payment_method = [
+        [
+            'name'      => esc_html__( 'Cash', 'devdiggers-multipos-for-woocommerce' ),
+            'slug'      => 'cash',
+            'permanent' => 'yes',
+            'status'    => 'enabled',
+        ],
     ];
 }
 
-$cash_payment_method = [
-    'name'      => esc_html__( 'Cash', 'devdiggers-multipos-for-woocommerce' ),
-    'slug'      => 'cash',
-    'permanent' => 'yes',
-    'status'    => 'enabled',
-];
-
-foreach ( (array) $payment_method as $configured_payment_method ) {
-    if ( ! empty( $configured_payment_method['slug'] ) && 'cash' === $configured_payment_method['slug'] ) {
-        $cash_payment_method['name']   = ! empty( $configured_payment_method['name'] ) ? $configured_payment_method['name'] : $cash_payment_method['name'];
-        $cash_payment_method['status'] = 'enabled';
-        break;
-    }
-}
-
-$payment_method = [ $cash_payment_method ];
-
-if ( empty( $invoices ) ) {
-    $invoices = [];
-    $invoices[] = [
-        'name'      => esc_html__( 'Default Invoice', 'devdiggers-multipos-for-woocommerce' ),
-        'slug'      => 'default-invoice',
-        'permanent' => 'yes',
-        'status'    => 'enabled',
-    ];
-} else {
-    $invoice = is_array( $invoices ) ? reset( $invoices ) : [];
+if ( empty( $invoices ) || ! is_array( $invoices ) ) {
     $invoices = [
         [
-            'name'      => ! empty( $invoice['name'] ) ? $invoice['name'] : esc_html__( 'Default Invoice', 'devdiggers-multipos-for-woocommerce' ),
+            'name'      => esc_html__( 'Default Invoice', 'devdiggers-multipos-for-woocommerce' ),
             'slug'      => 'default-invoice',
             'permanent' => 'yes',
             'status'    => 'enabled',

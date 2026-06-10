@@ -112,23 +112,18 @@ if ( ! class_exists( 'DDWCPOS_Transaction_Helper' ) ) {
 		public function ddwcpos_get_all_transactions( $per_page, $offset, $search ) {
 			$conditions = '';
 
-				// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Outlet filter is read-only report input.
-				if ( ! empty( $_GET[ 'outlet-id' ] ) ) {
-					// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Outlet filter is read-only report input.
+				$nonce_verified = isset( $_GET['ddwcpos_nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_GET['ddwcpos_nonce'] ) ), 'ddwcpos_nonce_action' );
+
+				if ( $nonce_verified && ! empty( $_GET[ 'outlet-id' ] ) ) {
 					$outlet_id   = sanitize_text_field( wp_unslash( $_GET[ 'outlet-id' ] ) );
 					$conditions .= $this->wpdb->prepare( " AND transactions.outlet_id=%s", $outlet_id );
 				}
-				// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Date filters are read-only report input.
-				if ( ( isset( $_GET[ 'transaction-from-date' ] ) || isset( $_GET[ 'transaction-to-date' ] ) ) && ( ! empty( $_GET[ 'transaction-from-date' ] ) || ! empty( $_GET[ 'transaction-to-date' ] ) ) ) {
-					// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Date filters are read-only report input.
+				if ( $nonce_verified && ( ! empty( $_GET[ 'transaction-from-date' ] ) || ! empty( $_GET[ 'transaction-to-date' ] ) ) ) {
 					$from_date   = ! empty( $_GET[ 'transaction-from-date' ] ) ? sanitize_text_field( wp_unslash( $_GET[ 'transaction-from-date' ] ) ) : current_time( 'Y-m-d' );
-					// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Date filters are read-only report input.
 					$end_date    = ! empty( $_GET[ 'transaction-to-date' ] ) ? sanitize_text_field( wp_unslash( $_GET[ 'transaction-to-date' ] ) ) : current_time( 'Y-m-d' );
 					$conditions .= $this->wpdb->prepare( " AND DATE(transactions.date) BETWEEN %s AND %s", $from_date, $end_date );
 				}
-				// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Cashier filter is read-only report input.
-				if ( ! empty( $_GET[ 'cashier-id' ] ) ) {
-					// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Cashier filter is read-only report input.
+				if ( $nonce_verified && ! empty( $_GET[ 'cashier-id' ] ) ) {
 					$cashier_id  = absint( wp_unslash( $_GET[ 'cashier-id' ] ) );
 					$conditions .= $this->wpdb->prepare( " AND transactions.cashier_id=%d", $cashier_id );
 				}
@@ -152,23 +147,18 @@ if ( ! class_exists( 'DDWCPOS_Transaction_Helper' ) ) {
 		public function ddwcpos_get_all_transactions_count( $search ) {
 			$conditions = '';
 
-				// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Outlet filter is read-only report input.
-				if ( ! empty( $_GET[ 'outlet-id' ] ) ) {
-					// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Outlet filter is read-only report input.
+				$nonce_verified = isset( $_GET['ddwcpos_nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_GET['ddwcpos_nonce'] ) ), 'ddwcpos_nonce_action' );
+
+				if ( $nonce_verified && ! empty( $_GET[ 'outlet-id' ] ) ) {
 					$outlet_id   = sanitize_text_field( wp_unslash( $_GET[ 'outlet-id' ] ) );
 					$conditions .= $this->wpdb->prepare( " AND transactions.outlet_id=%s", $outlet_id );
 				}
-				// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Date filters are read-only report input.
-				if ( ( isset( $_GET[ 'transaction-from-date' ] ) || isset( $_GET[ 'transaction-to-date' ] ) ) && ( ! empty( $_GET[ 'transaction-from-date' ] ) || ! empty( $_GET[ 'transaction-to-date' ] ) ) ) {
-					// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Date filters are read-only report input.
+				if ( $nonce_verified && ( ! empty( $_GET[ 'transaction-from-date' ] ) || ! empty( $_GET[ 'transaction-to-date' ] ) ) ) {
 					$from_date   = ! empty( $_GET[ 'transaction-from-date' ] ) ? sanitize_text_field( wp_unslash( $_GET[ 'transaction-from-date' ] ) ) : current_time( 'Y-m-d' );
-					// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Date filters are read-only report input.
 					$end_date    = ! empty( $_GET[ 'transaction-to-date' ] ) ? sanitize_text_field( wp_unslash( $_GET[ 'transaction-to-date' ] ) ) : current_time( 'Y-m-d' );
 					$conditions .= $this->wpdb->prepare( " AND DATE(transactions.date) BETWEEN %s AND %s", $from_date, $end_date );
 				}
-				// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Cashier filter is read-only report input.
-				if ( ! empty( $_GET[ 'cashier-id' ] ) ) {
-					// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Cashier filter is read-only report input.
+				if ( $nonce_verified && ! empty( $_GET[ 'cashier-id' ] ) ) {
 					$cashier_id  = absint( wp_unslash( $_GET[ 'cashier-id' ] ) );
 					$conditions .= $this->wpdb->prepare( " AND transactions.cashier_id=%d", $cashier_id );
 				}

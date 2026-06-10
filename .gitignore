@@ -11,6 +11,9 @@ Thumbs.db
 node_modules/
 **/node_modules/
 
+# AI/session notes (never ship or push)
+.claude/
+
 # IDE files
 .idea
 .vscode/*

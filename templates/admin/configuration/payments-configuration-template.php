@@ -65,6 +65,11 @@ if ( ! class_exists( 'DDWCPOS_Payments_Configuration_Template' ) ) {
 							}
 						}
 						?>
+						<tr>
+							<td colspan="3">
+								<a href="javascript:void(0);" class="ddwcpos-add-row button" data-template="ddwcpos-payments-configuration-row"><?php esc_html_e( 'Add Payment Method', 'devdiggers-multipos-for-woocommerce' ); ?></a>
+							</td>
+						</tr>
 					</tbody>
 				</table>
 
@@ -78,7 +83,7 @@ if ( ! class_exists( 'DDWCPOS_Payments_Configuration_Template' ) ) {
 				[
 					'header'            => [
 						'heading'     => esc_html__( 'Payments', 'devdiggers-multipos-for-woocommerce' ),
-						'description' => esc_html__( 'Edit and enable the payment methods available in POS.', 'devdiggers-multipos-for-woocommerce' ),
+						'description' => esc_html__( 'Add, edit, and enable the payment methods available in POS.', 'devdiggers-multipos-for-woocommerce' ),
 					],
 					'after_header_html' => $custom_html,
 					'fields'            => [],

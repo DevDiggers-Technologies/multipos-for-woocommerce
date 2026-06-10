@@ -2,6 +2,7 @@
 .distignore
 .git
 .gitignore
+.claude
 build
 bin
 node_modules

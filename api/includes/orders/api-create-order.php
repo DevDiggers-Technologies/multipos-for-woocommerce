@@ -154,7 +154,6 @@ if ( ! class_exists( 'DDWCPOS_API_Create_Order' ) ) {
 			$cashier_id         = $request[ 'cashier_id' ];
 			$outlet_helper      = new DDWCPOS_Outlet_Helper();
 			$outlet_data        = $outlet_helper->ddwcpos_get_outlet_details_by_id( $outlet_id );
-			$inventory_type     = 'centralized';
 			$customer_id        = $order_data[ 'customer_id' ];
 			$coupons            = ! empty( $order_data[ 'coupons' ] ) ? $order_data[ 'coupons' ] : [];
 			$fees               = ! empty( $order_data[ 'fees' ] ) ? $order_data[ 'fees' ] : [];
@@ -314,15 +313,6 @@ if ( ! class_exists( 'DDWCPOS_API_Create_Order' ) ) {
 
 						do_action( 'ddwcpos_after_adding_product_in_order', $item_id, $item, $order, $request );
 
-						if ( 'custom' === $inventory_type ) {
-							$custom_stock = get_post_meta( $product_id, '_ddwcpos_outlet_stock_' . $outlet_id, true );
-
-							update_post_meta( $product_id, '_ddwcpos_outlet_stock_' . $outlet_id, $custom_stock - $quantity );
-
-							$product_stock = $product->get_stock_quantity();
-
-							wc_update_product_stock( $product, $product_stock + $quantity );
-						}
 					}
 				}
 			}

@@ -67,7 +67,7 @@ if ( ! class_exists( 'DDFW_Review_Notice' ) ) {
 			$prefix = $this->args['plugin_prefix'];
 
 			// Check if dismissed permanently.
-			if ( 'yes' === get_option( "{$prefix}_review_notice_dismissed" ) ) {
+			if ( 'yes' === get_option( "ddfw_review_notice_dismissed_{$prefix}" ) ) {
 				return false;
 			}
 
@@ -85,7 +85,7 @@ if ( ! class_exists( 'DDFW_Review_Notice' ) ) {
 			}
 
 			// Check "Maybe Later" delay.
-			$remind_at = get_option( "{$prefix}_review_notice_remind_at" );
+			$remind_at = get_option( "ddfw_review_notice_remind_at_{$prefix}" );
 			if ( $remind_at && $current_time < $remind_at ) {
 				return false;
 			}
@@ -150,9 +150,9 @@ if ( ! class_exists( 'DDFW_Review_Notice' ) ) {
 
 			if ( 'maybe-later' === $dismiss_action ) {
 				$remind_at = time() + ( $this->args['remind_days'] * DAY_IN_SECONDS );
-				update_option( "{$prefix}_review_notice_remind_at", $remind_at );
+				update_option( "ddfw_review_notice_remind_at_{$prefix}", $remind_at );
 			} else {
-				update_option( "{$prefix}_review_notice_dismissed", 'yes' );
+				update_option( "ddfw_review_notice_dismissed_{$prefix}", 'yes' );
 			}
 
 			wp_send_json_success();

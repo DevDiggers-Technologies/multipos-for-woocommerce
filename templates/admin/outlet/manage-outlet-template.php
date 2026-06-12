@@ -100,7 +100,6 @@ if ( ! class_exists( 'DDWCPOS_Manage_Outlet_Template' ) ) {
 				$id             = ! empty( $_POST[ 'ddwcpos_outlet_id' ] ) ? sanitize_text_field( wp_unslash( $_POST[ 'ddwcpos_outlet_id' ] ) ) : '';
 				$name           = ! empty( $_POST[ 'ddwcpos_outlet_name' ] ) ? sanitize_text_field( wp_unslash( $_POST[ 'ddwcpos_outlet_name' ] ) ) : '';
 				$mode           = ! empty( $_POST[ 'ddwcpos_outlet_mode' ] ) ? sanitize_text_field( wp_unslash( $_POST[ 'ddwcpos_outlet_mode' ] ) ) : '';
-				$inventory_type = ! empty( $_POST[ 'ddwcpos_outlet_inventory_type' ] ) ? sanitize_text_field( wp_unslash( $_POST[ 'ddwcpos_outlet_inventory_type' ] ) ) : '';
 				$address1       = ! empty( $_POST[ 'ddwcpos_outlet_address1' ] ) ? sanitize_text_field( wp_unslash( $_POST[ 'ddwcpos_outlet_address1' ] ) ) : '';
 				$address2       = ! empty( $_POST[ 'ddwcpos_outlet_address2' ] ) ? sanitize_text_field( wp_unslash( $_POST[ 'ddwcpos_outlet_address2' ] ) ) : '';
 				$city           = ! empty( $_POST[ 'ddwcpos_outlet_city' ] ) ? sanitize_text_field( wp_unslash( $_POST[ 'ddwcpos_outlet_city' ] ) ) : '';

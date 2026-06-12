@@ -344,23 +344,6 @@ if ( ! class_exists( 'DDWCPOS_Admin_Functions' ) ) {
 		}
 
 		/**
-		 * Get saved POS cashier count.
-		 *
-		 * @return int
-		 */
-		protected function ddwcpos_get_pos_cashiers_count() {
-			$query = new \WP_User_Query(
-				[
-					'role'   => 'ddwcpos_cashier',
-					'fields' => 'ID',
-					'number' => 1,
-				]
-			);
-
-			return intval( $query->get_total() );
-		}
-
-		/**
 		 * Admin bar menu function
 		 *
 		 * @param object $wp_admin_bar

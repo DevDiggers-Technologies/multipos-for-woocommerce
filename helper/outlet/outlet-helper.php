@@ -115,10 +115,10 @@ if ( ! class_exists( 'DDWCPOS_Outlet_Helper' ) ) {
 		 * @return array
 		 */
 		public function ddwcpos_get_all_outlets( $per_page, $offset, $search ) {
-			$primary_outlet_id = $this->ddwcpos_get_primary_outlet_id();
-			$data              = $primary_outlet_id ? $this->wpdb->get_results( $this->wpdb->prepare( "SELECT * FROM $this->outlet_table WHERE id=%d AND name LIKE %s LIMIT 1", $primary_outlet_id, '%' . $search . '%' ), ARRAY_A ) : [];
+			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- Trusted internal table name; all values bound via prepare().
+			$data = $this->wpdb->get_results( $this->wpdb->prepare( "SELECT * FROM {$this->outlet_table} WHERE name LIKE %s ORDER BY id DESC LIMIT %d OFFSET %d", '%' . $search . '%', $per_page, $offset ), ARRAY_A );
 
-			return apply_filters( 'ddwcpos_modify_outlets_data', $data, 1, 0, $search );
+			return apply_filters( 'ddwcpos_modify_outlets_data', $data, $per_page, $offset, $search );
 		}
 
         /**
@@ -128,20 +128,10 @@ if ( ! class_exists( 'DDWCPOS_Outlet_Helper' ) ) {
 		 * @return int|null
 		 */
 		public function ddwcpos_get_all_outlets_count( $search ) {
-			$primary_outlet_id = $this->ddwcpos_get_primary_outlet_id();
-			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- Count on a trusted internal table name; no user input.
-			$data              = $primary_outlet_id ? intval( $this->wpdb->get_var( $this->wpdb->prepare( "SELECT count(id) FROM $this->outlet_table WHERE id=%d AND name LIKE %s", $primary_outlet_id, '%' . $search . '%' ), ARRAY_A ) ) : 0;
+			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- Count on a trusted internal table name; value bound via prepare().
+			$data = intval( $this->wpdb->get_var( $this->wpdb->prepare( "SELECT count(id) FROM {$this->outlet_table} WHERE name LIKE %s", '%' . $search . '%' ) ) );
 
-			return apply_filters( 'ddwcpos_modify_outlets_count_data', min( $data, 1 ), $search );
-		}
-
-		/**
-		 * Get raw saved outlet count.
-		 *
-		 * @return int
-		 */
-		public function ddwcpos_get_saved_outlets_count() {
-			return intval( $this->wpdb->get_var( "SELECT count(id) FROM $this->outlet_table" ) );
+			return apply_filters( 'ddwcpos_modify_outlets_count_data', $data, $search );
 		}
 
 		/**
@@ -151,8 +141,7 @@ if ( ! class_exists( 'DDWCPOS_Outlet_Helper' ) ) {
 		 * @return array
 		 */
         public function ddwcpos_get_outlet_details_by_ids( $ids ) {
-			$primary_outlet_id = $this->ddwcpos_get_primary_outlet_id();
-			$ids               = $primary_outlet_id && in_array( $primary_outlet_id, array_map( 'intval', (array) $ids ), true ) ? [ $primary_outlet_id ] : [];
+			$ids = array_filter( array_map( 'intval', (array) $ids ) );
 
 			if ( empty( $ids ) ) {
 				return apply_filters( 'ddwcpos_modify_outlets_data', [], $ids );
@@ -181,13 +170,7 @@ if ( ! class_exists( 'DDWCPOS_Outlet_Helper' ) ) {
 		 * @return array
 		 */
         public function ddwcpos_get_outlet_details_by_id( $id ) {
-			$primary_outlet_id = $this->ddwcpos_get_primary_outlet_id();
-
-			if ( empty( $primary_outlet_id ) || intval( $id ) !== $primary_outlet_id ) {
-				return apply_filters( 'ddwcpos_modify_outlets_data', [], $id );
-			}
-
-            $data = $this->wpdb->get_row( $this->wpdb->prepare( "SELECT * FROM $this->outlet_table WHERE id=%d", $id ), ARRAY_A );
+            $data = $this->wpdb->get_row( $this->wpdb->prepare( "SELECT * FROM {$this->outlet_table} WHERE id=%d", intval( $id ) ), ARRAY_A );
 
 			return apply_filters( 'ddwcpos_modify_outlets_data', $data, $id );
         }
@@ -311,26 +294,6 @@ if ( ! class_exists( 'DDWCPOS_Outlet_Helper' ) ) {
 			];
 
 			return apply_filters( 'ddwcpos_modify_outlet_modes', $outlet_modes );
-		}
-
-		/**
-		 * Get inventory type function
-		 *
-		 * @param int $id
-		 * @return string
-		 */
-		public function ddwcpos_get_inventory_type( $id ) {
-			return apply_filters( 'ddwcpos_modify_outlet_inventory_type', 'centralized', $id );
-		}
-
-		/**
-		 * Get the primary outlet exposed by this plugin.
-		 *
-		 * @return int
-		 */
-		protected function ddwcpos_get_primary_outlet_id() {
-			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- Trusted internal table name; no user input.
-			return intval( $this->wpdb->get_var( "SELECT id FROM $this->outlet_table ORDER BY id ASC LIMIT 1" ) );
 		}
     }
 }

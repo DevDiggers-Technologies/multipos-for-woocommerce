@@ -179,7 +179,6 @@ if ( ! class_exists( 'DDWCPOS_API_Get_Products' ) ) {
 		 */
 		protected function get_products_list( $request, $outlet_data, $tax_rates ) {
 			$cashier_id = intval( $request['cashier_id'] );
-			$outlet_id  = intval( $request['outlet_id'] );
 			$per_page   = intval( $request['per_page'] );
 			$current_page = intval( $request['current_page'] );
 
@@ -213,8 +212,6 @@ if ( ! class_exists( 'DDWCPOS_API_Get_Products' ) ) {
 
 			$products = [];
 			if ( $search_results->have_posts() ) {
-				$inventory_type = $this->outlet_helper->ddwcpos_get_inventory_type( $outlet_id );
-
 				while ( $search_results->have_posts() ) {
 					$search_results->the_post();
 					$product_id = $search_results->post;
@@ -224,7 +221,7 @@ if ( ! class_exists( 'DDWCPOS_API_Get_Products' ) ) {
 						continue;
 					}
 
-					$product_data = $this->ddwcpos_prepare_product_data( $product_id, $outlet_id, $inventory_type, $request );
+					$product_data = $this->ddwcpos_prepare_product_data( $product_id, $request );
 
 					if ( $product_data ) {
 						$products[] = $product_data;
@@ -281,12 +278,10 @@ if ( ! class_exists( 'DDWCPOS_API_Get_Products' ) ) {
 		 * Prepare product data function
 		 *
 		 * @param int $product_id
-		 * @param int $outlet_id
-		 * @param string $inventory_type
 		 * @param array $request
 		 * @return array
 		 */
-		public function ddwcpos_prepare_product_data( $product_id, $outlet_id, $inventory_type, $request ) {
+		public function ddwcpos_prepare_product_data( $product_id, $request ) {
 			$product = wc_get_product( $product_id );
 
 			if ( ! $product ) {
@@ -304,17 +299,6 @@ if ( ! class_exists( 'DDWCPOS_API_Get_Products' ) ) {
 			$cart_display   = get_option( 'woocommerce_tax_display_cart' );
 
 			ob_start();
-			if ( 'custom' === $inventory_type ) {
-				$stock = $product->get_meta( '_ddwcpos_outlet_stock_' . $outlet_id, true );
-				?>
-				<mark class="instock">
-					<?php
-					/* translators: %s: Product stock quantity. */
-					echo esc_html( sprintf( __( 'In Stock(%s)', 'devdiggers-multipos-for-woocommerce' ), $stock ) );
-					?>
-				</mark>
-				<?php
-			} else {
 				$stock_status       = $product->get_stock_status();
 				$backorders_allowed = $product->backorders_allowed();
 				$stock_quantity     = $product->get_stock_quantity();
@@ -357,7 +341,6 @@ if ( ! class_exists( 'DDWCPOS_API_Get_Products' ) ) {
 					<mark class="outofstock"><?php esc_html_e( 'Out of Stock', 'devdiggers-multipos-for-woocommerce' ); ?></mark>
 					<?php
 				}
-			}
 
 			$stock_html = ob_get_clean();
 
@@ -445,7 +428,7 @@ if ( ! class_exists( 'DDWCPOS_API_Get_Products' ) ) {
 					'stock'                  => $stock,
 					'stock_html'             => $stock_html,
 					'stock_status'           => $backorders_allowed ? 'onbackorder' : $product->get_stock_status(),
-					'stock_quantity'         => 'custom' === $inventory_type ? ( $backorders_allowed ? $stock_quantity : $stock ) : $product->get_stock_quantity(),
+					'stock_quantity'         => $product->get_stock_quantity(),
 					'image'                  => $product->get_image( 'thumbnail' ),
 					'categories'             => $categories,
 					'tax'                    => $product_tax,

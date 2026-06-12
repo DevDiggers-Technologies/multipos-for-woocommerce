@@ -209,6 +209,7 @@ if ( ! class_exists( 'DDWCPOS_Admin_Dashboard' ) ) {
 		public function add_screen_options() {
 			global $ddwcpos_list_table;
 
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only admin routing input, no state change.
 			$current_menu = ! empty( $_GET['menu'] ) ? sanitize_title( wp_unslash( $_GET['menu'] ) ) : 'dashboard';
 
 			$args = [
@@ -292,15 +293,16 @@ if ( ! class_exists( 'DDWCPOS_Admin_Dashboard' ) ) {
 			if ( ! empty( $action ) && ( 'add' === $action || 'edit' === $action ) ) {
 				new Admin\Outlet\DDWCPOS_Manage_Outlet_Template( $this->ddwcpos_configuration );
 			} else {
+				// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only admin routing input, no state change.
 				if ( ! empty( $_GET['success'] ) ) {
 					ddfw_print_notification( esc_html__( 'Outlet saved successfully.', 'devdiggers-multipos-for-woocommerce' ), 'success' );
 				}
 				// phpcs:enable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 				$obj = new Admin\Outlet\DDWCPOS_Outlets_List_Template( $this->ddwcpos_configuration );
 
-				$page  = isset( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : '';
-				$menu  = isset( $_GET['menu'] ) ? sanitize_text_field( wp_unslash( $_GET['menu'] ) ) : '';
-				$paged = isset( $_GET['paged'] ) ? sanitize_text_field( wp_unslash( $_GET['paged'] ) ) : '';
+				// Routing values are fixed for this screen; no request input is trusted to build them.
+				$page  = 'ddwcpos-dashboard';
+				$menu  = 'outlets';
 				?>
 				<form method="get">
 					<hr class="wp-header-end" />
@@ -318,7 +320,6 @@ if ( ! class_exists( 'DDWCPOS_Admin_Dashboard' ) ) {
 					<a href="<?php echo esc_url( site_url( $this->ddwcpos_configuration['endpoint'] ) ); ?>" class="page-title-action button" target="_blank"><?php esc_html_e( 'Visit POS', 'devdiggers-multipos-for-woocommerce' ); ?></a>
 					<input type="hidden" name="page" value="<?php echo esc_attr( $page ); ?>" />
 					<input type="hidden" name="menu" value="<?php echo esc_attr( $menu ); ?>" />
-					<input type="hidden" name="paged" value="<?php echo esc_attr( $paged ); ?>" />
 					<?php
 					wp_nonce_field( 'ddwcpos_nonce_action', 'ddwcpos_nonce' );
 					$obj->prepare_items();
@@ -336,14 +337,15 @@ if ( ! class_exists( 'DDWCPOS_Admin_Dashboard' ) ) {
 		 * @return void
 		 */
 		public function ddwcpos_get_cashiers_template() {
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only admin routing input, no state change.
 			if ( ! empty( $_GET['success'] ) ) {
 				ddfw_print_notification( esc_html__( 'Cashier created successfully.', 'devdiggers-multipos-for-woocommerce' ), 'success' );
 			}
 			$obj = new Admin\Cashier\DDWCPOS_Cashiers_List_Template();
 
-			$page  = isset( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : '';
-			$menu  = isset( $_GET['menu'] ) ? sanitize_text_field( wp_unslash( $_GET['menu'] ) ) : '';
-			$paged = isset( $_GET['paged'] ) ? sanitize_text_field( wp_unslash( $_GET['paged'] ) ) : '';
+			// Routing values are fixed for this screen; no request input is trusted to build them.
+			$page  = 'ddwcpos-dashboard';
+			$menu  = 'cashiers';
 			?>
 			<form method="get">
 				<hr class="wp-header-end" />
@@ -360,7 +362,6 @@ if ( ! class_exists( 'DDWCPOS_Admin_Dashboard' ) ) {
 				</a>
 				<input type="hidden" name="page" value="<?php echo esc_attr( $page ); ?>" />
 				<input type="hidden" name="menu" value="<?php echo esc_attr( $menu ); ?>" />
-				<input type="hidden" name="paged" value="<?php echo esc_attr( $paged ); ?>" />
 				<?php
 				wp_nonce_field( 'ddwcpos_nonce_action', 'ddwcpos_nonce' );
 				$obj->prepare_items();
@@ -379,9 +380,9 @@ if ( ! class_exists( 'DDWCPOS_Admin_Dashboard' ) ) {
 		public function ddwcpos_get_product_barcodes_template() {
 			$obj = new Admin\Barcode\DDWCPOS_Product_Barcodes_List_Template( $this->ddwcpos_configuration );
 
-			$page  = isset( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : '';
-			$menu  = isset( $_GET['menu'] ) ? sanitize_text_field( wp_unslash( $_GET['menu'] ) ) : '';
-			$paged = isset( $_GET['paged'] ) ? sanitize_text_field( wp_unslash( $_GET['paged'] ) ) : '';
+			// Routing values are fixed for this screen; no request input is trusted to build them.
+			$page  = 'ddwcpos-dashboard';
+			$menu  = 'product-barcodes';
 			?>
 			<form method="get">
 				<hr class="wp-header-end" />
@@ -398,47 +399,6 @@ if ( ! class_exists( 'DDWCPOS_Admin_Dashboard' ) ) {
 				</a>
 				<input type="hidden" name="page" value="<?php echo esc_attr( $page ); ?>" />
 				<input type="hidden" name="menu" value="<?php echo esc_attr( $menu ); ?>" />
-				<input type="hidden" name="paged" value="<?php echo esc_attr( $paged ); ?>" />
-				<?php
-				wp_nonce_field( 'ddwcpos_nonce_action', 'ddwcpos_nonce' );
-				$obj->prepare_items();
-				$obj->search_box( esc_html__( 'Search', 'devdiggers-multipos-for-woocommerce' ), 'search-id' );
-				$obj->display();
-				?>
-			</form>
-			<?php
-		}
-
-		/**
-		 * Product Stocks Template
-		 *
-		 * @return void
-		 */
-		public function ddwcpos_get_product_stocks_template() {
-			$obj = new Admin\Stock\DDWCPOS_Product_Stocks_List_Template( $this->ddwcpos_configuration );
-
-			$page      = isset( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : '';
-			$menu      = isset( $_GET['menu'] ) ? sanitize_text_field( wp_unslash( $_GET['menu'] ) ) : '';
-			$paged     = isset( $_GET['paged'] ) ? sanitize_text_field( wp_unslash( $_GET['paged'] ) ) : '';
-			$outlet_id = isset( $_GET['outlet-id'] ) ? sanitize_text_field( wp_unslash( $_GET['outlet-id'] ) ) : '';
-			?>
-			<form method="get">
-				<hr class="wp-header-end" />
-				<h1 class="wp-heading-inline"><?php esc_html_e( 'Products', 'devdiggers-multipos-for-woocommerce' ); ?></h1>
-				<a href="<?php echo esc_url( admin_url( 'post-new.php?post_type=product' ) ); ?>" class="page-title-action button-primary button">
-					<?php
-					DDFW_SVG::get_svg_icon(
-						'plus',
-						false,
-						[ 'size' => 15 ]
-					);
-					esc_html_e( 'Add New', 'devdiggers-multipos-for-woocommerce' );
-					?>
-				</a>
-				<input type="hidden" name="page" value="<?php echo esc_attr( $page ); ?>" />
-				<input type="hidden" name="menu" value="<?php echo esc_attr( $menu ); ?>" />
-				<input type="hidden" name="paged" value="<?php echo esc_attr( $paged ); ?>" />
-				<input type="hidden" name="outlet-id" value="<?php echo esc_attr( $outlet_id ); ?>" />
 				<?php
 				wp_nonce_field( 'ddwcpos_nonce_action', 'ddwcpos_nonce' );
 				$obj->prepare_items();
@@ -480,17 +440,17 @@ if ( ! class_exists( 'DDWCPOS_Admin_Dashboard' ) ) {
 		public function ddwcpos_get_orders_template() {
 			$obj = new Admin\Order\DDWCPOS_Orders_List_Template();
 
-			$page      = isset( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : '';
-			$menu      = isset( $_GET['menu'] ) ? sanitize_text_field( wp_unslash( $_GET['menu'] ) ) : '';
-			$paged     = isset( $_GET['paged'] ) ? sanitize_text_field( wp_unslash( $_GET['paged'] ) ) : '';
-			$outlet_id = isset( $_GET['outlet-id'] ) ? sanitize_text_field( wp_unslash( $_GET['outlet-id'] ) ) : '';
+			// Routing values are fixed for this screen; the outlet filter is read only when its nonce verifies.
+			$page      = 'ddwcpos-dashboard';
+			$menu      = 'orders';
+			$nonce_ok  = isset( $_GET['ddwcpos_nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_GET['ddwcpos_nonce'] ) ), 'ddwcpos_nonce_action' );
+			$outlet_id = ( $nonce_ok && ! empty( $_GET['outlet-id'] ) ) ? sanitize_text_field( wp_unslash( $_GET['outlet-id'] ) ) : '';
 			?>
 			<form method="get">
 				<hr class="wp-header-end" />
 				<h1 class="wp-heading-inline"><?php esc_html_e( 'Orders', 'devdiggers-multipos-for-woocommerce' ); ?></h1>
 				<input type="hidden" name="page" value="<?php echo esc_attr( $page ); ?>" />
 				<input type="hidden" name="menu" value="<?php echo esc_attr( $menu ); ?>" />
-				<input type="hidden" name="paged" value="<?php echo esc_attr( $paged ); ?>" />
 				<input type="hidden" name="outlet-id" value="<?php echo esc_attr( $outlet_id ); ?>" />
 				<?php
 				wp_nonce_field( 'ddwcpos_nonce_action', 'ddwcpos_nonce' );
@@ -510,20 +470,20 @@ if ( ! class_exists( 'DDWCPOS_Admin_Dashboard' ) ) {
 		public function ddwcpos_get_transactions_template() {
 			$obj = new Admin\Transaction\DDWCPOS_Transactions_List_Template( $this->ddwcpos_configuration );
 
-			$page                  = isset( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : '';
-			$menu                  = isset( $_GET['menu'] ) ? sanitize_text_field( wp_unslash( $_GET['menu'] ) ) : '';
-			$paged                 = isset( $_GET['paged'] ) ? sanitize_text_field( wp_unslash( $_GET['paged'] ) ) : '';
-			$outlet_id             = isset( $_GET['outlet-id'] ) ? sanitize_text_field( wp_unslash( $_GET['outlet-id'] ) ) : '';
-			$transaction_from_date = isset( $_GET['transaction-from-date'] ) ? sanitize_text_field( wp_unslash( $_GET['transaction-from-date'] ) ) : '';
-			$transaction_to_date   = isset( $_GET['transaction-to-date'] ) ? sanitize_text_field( wp_unslash( $_GET['transaction-to-date'] ) ) : '';
-			$cashier_id            = isset( $_GET['cashier-id'] ) ? sanitize_text_field( wp_unslash( $_GET['cashier-id'] ) ) : '';
+			// Routing values are fixed for this screen; filters are read only when their nonce verifies.
+			$page                  = 'ddwcpos-dashboard';
+			$menu                  = 'transactions';
+			$nonce_ok              = isset( $_GET['ddwcpos_nonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_GET['ddwcpos_nonce'] ) ), 'ddwcpos_nonce_action' );
+			$outlet_id             = ( $nonce_ok && ! empty( $_GET['outlet-id'] ) ) ? sanitize_text_field( wp_unslash( $_GET['outlet-id'] ) ) : '';
+			$transaction_from_date = ( $nonce_ok && ! empty( $_GET['transaction-from-date'] ) ) ? sanitize_text_field( wp_unslash( $_GET['transaction-from-date'] ) ) : '';
+			$transaction_to_date   = ( $nonce_ok && ! empty( $_GET['transaction-to-date'] ) ) ? sanitize_text_field( wp_unslash( $_GET['transaction-to-date'] ) ) : '';
+			$cashier_id            = ( $nonce_ok && ! empty( $_GET['cashier-id'] ) ) ? sanitize_text_field( wp_unslash( $_GET['cashier-id'] ) ) : '';
 			?>
 			<form method="get">
 				<hr class="wp-header-end" />
 				<h1 class="wp-heading-inline"><?php esc_html_e( 'Transactions', 'devdiggers-multipos-for-woocommerce' ); ?></h1>
 				<input type="hidden" name="page" value="<?php echo esc_attr( $page ); ?>" />
 				<input type="hidden" name="menu" value="<?php echo esc_attr( $menu ); ?>" />
-				<input type="hidden" name="paged" value="<?php echo esc_attr( $paged ); ?>" />
 				<input type="hidden" name="outlet-id" value="<?php echo esc_attr( $outlet_id ); ?>" />
 				<input type="hidden" name="transaction-from-date" value="<?php echo esc_attr( $transaction_from_date ); ?>" />
 				<input type="hidden" name="transaction-to-date" value="<?php echo esc_attr( $transaction_to_date ); ?>" />
@@ -660,7 +620,9 @@ if ( ! class_exists( 'DDWCPOS_Admin_Dashboard' ) ) {
 				);
 
 				// Register dashboard specific assets.
+				// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only admin routing input, no state change.
 				$page = ! empty( $_GET['page'] ) ? sanitize_text_field( wp_unslash( $_GET['page'] ) ) : '';
+				// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only admin routing input, no state change.
 				$menu = ! empty( $_GET['menu'] ) ? sanitize_text_field( wp_unslash( $_GET['menu'] ) ) : '';
 
 				if ( 'ddwcpos-dashboard' === $page && ( empty( $menu ) || 'dashboard' === $menu ) ) {

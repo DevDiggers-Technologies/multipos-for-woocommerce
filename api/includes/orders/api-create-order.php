@@ -251,12 +251,6 @@ if ( ! class_exists( 'DDWCPOS_API_Create_Order' ) ) {
 			}
 
 			foreach ( $order_data[ 'products' ] as $item ) {
-				if ( $item[ 'custom' ] ) {
-					throw new \Exception( esc_html__( 'Custom products are not available in the free version.', 'devdiggers-multipos-for-woocommerce' ) );
-				}
-			}
-
-			foreach ( $order_data[ 'products' ] as $item ) {
 				if ( ! $item[ 'custom' ] ) {
 					$product = wc_get_product( $item[ 'product_id' ] );
 
@@ -312,7 +306,6 @@ if ( ! class_exists( 'DDWCPOS_API_Create_Order' ) ) {
 						}
 
 						do_action( 'ddwcpos_after_adding_product_in_order', $item_id, $item, $order, $request );
-
 					}
 				}
 			}

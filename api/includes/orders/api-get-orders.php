@@ -187,16 +187,9 @@ if ( ! class_exists( 'DDWCPOS_API_Get_Orders' ) ) {
 				$value_data = $value->get_data();
 				$meta       = apply_filters( 'ddwcpos_get_order_item_meta_data', [], $value_data );
 				$image      = null;
-
-				if ( $product_id == 0 ) {
-					$product_id = 'custom_' . $id;
-					$type       = 'custom';
-					++$id;
-				} else {
-					$product = wc_get_product( $product_id );
-					$image   = $product->get_image( 'thumbnail' );
-					$type    = $product->get_type();
-				}
+				$product    = wc_get_product( $product_id );
+				$image      = $product->get_image( 'thumbnail' );
+				$type       = $product->get_type();
 
 				$value_data[ 'quantity' ] = ! empty( $value_data[ 'quantity' ] ) ? $value_data[ 'quantity' ] : 1;
 

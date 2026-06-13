@@ -587,6 +587,11 @@ if ( ! class_exists( 'DDFW_Form_Field' ) ) {
 
 			if ( $args[ 'return' ] ) {
 				return $field;
+			} elseif ( 'editor' === $args[ 'type' ] ) {
+				// wp_editor() emits core-generated markup (TinyMCE container, toolbar
+				// buttons, inline init scripts) that must NOT be re-filtered through
+				// wp_kses(), or the rich editor renders broken. It is safe core output.
+				echo $field; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- wp_editor() core output, already escaped.
 			} else {
 				echo wp_kses( $field, ddfw_kses_allowed_form_html() );
 			}

@@ -196,7 +196,7 @@ if ( ! class_exists( 'DDFW_Setup_Wizard' ) ) {
 			$title = $step['ready_title'] ?? esc_html__( 'Congratulations! You are all set.', 'devdiggers-multipos-for-woocommerce' );
 			$desc  = $step['ready_description'] ?? esc_html__( 'You can now start using the plugin and configure more advanced settings from the dashboard.', 'devdiggers-multipos-for-woocommerce' );
 			?>
-			<div class="ddfw-setup-wizard-ready ddwcpr-onboarding-welcome">
+			<div class="ddfw-setup-wizard-ready ddfw-setup-wizard-onboarding">
 				<div class="ddfw-success-icon-wrap">
 					<div style="background:#eef2ff; border-radius:50%; width:80px; height:80px; display:flex; align-items:center; justify-content:center;">
 						<svg class="ddfw-success-svg" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

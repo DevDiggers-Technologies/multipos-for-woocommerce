@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: DevDiggers MultiPOS for WooCommerce 1.0.0\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/devdiggers-multipos-for-woocommerce\n"
-"POT-Creation-Date: 2026-06-10 20:23:43+00:00\n"
+"POT-Creation-Date: 2026-06-13 19:38:35+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -187,19 +187,15 @@ msgstr ""
 msgid "No order data provided"
 msgstr ""
 
-#: api/includes/orders/api-create-order.php:213
+#: api/includes/orders/api-create-order.php:212
 msgid "Multiple payments are not available in the free version."
 msgstr ""
 
-#: api/includes/orders/api-create-order.php:226
+#: api/includes/orders/api-create-order.php:225
 msgid "Selected payment method is not available."
 msgstr ""
 
-#: api/includes/orders/api-create-order.php:256
-msgid "Custom products are not available in the free version."
-msgstr ""
-
-#: api/includes/orders/api-create-order.php:266
+#: api/includes/orders/api-create-order.php:259
 msgid "Only simple products are supported in the free version."
 msgstr ""
 
@@ -208,33 +204,28 @@ msgid "Outlet data not found"
 msgstr ""
 
 #: api/includes/products/api-get-products.php:313
-#: api/includes/products/api-get-products.php:345
-#: templates/admin/stock/product-stocks-list-template.php:208
-#. translators: %s: Product stock quantity.
-#. translators: %s for product stock quantity
-#: assets/js/pos.js:30
-msgid "In Stock(%s)"
-msgstr ""
-
-#: api/includes/products/api-get-products.php:329
 #. translators: %s: Product stock quantity.
 #: assets/js/pos.js:21
 msgid "On Backorder(%s)"
 msgstr ""
 
-#: api/includes/products/api-get-products.php:335
+#: api/includes/products/api-get-products.php:319
 #: assets/js/pos.js:22
 msgid "On Backorder"
 msgstr ""
 
-#: api/includes/products/api-get-products.php:351
-#: templates/admin/stock/product-stocks-list-template.php:214
+#: api/includes/products/api-get-products.php:329
+#. translators: %s: Product stock quantity.
+#: assets/js/pos.js:30
+msgid "In Stock(%s)"
+msgstr ""
+
+#: api/includes/products/api-get-products.php:335
 #: assets/js/pos.js:31
 msgid "In Stock"
 msgstr ""
 
-#: api/includes/products/api-get-products.php:357
-#: templates/admin/stock/product-stocks-list-template.php:219
+#: api/includes/products/api-get-products.php:341
 msgid "Out of Stock"
 msgstr ""
 
@@ -259,7 +250,7 @@ msgid "Dashboard"
 msgstr ""
 
 #: functions.php:133 includes/admin-dashboard.php:130
-#: templates/admin/outlet/manage-outlet-template.php:300
+#: templates/admin/outlet/manage-outlet-template.php:299
 msgid "Configuration"
 msgstr ""
 
@@ -279,7 +270,7 @@ msgstr ""
 msgid "Documentation"
 msgstr ""
 
-#: functions.php:156 includes/admin-dashboard.php:712
+#: functions.php:156 includes/admin-dashboard.php:674
 msgid "Review"
 msgstr ""
 
@@ -391,7 +382,6 @@ msgstr ""
 
 #: helper/invoice/invoice-helper.php:50
 #: templates/admin/barcode/product-barcodes-list-template.php:225
-#: templates/admin/stock/product-stocks-list-template.php:229
 #: assets/js/pos.js:133
 msgid "Quantity"
 msgstr ""
@@ -434,23 +424,23 @@ msgid "THANK YOU, HAVE A NICE DAY."
 msgstr ""
 
 #: helper/invoice/invoice-helper.php:60
-#: templates/admin/outlet/manage-outlet-template.php:280
+#: templates/admin/outlet/manage-outlet-template.php:279
 #: assets/js/pos.js:159
 msgid "Phone"
 msgstr ""
 
 #: helper/invoice/invoice-helper.php:61
-#: templates/admin/outlet/manage-outlet-template.php:289
+#: templates/admin/outlet/manage-outlet-template.php:288
 #: assets/js/pos.js:154
 #: assets/js/pos.js:86
 msgid "Email"
 msgstr ""
 
-#: helper/outlet/outlet-helper.php:309
+#: helper/outlet/outlet-helper.php:292
 msgid "Grocery/Retail"
 msgstr ""
 
-#: helper/outlet/outlet-helper.php:310
+#: helper/outlet/outlet-helper.php:293
 msgid "Restaurant/Cafe"
 msgstr ""
 
@@ -514,12 +504,12 @@ msgstr ""
 msgid "The user will only be able to log in to the POS of the assigned outlets."
 msgstr ""
 
-#: includes/admin/admin-functions.php:383 includes/admin-dashboard.php:318
+#: includes/admin/admin-functions.php:366 includes/admin-dashboard.php:320
 #: templates/admin/outlet/outlets-list-template.php:155
 msgid "Visit POS"
 msgstr ""
 
-#: includes/admin/admin-functions.php:400
+#: includes/admin/admin-functions.php:383
 msgid "Order Type"
 msgstr ""
 
@@ -775,11 +765,11 @@ msgstr ""
 msgid "MultiPOS - Point of Sale"
 msgstr ""
 
-#: includes/admin-dashboard.php:90 includes/admin-dashboard.php:307
+#: includes/admin-dashboard.php:90 includes/admin-dashboard.php:309
 msgid "Outlets"
 msgstr ""
 
-#: includes/admin-dashboard.php:95 includes/admin-dashboard.php:350
+#: includes/admin-dashboard.php:95 includes/admin-dashboard.php:352
 #: templates/admin/dashboard/dashboard-template.php:213
 msgid "Cashiers"
 msgstr ""
@@ -792,7 +782,7 @@ msgstr ""
 msgid "Assign Stocks"
 msgstr ""
 
-#: includes/admin-dashboard.php:110 includes/admin-dashboard.php:490
+#: includes/admin-dashboard.php:110 includes/admin-dashboard.php:451
 #: templates/admin/dashboard/dashboard-template.php:82
 #: templates/admin/order/orders-list-template.php:37
 #: assets/js/pos.js:91
@@ -804,7 +794,7 @@ msgstr ""
 msgid "Reports"
 msgstr ""
 
-#: includes/admin-dashboard.php:120 includes/admin-dashboard.php:523
+#: includes/admin-dashboard.php:120 includes/admin-dashboard.php:484
 msgid "Transactions"
 msgstr ""
 
@@ -836,128 +826,128 @@ msgstr ""
 msgid "Tables"
 msgstr ""
 
-#: includes/admin-dashboard.php:215
+#: includes/admin-dashboard.php:216
 msgid "Results Per Page"
 msgstr ""
 
-#: includes/admin-dashboard.php:268
+#: includes/admin-dashboard.php:269
 msgid "Advanced POS Reports in One Place"
 msgstr ""
 
-#: includes/admin-dashboard.php:269
+#: includes/admin-dashboard.php:270
 msgid ""
 "Upgrade to Pro to unlock easy-to-read sales, order, product, coupon, and "
 "tax reports for your store."
 msgstr ""
 
-#: includes/admin-dashboard.php:271
+#: includes/admin-dashboard.php:272
 msgid "Sales and revenue summaries with date filters"
 msgstr ""
 
-#: includes/admin-dashboard.php:272
+#: includes/admin-dashboard.php:273
 msgid "Product performance and stock insights"
 msgstr ""
 
-#: includes/admin-dashboard.php:273
+#: includes/admin-dashboard.php:274
 msgid "Coupon usage and discount tracking"
 msgstr ""
 
-#: includes/admin-dashboard.php:274
+#: includes/admin-dashboard.php:275
 msgid "Outlet-level order and sales reports"
 msgstr ""
 
-#: includes/admin-dashboard.php:275
+#: includes/admin-dashboard.php:276
 msgid "Tax totals and easy summary views"
 msgstr ""
 
-#: includes/admin-dashboard.php:276
+#: includes/admin-dashboard.php:277
 msgid "POS analytics with outlet breakdowns"
 msgstr ""
 
-#: includes/admin-dashboard.php:296
+#: includes/admin-dashboard.php:298
 msgid "Outlet saved successfully."
 msgstr ""
 
-#: includes/admin-dashboard.php:315 includes/admin-dashboard.php:358
-#: includes/admin-dashboard.php:396 includes/admin-dashboard.php:435
+#: includes/admin-dashboard.php:317 includes/admin-dashboard.php:360
+#: includes/admin-dashboard.php:397
 #: assets/js/pos.js:186
 msgid "Add New"
 msgstr ""
 
-#: includes/admin-dashboard.php:325 includes/admin-dashboard.php:367
-#: includes/admin-dashboard.php:405 includes/admin-dashboard.php:445
-#: includes/admin-dashboard.php:498 includes/admin-dashboard.php:534
+#: includes/admin-dashboard.php:326 includes/admin-dashboard.php:368
+#: includes/admin-dashboard.php:405 includes/admin-dashboard.php:458
+#: includes/admin-dashboard.php:494
 msgid "Search"
 msgstr ""
 
-#: includes/admin-dashboard.php:340
+#: includes/admin-dashboard.php:342
 msgid "Cashier created successfully."
 msgstr ""
 
-#: includes/admin-dashboard.php:388 includes/admin-dashboard.php:427
+#: includes/admin-dashboard.php:389
 #: assets/js/pos.js:494
 msgid "Products"
 msgstr ""
 
-#: includes/admin-dashboard.php:461
+#: includes/admin-dashboard.php:421
 msgid "Assign/Track Stock by Outlet"
 msgstr ""
 
-#: includes/admin-dashboard.php:462
+#: includes/admin-dashboard.php:422
 msgid ""
 "Upgrade to Pro to manage inventory separately for each outlet and keep "
 "stock levels accurate across all locations."
 msgstr ""
 
-#: includes/admin-dashboard.php:464
+#: includes/admin-dashboard.php:424
 msgid "Set stock levels for each outlet"
 msgstr ""
 
-#: includes/admin-dashboard.php:465
+#: includes/admin-dashboard.php:425
 msgid "Use custom outlet stock or central WooCommerce inventory"
 msgstr ""
 
-#: includes/admin-dashboard.php:466
+#: includes/admin-dashboard.php:426
 msgid "Show only available products per location"
 msgstr ""
 
-#: includes/admin-dashboard.php:467
+#: includes/admin-dashboard.php:427
 msgid "Keep inventory accurate across multiple stores"
 msgstr ""
 
-#: includes/admin-dashboard.php:468
+#: includes/admin-dashboard.php:428
 msgid "Bulk stock updates using CSV import"
 msgstr ""
 
-#: includes/admin-dashboard.php:649
+#: includes/admin-dashboard.php:609
 msgid "Please enter"
 msgstr ""
 
-#: includes/admin-dashboard.php:650
+#: includes/admin-dashboard.php:610
 msgid "or more character"
 msgstr ""
 
-#: includes/admin-dashboard.php:651
+#: includes/admin-dashboard.php:611
 msgid "No result Found"
 msgstr ""
 
-#: includes/admin-dashboard.php:652
+#: includes/admin-dashboard.php:612
 msgid "Upload Icon"
 msgstr ""
 
-#: includes/admin-dashboard.php:653
+#: includes/admin-dashboard.php:613
 msgid "Barcode field is empty."
 msgstr ""
 
-#: includes/admin-dashboard.php:654
+#: includes/admin-dashboard.php:614
 msgid "Barcode quantity field is empty."
 msgstr ""
 
-#: includes/admin-dashboard.php:655
+#: includes/admin-dashboard.php:615
 msgid "Custom stock value is invalid."
 msgstr ""
 
-#: includes/admin-dashboard.php:712
+#: includes/admin-dashboard.php:674
 #. translators: %s for a tag
 msgid ""
 "If you really like our plugin, please leave us a %s rating, we'll really "
@@ -993,17 +983,14 @@ msgid "Log in"
 msgstr ""
 
 #: templates/admin/barcode/product-barcodes-list-template.php:43
-#: templates/admin/stock/product-stocks-list-template.php:62
 msgid "Product List"
 msgstr ""
 
 #: templates/admin/barcode/product-barcodes-list-template.php:44
-#: templates/admin/stock/product-stocks-list-template.php:63
 msgid "Products List"
 msgstr ""
 
 #: templates/admin/barcode/product-barcodes-list-template.php:185
-#: templates/admin/stock/product-stocks-list-template.php:190
 msgid "Simple"
 msgstr ""
 
@@ -1018,12 +1005,10 @@ msgid "Print"
 msgstr ""
 
 #: templates/admin/barcode/product-barcodes-list-template.php:257
-#: templates/admin/stock/product-stocks-list-template.php:264
 msgid "No products avaliable."
 msgstr ""
 
 #: templates/admin/barcode/product-barcodes-list-template.php:276
-#: templates/admin/stock/product-stocks-list-template.php:283
 msgid "Product"
 msgstr ""
 
@@ -1034,12 +1019,10 @@ msgstr ""
 #: templates/admin/barcode/product-barcodes-list-template.php:317
 #: templates/admin/cashier/cashiers-list-template.php:360
 #: templates/admin/outlet/outlets-list-template.php:359
-#: templates/admin/stock/product-stocks-list-template.php:318
 msgid "Edit"
 msgstr ""
 
 #: templates/admin/barcode/product-barcodes-list-template.php:318
-#: templates/admin/stock/product-stocks-list-template.php:319
 msgid "View"
 msgstr ""
 
@@ -1482,7 +1465,7 @@ msgstr ""
 #: templates/admin/configuration/tables-configuration-template.php:109
 #: templates/admin/invoices/invoices-template.php:55
 #: templates/admin/invoices/invoices-template.php:69
-#: templates/admin/outlet/manage-outlet-template.php:349
+#: templates/admin/outlet/manage-outlet-template.php:348
 #: templates/admin/outlet/outlets-list-template.php:145
 msgid "Active"
 msgstr ""
@@ -1491,7 +1474,7 @@ msgstr ""
 #: templates/admin/configuration/payments-configuration-template.php:111
 #: templates/admin/configuration/tables-configuration-template.php:56
 #: templates/admin/configuration/tables-configuration-template.php:110
-#: templates/admin/outlet/manage-outlet-template.php:350
+#: templates/admin/outlet/manage-outlet-template.php:349
 #: templates/admin/outlet/outlets-list-template.php:145
 msgid "Inactive"
 msgstr ""
@@ -1679,7 +1662,7 @@ msgstr ""
 
 #: templates/admin/dashboard/dashboard-template.php:84
 #: templates/admin/dashboard/dashboard-template.php:259
-#: templates/admin/outlet/manage-outlet-template.php:306
+#: templates/admin/outlet/manage-outlet-template.php:305
 msgid "Payment Methods"
 msgstr ""
 
@@ -1810,8 +1793,6 @@ msgstr ""
 
 #: templates/admin/order/orders-list-template.php:466
 #: templates/admin/order/orders-list-template.php:467
-#: templates/admin/stock/product-stocks-list-template.php:380
-#: templates/admin/stock/product-stocks-list-template.php:381
 #: templates/admin/transaction/transactions-list-template.php:480
 #: templates/admin/transaction/transactions-list-template.php:481
 #: assets/js/pos.js:131
@@ -1819,163 +1800,161 @@ msgid "Select Outlet"
 msgstr ""
 
 #: templates/admin/order/orders-list-template.php:479
-#: templates/admin/stock/product-stocks-list-template.php:393
 #: templates/admin/transaction/transactions-list-template.php:524
 msgid "Filter"
 msgstr ""
 
 #: templates/admin/order/orders-list-template.php:489
-#: templates/admin/stock/product-stocks-list-template.php:403
 #: templates/admin/transaction/transactions-list-template.php:534
 #: assets/js/pos.js:143
 msgid "Reset"
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:135
+#: templates/admin/outlet/manage-outlet-template.php:134
 msgid "Fields are either empty or invalid."
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:152
+#: templates/admin/outlet/manage-outlet-template.php:151
 msgid "Edit Outlet"
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:154
+#: templates/admin/outlet/manage-outlet-template.php:153
 msgid "Add Outlet"
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:192
+#: templates/admin/outlet/manage-outlet-template.php:191
 msgid ""
 "Configure and manage your physical store locations. Each outlet can have "
 "its own operating mode, inventory tracking, and payment settings."
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:197
+#: templates/admin/outlet/manage-outlet-template.php:196
 msgid "Outlet Name"
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:198
+#: templates/admin/outlet/manage-outlet-template.php:197
 msgid "A descriptive name to identify this store location (e.g., Downtown Branch)."
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:208
+#: templates/admin/outlet/manage-outlet-template.php:207
 msgid "Operation Mode"
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:209
+#: templates/admin/outlet/manage-outlet-template.php:208
 msgid ""
 "Select how this outlet operates. \"Restaurant/Cafe\" mode enables "
 "additional features like Table management."
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:221
+#: templates/admin/outlet/manage-outlet-template.php:220
 msgid "Location & Contact"
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:222
+#: templates/admin/outlet/manage-outlet-template.php:221
 msgid ""
 "Enter the physical address and contact information for this outlet. These "
 "details appear on printed invoices and receipts."
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:227
+#: templates/admin/outlet/manage-outlet-template.php:226
 #: assets/js/pos.js:164
 msgid "Address Line 1"
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:228
+#: templates/admin/outlet/manage-outlet-template.php:227
 msgid "Primary street address. This will appear on printed invoices."
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:236
+#: templates/admin/outlet/manage-outlet-template.php:235
 #: assets/js/pos.js:169
 msgid "Address Line 2"
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:237
+#: templates/admin/outlet/manage-outlet-template.php:236
 msgid "Apartment, suite, unit, etc. (optional)."
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:244
+#: templates/admin/outlet/manage-outlet-template.php:243
 #: assets/js/pos.js:198
 msgid "City"
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:245
+#: templates/admin/outlet/manage-outlet-template.php:244
 msgid "City where the outlet is physically located."
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:253
+#: templates/admin/outlet/manage-outlet-template.php:252
 #: assets/js/pos.js:176
 msgid "Country"
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:254
+#: templates/admin/outlet/manage-outlet-template.php:253
 msgid "The region or country for tax and shipping calculations."
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:262
+#: templates/admin/outlet/manage-outlet-template.php:261
 msgid "State/Province"
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:263
+#: templates/admin/outlet/manage-outlet-template.php:262
 msgid "Specific state, province, or county."
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:271
+#: templates/admin/outlet/manage-outlet-template.php:270
 msgid "Postcode/ZIP"
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:272
+#: templates/admin/outlet/manage-outlet-template.php:271
 msgid "Postal code for the store location."
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:281
+#: templates/admin/outlet/manage-outlet-template.php:280
 msgid "Enter the contact phone number for the outlet."
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:290
+#: templates/admin/outlet/manage-outlet-template.php:289
 msgid "Enter the contact email for the outlet."
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:301
+#: templates/admin/outlet/manage-outlet-template.php:300
 msgid ""
 "Manage logistical settings for this outlet, including payment options, "
 "receipt templates, and dining table assignments."
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:307
+#: templates/admin/outlet/manage-outlet-template.php:306
 msgid ""
 "Choose the payment options that will be available for customers at this POS "
 "outlet."
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:319
+#: templates/admin/outlet/manage-outlet-template.php:318
 msgid "Invoice Template"
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:320
+#: templates/admin/outlet/manage-outlet-template.php:319
 msgid "The design layout for printed customer receipts at this location."
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:330
+#: templates/admin/outlet/manage-outlet-template.php:329
 msgid "Dining Tables"
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:331
+#: templates/admin/outlet/manage-outlet-template.php:330
 msgid ""
 "Select the active tables for this outlet. (Applicable only in "
 "\"Restaurant/Cafe\" mode)."
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:342
+#: templates/admin/outlet/manage-outlet-template.php:341
 msgid "Outlet Status"
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:343
+#: templates/admin/outlet/manage-outlet-template.php:342
 msgid "Set to \"Inactive\" to temporarily prevent POS access for this store."
 msgstr ""
 
-#: templates/admin/outlet/manage-outlet-template.php:357
+#: templates/admin/outlet/manage-outlet-template.php:356
 msgid "Save Outlet"
 msgstr ""
 
@@ -2047,31 +2026,6 @@ msgstr ""
 
 #: templates/admin/outlet/outlets-list-template.php:394
 msgid "Updated"
-msgstr ""
-
-#: templates/admin/stock/product-stocks-list-template.php:193
-msgid "Variation"
-msgstr ""
-
-#: templates/admin/stock/product-stocks-list-template.php:230
-#: assets/js/pos.js:145
-msgid "Update"
-msgstr ""
-
-#: templates/admin/stock/product-stocks-list-template.php:234
-msgid "Select Outlet First!"
-msgstr ""
-
-#: templates/admin/stock/product-stocks-list-template.php:284
-msgid "Stock Management"
-msgstr ""
-
-#: templates/admin/stock/product-stocks-list-template.php:363
-msgid "WooCommerce Stock"
-msgstr ""
-
-#: templates/admin/stock/product-stocks-list-template.php:365
-msgid "Manual POS Stock"
 msgstr ""
 
 #: templates/admin/transaction/transactions-list-template.php:57
@@ -2224,13 +2178,13 @@ msgstr ""
 msgid "https://devdiggers.com/"
 msgstr ""
 
-#: includes/admin/admin-functions.php:427
+#: includes/admin/admin-functions.php:410
 #. translators: %1$s opening span tag %2$s closing span tag
 msgctxt "POS Order Icon"
 msgid "%1$sPOS%2$s"
 msgstr ""
 
-#: includes/admin/admin-functions.php:430
+#: includes/admin/admin-functions.php:413
 #. translators: %1$s opening span tag %2$s closing span tag
 msgctxt "Website Order Icon"
 msgid "%1$sWebsite%2$s"
@@ -2620,6 +2574,10 @@ msgstr ""
 
 #: assets/js/pos.js:139
 msgid "Increase Quantity"
+msgstr ""
+
+#: assets/js/pos.js:145
+msgid "Update"
 msgstr ""
 
 #: assets/js/pos.js:133

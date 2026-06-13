@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: DevDiggers Framework 1.0.0\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/devdiggers-framework\n"
-"POT-Creation-Date: 2026-06-10 20:22:50+00:00\n"
+"POT-Creation-Date: 2026-06-13 19:37:14+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -40,6 +40,19 @@ msgstr ""
 msgid "PRO"
 msgstr ""
 
+#: devdiggers-framework/global-functions.php:364 global-functions.php:364
+#. translators: %s: Plugin Prefix
+msgid "License Deactivated for %s"
+msgstr ""
+
+#: devdiggers-framework/global-functions.php:370 global-functions.php:370
+msgid "License not found or deactivation failed"
+msgstr ""
+
+#: devdiggers-framework/global-functions.php:370 global-functions.php:370
+msgid "Deactivation Failed"
+msgstr ""
+
 #: devdiggers-framework/includes/class-ddfw-admin.php:57
 #: includes/class-ddfw-admin.php:57
 msgid "DevDiggers Plugins"
@@ -55,55 +68,58 @@ msgstr ""
 msgid "Extensions"
 msgstr ""
 
-#: devdiggers-framework/includes/class-ddfw-ajax.php:83
-#: devdiggers-framework/includes/class-ddfw-ajax.php:113
-#: devdiggers-framework/includes/class-ddfw-ajax.php:145
+#: devdiggers-framework/includes/class-ddfw-ajax.php:94
+#: devdiggers-framework/includes/class-ddfw-ajax.php:108
+#: devdiggers-framework/includes/class-ddfw-ajax.php:189
+#: devdiggers-framework/includes/class-ddfw-ajax.php:219
+#: devdiggers-framework/includes/class-ddfw-ajax.php:251
 #: includes/class-ddfw-ajax.php:94 includes/class-ddfw-ajax.php:108
 #: includes/class-ddfw-ajax.php:189 includes/class-ddfw-ajax.php:219
 #: includes/class-ddfw-ajax.php:251
 msgid "Security check failed!"
 msgstr ""
 
-#: devdiggers-framework/includes/class-ddfw-ajax.php:158
-#: devdiggers-framework/includes/class-ddfw-setup-wizard.php:60
+#: devdiggers-framework/includes/class-ddfw-ajax.php:264
+#: devdiggers-framework/includes/class-ddfw-setup-wizard.php:62
+#: devdiggers-framework/includes/class-ddfw-setup-wizard.php:67
 #: includes/class-ddfw-ajax.php:264 includes/class-ddfw-setup-wizard.php:62
 #: includes/class-ddfw-setup-wizard.php:67
 msgid "Security check failed."
 msgstr ""
 
-#: devdiggers-framework/includes/class-ddfw-ajax.php:162
-#: devdiggers-framework/includes/class-ddfw-setup-wizard.php:124
+#: devdiggers-framework/includes/class-ddfw-ajax.php:268
+#: devdiggers-framework/includes/class-ddfw-setup-wizard.php:131
 #: includes/class-ddfw-ajax.php:268 includes/class-ddfw-setup-wizard.php:131
 msgid "Insufficient permissions."
 msgstr ""
 
-#: devdiggers-framework/includes/class-ddfw-ajax.php:168
+#: devdiggers-framework/includes/class-ddfw-ajax.php:274
 #: includes/class-ddfw-ajax.php:274
 msgid "Please enter a valid email address."
 msgstr ""
 
-#: devdiggers-framework/includes/class-ddfw-ajax.php:173
+#: devdiggers-framework/includes/class-ddfw-ajax.php:279
 #: includes/class-ddfw-ajax.php:279
 msgid "You must be logged in to subscribe."
 msgstr ""
 
-#: devdiggers-framework/includes/class-ddfw-ajax.php:179
+#: devdiggers-framework/includes/class-ddfw-ajax.php:285
 #: includes/class-ddfw-ajax.php:285
 msgid "You are already subscribed to our newsletter."
 msgstr ""
 
-#: devdiggers-framework/includes/class-ddfw-ajax.php:200
+#: devdiggers-framework/includes/class-ddfw-ajax.php:306
 #: includes/class-ddfw-ajax.php:306
 msgid "Failed to connect to newsletter service. Please try again."
 msgstr ""
 
-#: devdiggers-framework/includes/class-ddfw-ajax.php:211
+#: devdiggers-framework/includes/class-ddfw-ajax.php:317
 #: devdiggers-framework/includes/class-ddfw-assets.php:84
 #: includes/class-ddfw-ajax.php:317 includes/class-ddfw-assets.php:84
 msgid "Thank you for subscribing!"
 msgstr ""
 
-#: devdiggers-framework/includes/class-ddfw-ajax.php:213
+#: devdiggers-framework/includes/class-ddfw-ajax.php:319
 #: includes/class-ddfw-ajax.php:319
 msgid "Subscription failed. Please try again."
 msgstr ""
@@ -242,6 +258,28 @@ msgstr ""
 msgid "Setup wizard not found for this plugin."
 msgstr ""
 
+#: devdiggers-framework/includes/class-ddfw-plugin-updater.php:246
+#: includes/class-ddfw-plugin-updater.php:246
+msgid "License Required"
+msgstr ""
+
+#: devdiggers-framework/includes/class-ddfw-plugin-updater.php:247
+#: includes/class-ddfw-plugin-updater.php:247
+msgid ""
+"A valid license key is required to install this update. Please activate or "
+"renew your license at "
+msgstr ""
+
+#: devdiggers-framework/includes/class-ddfw-plugin-updater.php:295
+#: includes/class-ddfw-plugin-updater.php:295
+msgid "A valid license is required to install this update."
+msgstr ""
+
+#: devdiggers-framework/includes/class-ddfw-plugin-updater.php:297
+#: includes/class-ddfw-plugin-updater.php:297
+msgid "Renew your license"
+msgstr ""
+
 #: devdiggers-framework/includes/class-ddfw-review-notice.php:118
 #: includes/class-ddfw-review-notice.php:118
 #. translators: %s: Plugin Name
@@ -252,35 +290,35 @@ msgstr ""
 
 #: devdiggers-framework/includes/class-ddfw-review-notice.php:122
 #: includes/class-ddfw-review-notice.php:122
-msgid "Leave a review"
-msgstr ""
-
-#: devdiggers-framework/includes/class-ddfw-review-notice.php:123
-#: includes/class-ddfw-review-notice.php:123
-msgid "Maybe later"
+msgid "Leave a Review"
 msgstr ""
 
 #: devdiggers-framework/includes/class-ddfw-review-notice.php:124
 #: includes/class-ddfw-review-notice.php:124
-msgid "I already did"
+msgid "Maybe Later"
 msgstr ""
 
-#: devdiggers-framework/includes/class-ddfw-setup-wizard.php:138
+#: devdiggers-framework/includes/class-ddfw-review-notice.php:126
+#: includes/class-ddfw-review-notice.php:126
+msgid "I Already Did"
+msgstr ""
+
+#: devdiggers-framework/includes/class-ddfw-setup-wizard.php:145
 #: includes/class-ddfw-setup-wizard.php:145
 msgid "Invalid request."
 msgstr ""
 
-#: devdiggers-framework/includes/class-ddfw-setup-wizard.php:142
+#: devdiggers-framework/includes/class-ddfw-setup-wizard.php:149
 #: includes/class-ddfw-setup-wizard.php:149
 msgid "Step not found."
 msgstr ""
 
-#: devdiggers-framework/includes/class-ddfw-setup-wizard.php:189
+#: devdiggers-framework/includes/class-ddfw-setup-wizard.php:196
 #: includes/class-ddfw-setup-wizard.php:196
 msgid "Congratulations! You are all set."
 msgstr ""
 
-#: devdiggers-framework/includes/class-ddfw-setup-wizard.php:190
+#: devdiggers-framework/includes/class-ddfw-setup-wizard.php:197
 #: includes/class-ddfw-setup-wizard.php:197
 msgid ""
 "You can now start using the plugin and configure more advanced settings "
@@ -603,6 +641,89 @@ msgstr ""
 msgid "Save Changes"
 msgstr ""
 
+#: devdiggers-framework/templates/layout/license.php:34
+#: templates/layout/license.php:34
+msgid "License Activation"
+msgstr ""
+
+#: devdiggers-framework/templates/layout/license.php:35
+#: templates/layout/license.php:35
+msgid ""
+"Enter your license key and email to activate your plugin. You'll not be "
+"able to use the plugin until you activate the license."
+msgstr ""
+
+#: devdiggers-framework/templates/layout/license.php:42
+#: templates/layout/license.php:42
+msgid "License Key"
+msgstr ""
+
+#: devdiggers-framework/templates/layout/license.php:43
+#: devdiggers-framework/templates/layout/license.php:70
+#: templates/layout/license.php:43 templates/layout/license.php:70
+msgid "Required"
+msgstr ""
+
+#: devdiggers-framework/templates/layout/license.php:51
+#: templates/layout/license.php:51
+msgid "Enter your license key"
+msgstr ""
+
+#: devdiggers-framework/templates/layout/license.php:61
+#: templates/layout/license.php:61
+msgid "Enter the license key you received after purchase."
+msgstr ""
+
+#: devdiggers-framework/templates/layout/license.php:62
+#: templates/layout/license.php:62
+msgid "How to find your license key?"
+msgstr ""
+
+#: devdiggers-framework/templates/layout/license.php:69
+#: templates/layout/license.php:69
+msgid "Purchase Email"
+msgstr ""
+
+#: devdiggers-framework/templates/layout/license.php:78
+#: templates/layout/license.php:78
+msgid "Enter your purchase email"
+msgstr ""
+
+#: devdiggers-framework/templates/layout/license.php:89
+#: templates/layout/license.php:89
+msgid "Enter the email address used for the purchase."
+msgstr ""
+
+#: devdiggers-framework/templates/layout/license.php:96
+#: templates/layout/license.php:96
+msgid "Activating..."
+msgstr ""
+
+#: devdiggers-framework/templates/layout/license.php:104
+#: templates/layout/license.php:104
+msgid "Activate License"
+msgstr ""
+
+#: devdiggers-framework/templates/layout/license.php:120
+#: templates/layout/license.php:120
+msgid "License Active"
+msgstr ""
+
+#: devdiggers-framework/templates/layout/license.php:121
+#: templates/layout/license.php:121
+msgid "Your license is active and you can enjoy all premium features."
+msgstr ""
+
+#: devdiggers-framework/templates/layout/license.php:124
+#: templates/layout/license.php:124
+msgid "Deactivating..."
+msgstr ""
+
+#: devdiggers-framework/templates/layout/license.php:132
+#: templates/layout/license.php:132
+msgid "Deactivate License"
+msgstr ""
+
 #: devdiggers-framework/templates/layout/setup-wizard.php:34
 #: templates/layout/setup-wizard.php:34
 msgid "Onboarding"
@@ -642,103 +763,6 @@ msgstr ""
 #: devdiggers-framework/templates/layout/sidebar.php:36
 #: templates/layout/sidebar.php:36
 msgid "Close Settings"
-msgstr ""
-
-#: global-functions.php:364
-#. translators: %s: Plugin Prefix
-msgid "License Deactivated for %s"
-msgstr ""
-
-#: global-functions.php:370
-msgid "License not found or deactivation failed"
-msgstr ""
-
-#: global-functions.php:370
-msgid "Deactivation Failed"
-msgstr ""
-
-#: includes/class-ddfw-plugin-updater.php:246
-msgid "License Required"
-msgstr ""
-
-#: includes/class-ddfw-plugin-updater.php:247
-msgid ""
-"A valid license key is required to install this update. Please activate or "
-"renew your license at "
-msgstr ""
-
-#: includes/class-ddfw-plugin-updater.php:295
-msgid "A valid license is required to install this update."
-msgstr ""
-
-#: includes/class-ddfw-plugin-updater.php:297
-msgid "Renew your license"
-msgstr ""
-
-#: templates/layout/license.php:34
-msgid "License Activation"
-msgstr ""
-
-#: templates/layout/license.php:35
-msgid ""
-"Enter your license key and email to activate your plugin. You'll not be "
-"able to use the plugin until you activate the license."
-msgstr ""
-
-#: templates/layout/license.php:42
-msgid "License Key"
-msgstr ""
-
-#: templates/layout/license.php:43 templates/layout/license.php:70
-msgid "Required"
-msgstr ""
-
-#: templates/layout/license.php:51
-msgid "Enter your license key"
-msgstr ""
-
-#: templates/layout/license.php:61
-msgid "Enter the license key you received after purchase."
-msgstr ""
-
-#: templates/layout/license.php:62
-msgid "How to find your license key?"
-msgstr ""
-
-#: templates/layout/license.php:69
-msgid "Purchase Email"
-msgstr ""
-
-#: templates/layout/license.php:78
-msgid "Enter your purchase email"
-msgstr ""
-
-#: templates/layout/license.php:89
-msgid "Enter the email address used for the purchase."
-msgstr ""
-
-#: templates/layout/license.php:96
-msgid "Activating..."
-msgstr ""
-
-#: templates/layout/license.php:104
-msgid "Activate License"
-msgstr ""
-
-#: templates/layout/license.php:120
-msgid "License Active"
-msgstr ""
-
-#: templates/layout/license.php:121
-msgid "Your license is active and you can enjoy all premium features."
-msgstr ""
-
-#: templates/layout/license.php:124
-msgid "Deactivating..."
-msgstr ""
-
-#: templates/layout/license.php:132
-msgid "Deactivate License"
 msgstr ""
 
 #. Plugin Name of the plugin/theme

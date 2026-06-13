@@ -119,9 +119,11 @@ if ( ! class_exists( 'DDFW_Review_Notice' ) ) {
 					?>
 				</p>
 				<p>
-					<a href="<?php echo esc_url( $review_url ); ?>" class="ddfw-review-notice-action" data-action="already-did" target="_blank"><?php esc_html_e( 'Leave a review', 'devdiggers-multipos-for-woocommerce' ); ?></a> |
-					<button type="button" class="button-link ddfw-review-notice-action" data-action="maybe-later"><?php esc_html_e( 'Maybe later', 'devdiggers-multipos-for-woocommerce' ); ?></button> |
-					<button type="button" class="button-link ddfw-review-notice-action" data-action="already-did"><?php esc_html_e( 'I already did', 'devdiggers-multipos-for-woocommerce' ); ?></button>
+					<a href="<?php echo esc_url( $review_url ); ?>" class="button button-primary ddfw-review-notice-action" data-action="already-did" data-open-review="true" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Leave a Review', 'devdiggers-multipos-for-woocommerce' ); ?></a>
+					&nbsp;&nbsp;
+					<button type="button" class="button button-secondary ddfw-review-notice-action" data-action="maybe-later"><?php esc_html_e( 'Maybe Later', 'devdiggers-multipos-for-woocommerce' ); ?></button>
+					&nbsp;&nbsp;
+					<a href="#" class="ddfw-review-notice-action" data-action="already-did"><?php esc_html_e( 'I Already Did', 'devdiggers-multipos-for-woocommerce' ); ?></a>
 				</p>
 			</div>
 			<?php

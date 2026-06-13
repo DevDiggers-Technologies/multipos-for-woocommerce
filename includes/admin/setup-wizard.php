@@ -118,7 +118,7 @@ if ( ! class_exists( 'DDWCPOS_Setup_Wizard' ) ) {
          */
         public function welcome_view() {
             ?>
-            <div class="ddfw-setup-wizard-ready ddwcpr-onboarding-welcome">
+            <div class="ddfw-setup-wizard-ready ddfw-setup-wizard-onboarding">
                 <div class="ddfw-success-icon-wrap">
                     <svg class="ddfw-success-svg" width="100" height="100" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="16" cy="16" r="15" fill="var(--ddfw-tab-background-color)"/>
@@ -134,8 +134,8 @@ if ( ! class_exists( 'DDWCPOS_Setup_Wizard' ) ) {
                         <path d="M18 9V4L19 5L20 4L21 5L22 4V9H18Z" fill="var(--ddfw-primary-color)" fill-opacity="0.5"/>
                     </svg>
                 </div>
-                <h2 class="ddwcpr-onboarding-welcome-title"><?php esc_html_e( 'Welcome to MultiPOS!', 'devdiggers-multipos-for-woocommerce' ); ?></h2>
-                <p class="ddwcpr-onboarding-welcome-desc">
+                <h2 class="ddfw-setup-wizard-ready-title"><?php esc_html_e( 'Welcome to MultiPOS!', 'devdiggers-multipos-for-woocommerce' ); ?></h2>
+                <p class="ddfw-setup-wizard-ready-desc">
                     <?php esc_html_e( 'Let\'s quickly set up your Point of Sale system so you can start selling in your physical store. This wizard will guide you through the essential settings.', 'devdiggers-multipos-for-woocommerce' ); ?>
                 </p>
             </div>
